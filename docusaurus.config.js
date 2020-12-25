@@ -1,30 +1,36 @@
 module.exports = {
-  title: "My Site",
-  tagline: "The tagline of my site",
-  url: "https://your-docusaurus-test-site.com",
+  title: "Flayyer docs",
+  tagline: "CLI documentation and integration guides",
+  url: "https://docs.flayyer.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "flayyer", // Usually your GitHub org/user name.
+  projectName: "flayyer-docs", // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: "My Site",
+      title: "Flayyer",
       logo: {
-        alt: "My Site Logo",
+        href: "https://flayyer.com",
+        alt: "Flayyer logo",
         src: "img/logo.svg",
       },
       items: [
         {
           to: "docs/",
           activeBasePath: "docs",
-          label: "Docs",
+          label: "Documentation",
           position: "left",
         },
         { to: "blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://flayyer.com",
+          label: "Try for free",
+          position: "right",
+        },
+        {
+          href: "https://github.com/flayyer",
           label: "GitHub",
           position: "right",
         },
@@ -50,34 +56,55 @@ module.exports = {
           title: "Community",
           items: [
             {
+              label: "Instagram",
+              href: "https://instagram.com/flayyer_com",
+            },
+            {
               label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+              href: "https://stackoverflow.com/questions/tagged/flayyer",
             },
             {
               label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
+              href: "https://discord.gg/aPAv4Gg6h9",
+              // href: "https://discordapp.com/invite/flayyer",
             },
             {
               label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              href: "https://twitter.com/flayyer_com",
+            },
+            {
+              label: "Facebook",
+              href: "https://www.facebook.com/flayyercom",
             },
           ],
         },
         {
-          title: "More",
+          title: "Company",
           items: [
+            {
+              label: "GitHub",
+              href: "https://github.com/flayyer",
+            },
             {
               label: "Blog",
               to: "blog",
             },
             {
-              label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              label: "About",
+              href: "https://flayyer.com/about",
+            },
+            {
+              label: "Partnerships",
+              href: "https://flayyer.com/partners",
+            },
+            {
+              label: "Jobs",
+              href: "https://flayyer.com/jobs",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Flayyer.com`,
     },
   },
   presets: [
@@ -87,12 +114,12 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl: "https://github.com/facebook/docusaurus/edit/master/website/",
+          editUrl: "https://github.com/flayyer/flayyer-docs/edit/master/docs/",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl: "https://github.com/facebook/docusaurus/edit/master/website/blog/",
+          editUrl: "https://github.com/flayyer/flayyer-docs/edit/master/blog/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
