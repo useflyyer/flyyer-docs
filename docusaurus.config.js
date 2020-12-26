@@ -32,9 +32,9 @@ module.exports = {
           position: "left",
           activeBaseRegex: `/guides/`,
         },
-        { to: "blog", label: "Blog", position: "left" },
+        { to: "changelog", label: "Changelog", position: "left" },
         {
-          href: "https://flayyer.com",
+          href: "https://flayyer.com?ref=docs",
           label: "Flayyer.com / Try for free",
           position: "right",
         },
@@ -58,6 +58,27 @@ module.exports = {
             {
               label: "Flayyer.com",
               to: "https://flayyer.com?ref=docs",
+            },
+          ],
+        },
+        {
+          title: "Company",
+          items: [
+            {
+              label: "GitHub",
+              href: "https://github.com/flayyer",
+            },
+            {
+              label: "About",
+              href: "https://flayyer.com/about",
+            },
+            {
+              label: "Partnerships",
+              href: "https://flayyer.com/partners",
+            },
+            {
+              label: "Jobs",
+              href: "https://flayyer.com/jobs",
             },
           ],
         },
@@ -87,31 +108,6 @@ module.exports = {
             },
           ],
         },
-        {
-          title: "Company",
-          items: [
-            {
-              label: "GitHub",
-              href: "https://github.com/flayyer",
-            },
-            {
-              label: "Blog",
-              to: "blog",
-            },
-            {
-              label: "About",
-              href: "https://flayyer.com/about",
-            },
-            {
-              label: "Partnerships",
-              href: "https://flayyer.com/partners",
-            },
-            {
-              label: "Jobs",
-              href: "https://flayyer.com/jobs",
-            },
-          ],
-        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Flayyer.com`,
     },
@@ -128,6 +124,17 @@ module.exports = {
         sidebarPath: require.resolve("./sidebars-guides.js"),
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-blog",
+      {
+        /** Required for any multi-instance plugin */
+        id: "changelog",
+        /** URL route for the blog section of your site. *DO NOT* include a trailing slash. */
+        routeBasePath: "changelog",
+        /** Path to data on filesystem relative to site dir. */
+        path: "changelog",
       },
     ],
   ],
