@@ -20,7 +20,7 @@ export const jsManagers = [
 
 Using Yarn this will create a folder called `flayyer-app` in your current directory:
 
-```sh
+```bash title="Terminal.app"
 yarn create flayyer-app
 ```
 
@@ -30,7 +30,7 @@ yarn create flayyer-app
 
 Using NPM this will create a folder called `flayyer-app` in your current directory:
 
-```sh
+```bash title="Terminal.app"
 npx create-flayyer-app
 ```
 
@@ -62,7 +62,7 @@ The main benefit of having Flayyer inside your project is being able to reuse yo
 
 Install `react`, `react-dom` and `@flayyer/cli` with:
 
-```sh
+```bash title="Terminal.app"
 yarn add react react-dom
 yarn add --dev @flayyer/cli
 ```
@@ -87,7 +87,7 @@ Add the following to your `.gitignore`:
 
 Now you can start the development server with:
 
-```sh
+```bash title="Terminal.app"
 yarn run flayyer:start
 ```
 
@@ -97,7 +97,7 @@ yarn run flayyer:start
 
 Install `react`, `react-dom` and `@flayyer/cli` with:
 
-```sh
+```bash title="Terminal.app"
 npm install react react-dom
 npm install --save-dev @flayyer/cli
 ```
@@ -122,7 +122,7 @@ Add the following to your `.gitignore`:
 
 Now you can start the development server with:
 
-```sh
+```bash title="Terminal.app"
 npm run-script flayyer:start
 ```
 

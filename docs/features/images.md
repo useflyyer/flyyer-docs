@@ -5,13 +5,13 @@ title: Images and SVG
 
 We recommend creating a folder called `/static` or `/assets` and putting any image in that folder. This is optional, you can name the folder as you want.
 
-```sh
+```bash title="Terminal.app"
 mkdir assets
 ```
 
 To import files:
 
-```js {3,4}
+```jsx title="templates/main.js" {3,4}
 import React from "react";
 
 import background from "../static/background.jpg";

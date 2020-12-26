@@ -25,7 +25,7 @@ We are working on making font easier to import. But at the moment this is how yo
 
 Grab your custom font as `.woff` and `.woff2` format and place them inside a directory. Let's call that directory `/fonts` on the root of your repository.
 
-```sh
+```bash title="Terminal.app"
 mkdir fonts
 ```
 
@@ -40,7 +40,7 @@ PROJECT-NAME/
 
 Create a [style](features/styles.md) file and add the corresponding `@font-face`.
 
-```sh
+```bash title="Terminal.app"
 mkdir styles
 touch styles/fonts.css
 ```
@@ -66,7 +66,7 @@ touch styles/fonts.css
 
 **Done! Now you can use your custom fonts.**
 
-```js title="templates/main.js" {5}
+```jsx title="templates/main.js" {5}
 import React from "react"
 import styled from "styled-components"
 

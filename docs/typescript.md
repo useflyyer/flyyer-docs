@@ -16,7 +16,7 @@ export const jsManagers = [
 <Tabs groupId="js-manager" defaultValue="yarn" values={jsManagers}>
 <TabItem value="yarn">
 
-```sh
+```bash title="Terminal.app"
 yarn add --dev typescript @flayyer/flayyer-types @types/react
 ```
 
@@ -24,7 +24,7 @@ yarn add --dev typescript @flayyer/flayyer-types @types/react
 
 <TabItem value="npm">
 
-```sh
+```bash title="Terminal.app"
 npm i --save-dev typescript @flayyer/flayyer-types @types/react
 ```
 

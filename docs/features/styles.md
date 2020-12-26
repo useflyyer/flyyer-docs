@@ -5,7 +5,7 @@ title: Styles
 
 We recommend creating a folder for your styles, but this is optional. You can have style files anywhere.
 
-```sh
+```bash title="Terminal.app"
 mkdir styles
 ```
 
@@ -32,7 +32,7 @@ export const jsManagers = [
 
 If you need SCSS/SASS you must install an extra dependency:
 
-```sh
+```bash title="Terminal.app"
 yarn add --dev sass
 ```
 
@@ -42,7 +42,7 @@ yarn add --dev sass
 
 If you need SCSS/SASS you must install an extra dependency:
 
-```sh
+```bash
 npm i --save-dev sass
 ```
 
