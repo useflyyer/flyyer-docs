@@ -6,7 +6,9 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import clsx from "clsx";
 
-import styles from "./styles.module.css";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import styles from "./styles.module.scss";
 
 const features = [
   {
@@ -67,10 +69,16 @@ function Home() {
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
             <Link
-              className={clsx("button button--outline button--secondary button--lg", styles.getStarted)}
+              className={clsx(styles.button, "button button--secondary button--lg", styles.getStarted)}
               to={useBaseUrl("docs/")}
             >
-              Get Started
+              Create Flayyer app
+            </Link>
+            <Link
+              className={clsx(styles.button, "button button--secondary button--lg", styles.getStarted)}
+              to={useBaseUrl("docs/")}
+            >
+              Integration guides
             </Link>
           </div>
         </div>

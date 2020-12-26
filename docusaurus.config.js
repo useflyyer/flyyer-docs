@@ -10,23 +10,32 @@ module.exports = {
   projectName: "flayyer-docs", // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: "Flayyer",
+      title: "docs.Flayyer",
       logo: {
-        href: "https://flayyer.com",
+        // href: "https://flayyer.com",
+        href: "/",
         alt: "Flayyer logo",
         src: "img/logo.svg",
+        srcDark: "img/logo-dark.svg",
       },
       items: [
         {
-          to: "docs/",
-          activeBasePath: "docs",
-          label: "Documentation",
+          type: "doc",
           position: "left",
+          docId: "introduction",
+          label: "Documentation",
+        },
+        {
+          to: "/guides",
+          // docId: "guides",
+          label: "Guides",
+          position: "left",
+          activeBaseRegex: `/guides/`,
         },
         { to: "blog", label: "Blog", position: "left" },
         {
           href: "https://flayyer.com",
-          label: "Try for free",
+          label: "Flayyer.com / Try for free",
           position: "right",
         },
         {
@@ -107,22 +116,36 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} Flayyer.com`,
     },
   },
+  plugins: [
+    "docusaurus-plugin-sass",
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "guides",
+        path: "guides",
+        editUrl: "https://github.com/flayyer/flayyer-docs/edit/master/guides/",
+        routeBasePath: "guides",
+        sidebarPath: require.resolve("./sidebars-guides.js"),
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+      },
+    ],
+  ],
   presets: [
     [
       "@docusaurus/preset-classic",
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
+          path: "docs",
           editUrl: "https://github.com/flayyer/flayyer-docs/edit/master/docs/",
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
           editUrl: "https://github.com/flayyer/flayyer-docs/edit/master/blog/",
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: require.resolve("./src/css/custom.scss"),
         },
       },
     ],
