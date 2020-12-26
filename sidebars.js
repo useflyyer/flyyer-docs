@@ -32,5 +32,11 @@ module.exports = {
       collapsed: false,
       items: ["cli/flayyer-cli"],
     },
+    {
+      type: "category",
+      label: "Advanced",
+      collapsed: false,
+      items: ["advanced/automatic-deploys"],
+    },
   ],
 };
