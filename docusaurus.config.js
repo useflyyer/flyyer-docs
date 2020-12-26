@@ -49,15 +49,15 @@ module.exports = {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "Pages",
           items: [
             {
-              label: "Style Guide",
-              to: "docs/",
+              label: "Flayyer.io",
+              to: "https://flayyer.io?ref=docs",
             },
             {
-              label: "Second Doc",
-              to: "docs/doc2/",
+              label: "Flayyer.com",
+              to: "https://flayyer.com?ref=docs",
             },
           ],
         },
