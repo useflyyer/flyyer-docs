@@ -12,7 +12,12 @@ module.exports = {
       type: "category",
       label: "Getting Started",
       collapsed: false,
-      items: ["requirements", "setup", "project-structure", "typescript"],
+      items: [
+        "getting-started/requirements",
+        "getting-started/setup",
+        "getting-started/project-structure",
+        "getting-started/typescript",
+      ],
     },
     {
       type: "category",
