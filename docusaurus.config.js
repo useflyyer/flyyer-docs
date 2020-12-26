@@ -121,7 +121,7 @@ module.exports = {
       {
         id: "guides",
         path: "guides",
-        editUrl: "https://github.com/flayyer/flayyer-docs/edit/master/guides/",
+        editUrl: "https://github.com/flayyer/flayyer-docs/edit/main/",
         routeBasePath: "guides",
         sidebarPath: require.resolve("./sidebars-guides.js"),
         showLastUpdateAuthor: true,
@@ -137,6 +137,7 @@ module.exports = {
         routeBasePath: "changelog",
         /** Path to data on filesystem relative to site dir. */
         path: "changelog",
+        editUrl: "https://github.com/flayyer/flayyer-docs/edit/main/",
       },
     ],
   ],
@@ -147,11 +148,11 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           path: "docs",
-          editUrl: "https://github.com/flayyer/flayyer-docs/edit/master/docs/",
+          editUrl: "https://github.com/flayyer/flayyer-docs/edit/main/",
         },
         blog: {
           showReadingTime: true,
-          editUrl: "https://github.com/flayyer/flayyer-docs/edit/master/blog/",
+          editUrl: "https://github.com/flayyer/flayyer-docs/edit/main/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.scss"),
