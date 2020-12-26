@@ -9,6 +9,8 @@ module.exports = {
   organizationName: "flayyer", // Usually your GitHub org/user name.
   projectName: "flayyer-docs", // Usually your repo name.
   themeConfig: {
+    respectPrefersColorScheme: true,
+    // image: "img/logo.svg",
     navbar: {
       title: "docs.Flayyer",
       logo: {

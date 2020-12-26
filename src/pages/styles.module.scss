@@ -39,6 +39,12 @@
 }
 
 .featureImage {
-  height: 200px;
-  width: 200px;
+  height: 180px;
+  width: 250px;
+  object-fit: contain;
+  object-position: bottom;
+  margin-bottom: 1em;
+}
+.featureImageDark {
+  filter: brightness(0) invert(0.9);
 }

@@ -1,8 +1,11 @@
+/* eslint-disable react/jsx-no-target-blank */
+
 import React from "react";
 
 import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import useThemeContext from "@theme/hooks/useThemeContext";
 import Layout from "@theme/Layout";
 import clsx from "clsx";
 
@@ -10,50 +13,62 @@ import clsx from "clsx";
 // @ts-ignore
 import styles from "./styles.module.scss";
 
-const features = [
+const FEATURES = [
   {
-    title: "Easy to Use",
-    imageUrl: "img/undraw_docusaurus_mountain.svg",
+    title: "Create previews now",
+    imageUrl: "img/feature-design.svg",
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and used to get your website up and running
-        quickly.
+        We will guide you trought all the required steps to create your own designs and bring them to life with React
+        and Vue.
       </>
     ),
   },
   {
-    title: "Focus on What Matters",
-    imageUrl: "img/undraw_docusaurus_tree.svg",
+    title: "Concise and up-to-date",
+    imageUrl: "img/feature-search.svg",
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go ahead and move your docs into the{" "}
-        <code>docs</code> directory.
+        These are the official docs and guides, lead by the same people building{" "}
+        <a href="https://flayyer.io" target="_blank">
+          Flayyer.io
+        </a>
+        {" and "}
+        <a href="https://flayyer.com" target="_blank">
+          Flayyer.com
+        </a>
+        .
       </>
     ),
   },
   {
-    title: "Powered by React",
-    imageUrl: "img/undraw_docusaurus_react.svg",
+    title: "Community driven",
+    imageUrl: "img/feature-collaborate.svg",
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can be extended while reusing the same
-        header and footer.
+        All of this pages are{" "}
+        <a href="https://github.com/flayyer/flayyer-docs" target="_blank">
+          open-source
+        </a>{" "}
+        and open to every contribution. {"Let's"} build a better community!
       </>
     ),
   },
 ];
 
 function Feature({ imageUrl, title, description }: any) {
+  const { isDarkTheme } = useThemeContext();
+
   const imgUrl = useBaseUrl(imageUrl);
   return (
     <div className={clsx("col col--4", styles.feature)}>
       {imgUrl && (
         <div className="text--center">
-          <img className={styles.featureImage} src={imgUrl} alt={title} />
+          <img className={clsx(styles.featureImage, isDarkTheme && styles.featureImageDark)} src={imgUrl} alt={title} />
         </div>
       )}
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <h3 className="text--center">{title}</h3>
+      <p className="text--center">{description}</p>
     </div>
   );
 }
@@ -72,7 +87,7 @@ function Home() {
               className={clsx(styles.button, "button button--secondary button--lg", styles.getStarted)}
               to={useBaseUrl("docs/")}
             >
-              Create Flayyer app
+              Create Flayyers
             </Link>
             <Link
               className={clsx(styles.button, "button button--secondary button--lg", styles.getStarted)}
@@ -84,11 +99,11 @@ function Home() {
         </div>
       </header>
       <main>
-        {features && features.length > 0 && (
+        {FEATURES && FEATURES.length > 0 && (
           <section className={styles.features}>
             <div className="container">
               <div className="row">
-                {features.map((props, idx) => (
+                {FEATURES.map((props, idx) => (
                   <Feature key={idx} {...props} />
                 ))}
               </div>
