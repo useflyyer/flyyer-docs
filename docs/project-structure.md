@@ -1,6 +1,6 @@
 ---
 id: project-structure
-title: Project Structure
+title: Project structure
 ---
 
 [create-flayyer-app]: https://npmjs.com/package/create-flayyer-app

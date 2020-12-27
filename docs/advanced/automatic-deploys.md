@@ -1,6 +1,6 @@
 ---
 id: automatic-deploys
-title: Automatic Deploys
+title: Automatic deploys
 ---
 
 [flayyer-actions]: https://github.com/flayyer/flayyer-actions

@@ -52,7 +52,7 @@ export default function DemoTemplate({ variables }) {
 ```
 
 :::tip
-To read more about variables and how to support objects and array go to [Complex Variables](./advanced/complex-variables.md).
+To read more about variables and how to support objects and array go to [Complex variables](./advanced/complex-variables.md).
 :::
 
 ### Deck or Project
@@ -65,7 +65,17 @@ Every user belongs to an organization. We call this entities "tenants" or "compa
 
 ## URL anatomy
 
-Every Flayyer.io URL is built around this schema. For variables refer to [Variables](#variables) and [Complex Variables](./advanced/complex-variables.md).
+Every Flayyer.io URL is built around this schema. For variables refer to [Variables](#variables) and [Complex variables](./advanced/complex-variables.md).
+
+* `:tenant` — is the Tenant's slug
+* `:deck` — is the Deck's slug
+* `:template` — is the Template's slug
+* `:extension` — the extension of the rendered image
+  * Possible values: `png`, `webp`, `jpeg` (`jpg` is an alias)
+  * Defaults to `jpeg`.
+* `:version` — The version control number of your deck.
+  * Defaults to `_` which means _latest version_.
+  * Omit to always use the latest version (recommended).
 
 :::note
 Please note that `:tenant`, `:deck` and `:template` are always **required**, everything else is optional.

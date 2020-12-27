@@ -21,7 +21,14 @@ module.exports = {
       type: "category",
       label: "Basic features",
       collapsed: false,
-      items: ["features/templates", "features/components", "features/styles", "features/images", "features/fonts"],
+      items: [
+        "features/templates",
+        "features/components",
+        "features/styles",
+        "features/images",
+        "features/fonts",
+        "features/agent-detection",
+      ],
     },
     {
       type: "doc",
@@ -36,12 +43,13 @@ module.exports = {
     {
       type: "category",
       label: "Advanced",
-      collapsed: false,
+      // collapsed: false,
       items: [
         "advanced/complex-variables",
         "advanced/typescript",
         "advanced/automatic-deploys",
         "advanced/monorepo",
+        "advanced/existing-projects",
       ].sort(),
     },
   ],

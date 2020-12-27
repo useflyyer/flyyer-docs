@@ -1,6 +1,6 @@
 ---
 id: complex-variables
-title: Complex Variables
+title: Complex variables
 ---
 
 Variables are passed through the unique URL of a flayyer as **queryparams**.

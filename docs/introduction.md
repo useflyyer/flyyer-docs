@@ -14,6 +14,8 @@ This documentation is intended for developers who want to integrate Flayyer with
 
 If you have any questions related to Flayyer you can reach out to us via [Twitter][twitter], [Instagram][instagram] or by sending an email to [help@flayyer.com][help-email].
 
+![a row of 5 demo images](/img/images/row.png)
+
 ## SEO is good
 
 Nowadays people talk about SEO and how important it is. They are right! Your site needs to be easy to find on Google and having a better positioning than your competition is crucial to overcome the already saturated global market.
@@ -34,7 +36,11 @@ Remember when YouTube videos used to have very simple thumbnail previews? Those 
 
 **Flayyer enables companies to present the best possible links for every page of their website when it is shared**. You don't need to manually create all of yours link previews. Just take a Flayyer template and use it everywhere to superpower your website.
 
-### Who is Flayyer for?
+We guarantee the best possible links for each social media platform.
+
+![multiple agents demo](/img/images/agents.png)
+
+## Who is Flayyer for?
 
 You might not need this service if you have a small business, because you can craft by hand any image preview you may need.
 

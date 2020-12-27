@@ -71,3 +71,7 @@ export default function MainTemplate({ agent, variables }: TemplateProps<Variabl
 :::note
 Remember to use the extension `.tsx` for Typescript files.
 :::
+
+:::tip
+Visit the repository [@flayyer/flayyer-types](https://github.com/flayyer/flayyer-types) for more info regarding types.
+:::
