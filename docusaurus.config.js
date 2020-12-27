@@ -11,6 +11,9 @@ module.exports = {
   themeConfig: {
     respectPrefersColorScheme: true,
     // image: "img/logo.svg",
+    prism: {
+      additionalLanguages: ["erb", "ruby"],
+    },
     navbar: {
       title: "docs.Flayyer",
       logo: {

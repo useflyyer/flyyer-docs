@@ -23,7 +23,7 @@ rails generate meta_tags:install
 
 Add `display_meta_tags` to your _layouts_ files:
 
-```erb title="app/views/layouts/application.html.erb" {9}
+```ruby title="app/views/layouts/application.html.erb" {9}
 <!DOCTYPE html>
 <html>
   <head>
