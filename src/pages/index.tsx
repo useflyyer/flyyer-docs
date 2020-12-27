@@ -73,7 +73,7 @@ function Feature({ imageUrl, title, description }: any) {
   );
 }
 
-function Home() {
+export default function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
   return (
@@ -84,14 +84,14 @@ function Home() {
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
             <Link
-              className={clsx(styles.button, "button button--secondary button--lg", styles.getStarted)}
+              className={clsx(styles.button, "button button--outline button--lg", styles.getStarted)}
               to={useBaseUrl("docs/")}
             >
               Create Flayyers
             </Link>
             <Link
               className={clsx(styles.button, "button button--secondary button--lg", styles.getStarted)}
-              to={useBaseUrl("docs/")}
+              to={useBaseUrl("guides/")}
             >
               Integration guides
             </Link>
@@ -114,5 +114,3 @@ function Home() {
     </Layout>
   );
 }
-
-export default Home;
