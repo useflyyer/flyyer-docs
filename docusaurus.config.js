@@ -24,12 +24,12 @@ module.exports = {
         {
           type: "doc",
           position: "left",
-          docId: "introduction",
+          docId: "getting-started",
           label: "Documentation",
         },
         {
           to: "/guides",
-          // docId: "guides",
+          docId: "introduction",
           label: "Guides",
           position: "left",
           activeBaseRegex: `/guides/`,

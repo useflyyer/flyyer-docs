@@ -2,7 +2,7 @@ module.exports = {
   docs: [
     {
       type: "doc",
-      id: "introduction",
+      id: "getting-started",
     },
     {
       type: "doc",
@@ -12,11 +12,6 @@ module.exports = {
       type: "doc",
       id: "concepts",
     },
-    {
-      type: "doc",
-      id: "getting-started",
-    },
-
     {
       type: "category",
       label: "Basic features",
