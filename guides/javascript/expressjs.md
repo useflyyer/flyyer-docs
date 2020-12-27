@@ -80,6 +80,17 @@ router.get('/', function(req, res, next) {
 });
 ```
 
+## Template engines
+
+Use any template engine you like.
+
+:::caution
+Rendering `<meta />` inside the `<body />` of your pages **will no have the desired effect**.
+Make sure you always render Flayyer URLs in the `<head />` of your views.
+:::
+
+### Jade
+
 On your layout views:
 
 ```jade title="views/layout.jade" {2-3}
@@ -88,8 +99,3 @@ head
   meta(property='twitter:image', content='#{flayyer}')
   meta(property='twitter:card', content='summary_large_image')
 ```
-
-:::caution
-Rendering `<meta />` inside the `<body />` of your pages **will no have the desired effect**.
-Make sure you always render Flayyer URLs in the `<head />` of your views.
-:::

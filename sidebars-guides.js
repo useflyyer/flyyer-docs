@@ -7,13 +7,38 @@ module.exports = {
     {
       type: "category",
       label: "JavaScript",
-      collapsed: false,
       items: [
         //
         "javascript/flayyer-js",
         "javascript/nextjs",
         "javascript/gatsbyjs",
         "javascript/expressjs",
+      ],
+    },
+    {
+      type: "category",
+      label: "Python",
+      items: [
+        //
+        "python/flayyer",
+        "python/django",
+      ],
+    },
+    {
+      type: "category",
+      label: "Ruby",
+      items: [
+        //
+        "ruby/flayyer",
+        "ruby/ruby-on-rails",
+      ],
+    },
+    {
+      type: "category",
+      label: "PHP",
+      items: [
+        //
+        "php/flayyer",
       ],
     },
   ],
