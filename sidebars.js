@@ -10,21 +10,22 @@ module.exports = {
     },
     {
       type: "doc",
-      id: "setup",
+      id: "concepts",
     },
     {
       type: "doc",
-      id: "project-structure",
+      id: "getting-started",
     },
-    {
-      type: "doc",
-      id: "typescript",
-    },
+
     {
       type: "category",
       label: "Basic features",
       collapsed: false,
       items: ["features/templates", "features/components", "features/styles", "features/images", "features/fonts"],
+    },
+    {
+      type: "doc",
+      id: "project-structure",
     },
     {
       type: "category",
@@ -36,7 +37,12 @@ module.exports = {
       type: "category",
       label: "Advanced",
       collapsed: false,
-      items: ["advanced/automatic-deploys"],
+      items: [
+        "advanced/complex-variables",
+        "advanced/typescript",
+        "advanced/automatic-deploys",
+        "advanced/monorepo",
+      ].sort(),
     },
   ],
 };

@@ -39,7 +39,7 @@ npm install --save-dev @flayyer/cli
 </Tabs>
 
 :::note
-This module is included when creating a project with [`create-flayyer-app`](../setup.md)
+This module is included when creating a project with [`create-flayyer-app`](../getting-started.md)
 :::
 
 ## flayyer.config.js
@@ -107,6 +107,10 @@ Every script here assumes you have the following `package.json`:
 ### flayyer start
 
 [flayyer-studio]: https://flayyer.github.io/flayyer-studio/
+
+:::caution
+Please use Google Chrome, Firefox or Opera. Safari is not widely supported.
+:::
 
 This command starts a development server using Parcel.js. Then open [Flayyer Studio][flayyer-studio] in your browser for a better developer experience.
 
@@ -217,7 +221,7 @@ FLAYYER_KEY=...
 <Tabs groupId="js-manager" defaultValue="yarn" values={jsManagers}>
 <TabItem value="yarn">
 
-When you are ready run:
+When you are ready to deploy run:
 
 ```bash title="Terminal.app"
 yarn run deploy
@@ -227,7 +231,7 @@ yarn run deploy
 
 <TabItem value="npm">
 
-When you are ready run:
+When you are ready to deploy run:
 
 ```bash title="Terminal.app"
 npm run-script deploy
