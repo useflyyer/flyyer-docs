@@ -102,3 +102,7 @@ https://flayyer.io/v2/:tenant/:deck/:template.:version.:extension?variable=value
 # Example:
 https://flayyer.io/v2/flayyer/landing/demo.1608497482.png?title=Title&description=Description+text
 ```
+
+:::tip
+To easily compose and format Flayyer URLs please use one of our [libraries](libraries.md).
+:::

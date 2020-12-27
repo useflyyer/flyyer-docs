@@ -36,6 +36,10 @@ module.exports = {
       items: ["cli/flayyer-cli"],
     },
     {
+      type: "doc",
+      id: "libraries",
+    },
+    {
       type: "category",
       label: "Advanced",
       // collapsed: false,
