@@ -35,7 +35,7 @@ yarn create flayyer-app my-project
 Using NPM this will create a folder called `my-project` in your current directory:
 
 ```bash title="Terminal.app"
-npx create-flayyer-app my-project
+npm init flayyer-app my-project
 ```
 
 </TabItem>

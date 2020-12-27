@@ -12,6 +12,8 @@ module.exports = {
         //
         "javascript/flayyer-js",
         "javascript/nextjs",
+        "javascript/gatsbyjs",
+        "javascript/expressjs",
       ],
     },
   ],
