@@ -51,7 +51,7 @@ module.exports = {
       ],
     },
     footer: {
-      style: "dark",
+      style: "light",
       links: [
         {
           title: "Pages",
@@ -114,7 +114,16 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Flayyer.com`,
+      logo: {
+        alt: "Flayyer logo",
+        src: "img/logo.svg",
+        href: "https://flayyer.com?ref=docs",
+      },
+      copyright: `Copyright © ${new Date().getFullYear()} Flayyer.com — Santiago, Chile`,
+    },
+    gtag: {
+      trackingID: "G-15BQ7WPJJL",
+      anonymizeIP: true,
     },
   },
   plugins: [
