@@ -10,6 +10,9 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+
+  // Do not change on dark mode
+  --ifm-hero-text-color: white;
 }
 
 @media screen and (max-width: 966px) {
@@ -29,6 +32,7 @@
   margin-bottom: 12px;
   margin-left: 6px;
   margin-right: 6px;
+  border: 1px solid white;
 }
 
 .features {

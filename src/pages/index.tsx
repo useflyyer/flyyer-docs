@@ -85,6 +85,7 @@ export default function Home() {
           <div className={styles.buttons}>
             <Link
               className={clsx(styles.button, "button button--outline button--lg", styles.getStarted)}
+              style={{ color: "white" }}
               to={useBaseUrl("docs/")}
             >
               Create Flayyers
