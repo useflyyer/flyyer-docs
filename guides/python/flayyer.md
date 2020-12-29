@@ -13,12 +13,12 @@ We have created a library that can help you creating valid Flayyer urls and so a
 
 It is built as a Python package and is very lightweight and has zero dependencies. You can check the source-code on our GitHub: [flayyer/flayyer-python][flayyer-python].
 
-
 <!-- MDX variables -->
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 export const pyManagers = [
   {label: "Poetry", value: "poetry"},
+  {label: "Pipenv", value: "pipenv"},
   {label: "Pip", value: "pip"},
 ]
 
@@ -33,12 +33,23 @@ poetry add flayyer
 
 </TabItem>
 
+<TabItem value="pipenv">
+
+Install it with [Pipenv](https://pipenv.pypa.io/), the Python dev workflow for humans.
+
+```bash title="Terminal.app"
+pipenv install flayyer
+```
+
+</TabItem>
+
 <TabItem value="pip">
 
 You can also use [pip](https://pip.pypa.io/en/stable/).
 
 ```bash title="Terminal.app"
 pip install flayyer
+pip freeze > requirements.txt
 ```
 
 </TabItem>
