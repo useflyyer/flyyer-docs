@@ -30,7 +30,7 @@ module.exports = {
       items: [
         //
         "ruby/flayyer",
-        "ruby/ruby-on-rails",
+        "ruby/rails",
       ],
     },
     {

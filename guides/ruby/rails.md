@@ -1,5 +1,5 @@
 ---
-id: ruby-on-rails
+id: rails
 title: Ruby on Rails
 ---
 
