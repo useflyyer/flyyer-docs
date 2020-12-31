@@ -96,6 +96,6 @@ On your layout views:
 ```jade title="views/layout.jade" {2-3}
 head
   meta(property='og:image', content='#{flayyer}')
-  meta(property='twitter:image', content='#{flayyer}')
-  meta(property='twitter:card', content='summary_large_image')
+  meta(name='twitter:image', content='#{flayyer}')
+  meta(name='twitter:card', content='summary_large_image')
 ```

@@ -66,8 +66,8 @@ export default function PageIndex() {
         <title>My page title</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta property="og:image" content={flayyer.href()} />
-        <meta property="twitter:image" content={flayyer.href()} />
-        <meta property="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={flayyer.href()} />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <p>Hello world!</p>
     </div>

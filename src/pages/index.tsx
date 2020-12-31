@@ -8,6 +8,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useThemeContext from "@theme/hooks/useThemeContext";
 import Layout from "@theme/Layout";
 import clsx from "clsx";
+import dedent from "dedent";
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -77,7 +78,12 @@ export default function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
   return (
-    <Layout title={`Hello from ${siteConfig.title}`} description="Description will go into a meta tag in <head />">
+    <Layout
+      title={`Create dynamic image previews and integrate them`}
+      description={dedent`
+        Enables companies to present the best possible links for every page of their website when it is shared. Just take a Flayyer template and use it everywhere to superpower your website.
+      `}
+    >
       <header className={clsx("hero hero--primary", styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
