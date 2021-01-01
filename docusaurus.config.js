@@ -171,5 +171,33 @@ module.exports = {
         },
       },
     ],
+    [
+      "@flayyer/docusaurus-preset",
+      {
+        main: {
+          tenant: "flayyer",
+          deck: "flayyer-docs",
+          template: "page",
+        },
+        docs: {
+          tenant: "flayyer",
+          deck: "flayyer-docs",
+          template: "page",
+          // variables: {
+          //   title: "{{description}}",
+          //   section: "{{title}}",
+          // },
+        },
+        blog: {
+          tenant: "flayyer",
+          deck: "flayyer-docs",
+          template: "page",
+          // variables: {
+          //   title: "{{description}}",
+          //   section: "{{title}}",
+          // },
+        },
+      },
+    ],
   ],
 };

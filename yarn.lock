@@ -1455,6 +1455,25 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@flayyer/docusaurus-preset@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@flayyer/docusaurus-preset/-/docusaurus-preset-0.1.2.tgz#21f62e767194e6b1d43cac6a7b92dfee59df0e7f"
+  integrity sha512-ixErNP2xR3J5wrDG0JrnAwtSkDbDjYMfs53/vLuuZeDlQk/wqi0EJvF1O8PgqkUVtbOhun9glI6/dBX4INOzyw==
+  dependencies:
+    "@flayyer/docusaurus-theme" "^0.1.2"
+    debug "^4.3.1"
+
+"@flayyer/docusaurus-theme@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@flayyer/docusaurus-theme/-/docusaurus-theme-0.1.2.tgz#8133bbce189caac5ef557268ac5ac40e8edde69c"
+  integrity sha512-8ZQTzi6FoPNYlSzxiaGYBEKRnZy0JeQruRhnE9MpYosL0pS7YTEOVwtrLG5Yd2CzovL59TaWFSSkCpxt3zaXZQ==
+  dependencies:
+    "@flayyer/flayyer" "^1.2.0"
+    "@flayyer/flayyer-hook" "^1.2.1"
+    debug "^4.3.1"
+    lodash "^4.17.20"
+    templite "^1.1.0"
+
 "@flayyer/eslint-config@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@flayyer/eslint-config/-/eslint-config-1.0.1.tgz#9d534ce4c1f0961d26f45e50134d13b5e1adc46d"
@@ -1470,6 +1489,19 @@
     eslint-plugin-prettier "^3.3.0"
     eslint-plugin-react "^7.21.5"
     eslint-plugin-react-hooks "^4.2.0"
+
+"@flayyer/flayyer-hook@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@flayyer/flayyer-hook/-/flayyer-hook-1.2.1.tgz#6a0bc905c3e90dcc87a36470c8e1d9c46434683f"
+  integrity sha512-Krmb9JkYXQLv6l9P8mwk/eFhDMGFq/QQoKrQEUXjIbHj5K/5EIuZDBeKZ7I/l5H4MHJtjyeJGG/YXGJ7TbQ+Ew==
+
+"@flayyer/flayyer@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@flayyer/flayyer/-/flayyer-1.2.0.tgz#6f085d7081ebfe133bd90b60c9ffc8cc6515219d"
+  integrity sha512-IeIEta30GIeyCPY/u6n21EcMRbrgWmEeL9nLC+x8lWQCKbGvpqH4PBhFgGuLz5wT2zq/tpu6Xq/wGTyiLJKy7g==
+  dependencies:
+    "@types/qs" "^6.9.5"
+    qs "^6.9.4"
 
 "@hapi/hoek@^9.0.0":
   version "9.1.0"
@@ -1792,6 +1824,11 @@
   version "1.5.4"
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.4.tgz#15925414e0ad2cd765bfef58842f7e26a7accb24"
   integrity sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==
+
+"@types/qs@^6.9.5":
+  version "6.9.5"
+  resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.9.5.tgz#434711bdd49eb5ee69d90c1d67c354a9a8ecb18b"
+  integrity sha512-/JHkVHtx/REVG0VVToGRGH2+23hsYLHdyG+GrvoUGlGAd0ErauXDyvHtRI/7H7mzLm+tBCKA7pfcpkQ1lf58iQ==
 
 "@types/react-helmet@^6.1.0":
   version "6.1.0"
@@ -3964,7 +4001,7 @@ debug@^3.1.1, debug@^3.2.5:
   dependencies:
     ms "^2.1.1"
 
-debug@^4.0.1, debug@^4.1.0, debug@^4.1.1:
+debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@^4.3.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.1.tgz#f0d229c505e0c6d8c49ac553d1b13dc183f6b2ee"
   integrity sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==
@@ -9271,6 +9308,11 @@ qs@6.7.0:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
   integrity sha512-VCdBRNFTX1fyE7Nb6FYoURo/SPe62QCaAyzJvUjwRaIsc+NePBEniHlvxFmmX56+HZphIGtV0XeCirBtpDrTyQ==
 
+qs@^6.9.4:
+  version "6.9.4"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.9.4.tgz#9090b290d1f91728d3c22e54843ca44aea5ab687"
+  integrity sha512-A1kFqHekCTM7cz0udomYUoYNWjBebHm/5wzU/XqrBRBNWectVH0QIiN+NEcZ0Dte5hvzHwbr8+XQmguPhJ6WdQ==
+
 qs@~6.5.2:
   version "6.5.2"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
@@ -10885,6 +10927,11 @@ tar@^6.0.2:
     minizlib "^2.1.1"
     mkdirp "^1.0.3"
     yallist "^4.0.0"
+
+templite@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/templite/-/templite-1.1.0.tgz#4f2eab732234fdac996628427d72817b3a47ce06"
+  integrity sha512-DtXicIurbnJS5/eu3nMLLspt4bZ8F/811IpcI7DgSE63UhES6ld3CxoTcLXBuGhliYx2wMVmyNzHf3c7mqwIIA==
 
 term-size@^2.1.0:
   version "2.2.1"
