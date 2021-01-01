@@ -13,6 +13,7 @@ module.exports = {
         "javascript/nextjs",
         "javascript/gatsbyjs",
         "javascript/expressjs",
+        "javascript/docusaurus",
       ],
     },
     {
