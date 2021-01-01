@@ -3,6 +3,8 @@ id: nextjs
 title: Next.js
 ---
 
+> Repository: https://github.com/flayyer/integration-examples/tree/main/examples/next
+
 We are glad you are here, our [landing page and dashboard](https://flayyer.com) sites are built with [Next.js](https://nextjs.org/).
 
 The JavaScript module [@flayyer/flayyer](./flayyer-js.md) is the only dependency you will need. In this guide we are going to show how it can be integrated with Next.js. This guide is only a basic example and you should adapt it to your needs.
