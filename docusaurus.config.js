@@ -1,3 +1,5 @@
+const ALGOLIA_KEY = process.env.ALGOLIA_KEY;
+
 module.exports = {
   title: "Flayyer docs",
   tagline: "CLI documentation and integration guides",
@@ -13,6 +15,15 @@ module.exports = {
     // image: "img/logo.svg",
     prism: {
       additionalLanguages: ["erb", "ruby"],
+    },
+    algolia: {
+      apiKey: ALGOLIA_KEY,
+      indexName: "flayyer",
+      // Optional: see doc section bellow
+      contextualSearch: false,
+      // Optional: Algolia search parameters
+      searchParameters: {},
+      //... other Algolia params
     },
     navbar: {
       title: "docs.Flayyer",
