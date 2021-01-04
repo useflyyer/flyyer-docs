@@ -16,4 +16,4 @@ Because in Flayyer.com we love open-source, all of this guides and docs and chan
 
 **Feel free to contribute 😃**
 
-![alt](/img/changelog/hello-cat.svg)
+![cat with a phone saying hello](/img/changelog/hello-cat.svg)

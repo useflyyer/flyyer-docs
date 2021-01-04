@@ -1,3 +1,8 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+
+const dotenv = require("dotenv");
+dotenv.config();
+
 const ALGOLIA_KEY = process.env.ALGOLIA_KEY;
 
 module.exports = {
