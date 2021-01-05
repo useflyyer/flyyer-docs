@@ -7,6 +7,7 @@ module.exports = {
     {
       type: "category",
       label: "JavaScript",
+      collapsed: false,
       items: [
         //
         "javascript/flayyer-js",
@@ -19,6 +20,7 @@ module.exports = {
     {
       type: "category",
       label: "Python",
+      collapsed: false,
       items: [
         //
         "python/flayyer",
@@ -28,6 +30,7 @@ module.exports = {
     {
       type: "category",
       label: "Ruby",
+      collapsed: false,
       items: [
         //
         "ruby/flayyer",
@@ -37,9 +40,11 @@ module.exports = {
     {
       type: "category",
       label: "PHP",
+      collapsed: false,
       items: [
         //
         "php/flayyer",
+        "php/wordpress",
       ],
     },
   ],
