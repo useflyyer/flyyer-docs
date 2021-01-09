@@ -19,7 +19,7 @@ module.exports = {
     respectPrefersColorScheme: true,
     // image: "img/logo.svg",
     prism: {
-      additionalLanguages: ["erb", "ruby"],
+      additionalLanguages: ["erb", "ruby", "liquid"],
     },
     algolia: {
       apiKey: ALGOLIA_KEY,

@@ -5,6 +5,10 @@ module.exports = {
       id: "introduction",
     },
     {
+      type: "doc",
+      id: "shopify",
+    },
+    {
       type: "category",
       label: "JavaScript",
       collapsed: false,
