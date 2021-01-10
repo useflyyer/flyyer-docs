@@ -5,8 +5,11 @@
  * work well for content-centric websites.
  */
 
+ @import url('https://rsms.me/inter/inter.css');
+
 /* You can override the default Infima variables here. */
 :root {
+  --ifm-font-family-base: 'Inter var';
   --ifm-color-primary: #4346DE;
   --ifm-color-primary-dark: #262685;
   --ifm-color-primary-darker: #1F2937;
