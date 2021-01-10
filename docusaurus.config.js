@@ -20,6 +20,8 @@ module.exports = {
     // image: "img/logo.svg",
     prism: {
       additionalLanguages: ["erb", "ruby", "liquid"],
+      // theme: require("prism-react-renderer/themes/github"),
+      // darkTheme: require("prism-react-renderer/themes/vsDark"),
     },
     algolia: {
       apiKey: ALGOLIA_KEY,
@@ -29,6 +31,13 @@ module.exports = {
       // Optional: Algolia search parameters
       searchParameters: {},
       //... other Algolia params
+    },
+    announcementBar: {
+      id: "announcement-bar",
+      content: `👉 Preview your links with <a target="_blank" rel="noopener noreferrer" href="https://socialpreview.io?ref=docs">SocialPreview.io</a>, it's free!`,
+      backgroundColor: "#4346DE", // Defaults to `#fff`.
+      textColor: "#fff", // Defaults to `#000`.
+      isCloseable: false, // Defaults to `true`.
     },
     navbar: {
       title: "docs.Flayyer",
@@ -56,7 +65,7 @@ module.exports = {
         { to: "changelog", label: "Changelog", position: "left" },
         {
           href: "https://flayyer.com?ref=docs",
-          label: "Flayyer.com / Try for free",
+          label: "Flayyer.com",
           position: "right",
         },
         {
