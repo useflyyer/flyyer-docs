@@ -22,7 +22,7 @@ export const jsManagers = [
 <Tabs groupId="js-manager" defaultValue="yarn" values={jsManagers}>
 <TabItem value="yarn">
 
-Using Yarn this will create a folder called `my-project` in your current directory:
+Using Yarn will create a folder called `my-project` in your current directory:
 
 ```bash title="Terminal.app"
 yarn create flayyer-app my-project
@@ -32,7 +32,7 @@ yarn create flayyer-app my-project
 
 <TabItem value="npm">
 
-Using NPM this will create a folder called `my-project` in your current directory:
+Using NPM will create a folder called `my-project` in your current directory:
 
 ```bash title="Terminal.app"
 npm init flayyer-app my-project
@@ -41,7 +41,7 @@ npm init flayyer-app my-project
 </TabItem>
 </Tabs>
 
-You will be prompted with multiple starting setups. You can chose the one that suites best for you.
+You will be prompted with multiple starting setups. You can choose the one that suites best for you.
 
 ```txt {2}
 ? Select the best template setup for you …  You can customize the template later
@@ -132,7 +132,7 @@ This command starts a development server using Parcel.js. Then open [Flayyer Stu
 
 ## Deploy
 
-Work on your template, try changing the variables and when you are ready run:
+Work on your template, try changing the variables and when you are ready, run:
 
 <Tabs groupId="js-manager" defaultValue="yarn" values={jsManagers}>
 <TabItem value="yarn">
@@ -159,7 +159,7 @@ To upload the final bundled templates to our cloud you must have an API Key.
 <Tabs groupId="js-manager" defaultValue="yarn" values={jsManagers}>
 <TabItem value="yarn">
 
-When you are ready to deploy run:
+When you are ready to deploy, run:
 
 ```bash title="Terminal.app"
 yarn run deploy
@@ -169,7 +169,7 @@ yarn run deploy
 
 <TabItem value="npm">
 
-When you are ready to deploy run:
+When you are ready to deploy, run:
 
 ```bash title="Terminal.app"
 npm run-script deploy

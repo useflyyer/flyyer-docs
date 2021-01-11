@@ -7,7 +7,7 @@ title: flayyer package
 
 Learn how to ingrate Flayyer with any PHP framework. Here you will find the required documentation to use your templates on your websites. **Note: PHP 7.1+ is required.**
 
-We have created a library that can help you creating valid Flayyer urls and so avoiding any potential issues with manually encoding values.
+We have created a library that can help you creating valid Flayyer URLs and so avoiding any potential issues with manually encoding values.
 
 It is built as a PHP Composer package and is very lightweight and has zero dependencies. You can check the source-code on our GitHub: [flayyer/flayyer-php](https://github.com/flayyer/flayyer-php).
 

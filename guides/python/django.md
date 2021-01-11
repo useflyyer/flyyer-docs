@@ -5,7 +5,7 @@ title: Django
 
 > Repository: https://github.com/flayyer/integration-examples/tree/main/examples/django
 
-Basically we are going to use [flayyer/flayyer-python](https://github.com/flayyer/flayyer-python) to format Flayyer URL and [nephila/django-meta](https://github.com/nephila/django-meta) to render them into the `<head />` of your views.
+Basically, we are going to use [flayyer/flayyer-python](https://github.com/flayyer/flayyer-python) to format Flayyer URL and [nephila/django-meta](https://github.com/nephila/django-meta) to render them into the `<head />` of your views.
 
 ## Install
 
@@ -197,7 +197,7 @@ Class-based views provide an alternative way to implement views as Python object
 
 If you don't override the `context_object_name` attribute of the Views, the current object in the context is available as `context['object']` for `django.views.generic.DetailView` and as `context['object_list']` for `django.views.generic.ListView`.
 
-Similar to the previous section, we need set an instance of `Meta` to the `context['meta']`.
+Similar to the previous section, we need to set an instance of `Meta` to the `context['meta']`.
 
 ```python
 from django.views import generic

@@ -7,7 +7,7 @@ title: flayyer gem
 
 Learn how to ingrate Flayyer with any Ruby framework. Here you will find the required documentation to use your templates on your websites.
 
-We have created a library that can help you creating valid Flayyer urls and so avoiding any potential issues with manually encoding values.
+We have created a library that can help you creating valid Flayyer URLs and so avoiding any potential issues with manually encoding values.
 
 It is built as a Ruby Gem and is very lightweight and has zero dependencies. You can check the source-code on our GitHub: [flayyer/flayyer-ruby](https://github.com/flayyer/flayyer-ruby).
 

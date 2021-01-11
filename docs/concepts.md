@@ -13,7 +13,7 @@ Here is the list of the technical terms.
 
 The name of the company but also **we call "Flayyer" every created [dynamic template](#template)**. As a company we are composed by two main domains:
 
-* [Flayyer.com](https://flayyer.com) — Main service with dashboard, billing, account management and more user-friendly.
+* [Flayyer.com](https://flayyer.com) — Main service with dashboard, billing, account management and it's much more user-friendly.
 * [Flayyer.io](https://flayyer.io) — "Og:Image as a Service" rendering server.
 
 ### Slug

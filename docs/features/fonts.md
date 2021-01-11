@@ -21,7 +21,7 @@ The easiest way to include fonts is via SCSS:
 If you need a tool to generate the `@font-face` definitions we recommend: https://google-webfonts-helper.herokuapp.com/
 :::
 
-We are working on making font easier to import. But at the moment this is how you can import custom fonts.
+We are working on making fonts easier to import. But at the moment this is how you can import custom fonts.
 
 Grab your custom font as `.woff` and `.woff2` format and place them inside a directory. Let's call that directory `/fonts` on the root of your repository.
 

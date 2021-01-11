@@ -3,7 +3,7 @@ id: components
 title: Components
 ---
 
-Do you have multiple templates and you want to share components between these templates? Create a `/components` directory in the root of your project. Then you can import the components as usual.
+Do you have multiple templates and you want to share components between these templates? Create a `/components` directory in the root of your project. Then, you can import the components as usual.
 
 ```ssh
 mkdir components

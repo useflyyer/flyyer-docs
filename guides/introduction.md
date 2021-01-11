@@ -34,7 +34,7 @@ Remember when YouTube videos used to have very simple thumbnail previews? Those 
 
 ## What is Flayyer?
 
-**Flayyer enables companies to present the best possible links for every page of their website when it is shared**. You don't need to manually create all of yours link previews. Just take a Flayyer template and use it everywhere to superpower your website.
+**Flayyer enables companies to present the best possible links for every page of their website when it is shared**. You don't need to manually create all of your link previews. Just take a Flayyer template and use it everywhere to superpower your website.
 
 We guarantee the best possible links for each social media platform.
 

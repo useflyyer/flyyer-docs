@@ -9,7 +9,7 @@ The JavaScript module [@flayyer/flayyer](./flayyer-js.md) is the only dependency
 
 ## Setup
 
-We assume you already have a project. If not you can create a new one with:
+We assume you already have a project. If not, you can create a new one with:
 
 <!-- MDX variables -->
 import Tabs from '@theme/Tabs';

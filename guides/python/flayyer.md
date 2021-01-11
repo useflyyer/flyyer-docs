@@ -9,7 +9,7 @@ title: flayyer lib
 
 Learn how to ingrate Flayyer with any Python framework. Here you will find the required documentation to use your templates on your websites. **Note: Python 3.6+ is required.**
 
-We have created a library that can help you creating valid Flayyer urls and so avoiding any potential issues with manually encoding values.
+We have created a library that can help you creating valid Flayyer URLs and so avoiding any potential issues with manually encoding values.
 
 It is built as a Python package and is very lightweight and has zero dependencies. You can check the source-code on our GitHub: [flayyer/flayyer-python][flayyer-python].
 

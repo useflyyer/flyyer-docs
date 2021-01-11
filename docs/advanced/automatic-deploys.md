@@ -7,7 +7,7 @@ title: Automatic deploys
 
 > Repository: [https://github.com/flayyer/flayyer-actions][flayyer-actions]
 
-To speed-up the process and deploying Flayyers and make collaboration easier you can take advantage of Continuous Integration (CI) services such as [GitHub Actions](#github-actions) among others.
+To speed-up the process of deploying Flayyers and making collaboration easier you can take advantage of Continuous Integration (CI) services such as [GitHub Actions](#github-actions) among others.
 
 ## GitHub Actions
 

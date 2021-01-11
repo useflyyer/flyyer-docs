@@ -5,7 +5,7 @@ title: Ruby on Rails
 
 > Repository: https://github.com/flayyer/integration-examples/tree/main/examples/rails
 
-Basically we are going to use [flayyer/flayyer-ruby](https://github.com/flayyer/flayyer-ruby) to format Flayyer URL and [kpumuk/meta-tags](https://github.com/kpumuk/meta-tags) to render them into the `<head />` of your views.
+Basically, we are going to use [flayyer/flayyer-ruby](https://github.com/flayyer/flayyer-ruby) to format Flayyer URL and [kpumuk/meta-tags](https://github.com/kpumuk/meta-tags) to render them into the `<head />` of your views.
 
 Add to your Gemfile:
 

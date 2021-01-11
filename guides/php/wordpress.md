@@ -16,7 +16,7 @@ We have developed a Wordpress Plugin but is not listed in the official plugin li
 
 ## Download
 
-To get started download the latest plugin version: [flayyer-wordpress-plugin.zip](https://github.com/flayyer/flayyer-wp/releases/latest/download/flayyer-wordpress-plugin.zip)
+To get started, download the latest plugin version: [flayyer-wordpress-plugin.zip](https://github.com/flayyer/flayyer-wp/releases/latest/download/flayyer-wordpress-plugin.zip)
 
 If you are looking for an older version of the plugin you can find them in the [releases page](https://github.com/flayyer/flayyer-wp/releases/latest). They	are all listed as zip files named `flayyer-wordpress-plugin.zip`.
 
@@ -28,7 +28,7 @@ From your admin dashboard go to the **Plugins** menu. Click on **Upload Plugin**
 
 ## Categories and variables
 
-By default we have defined **5 types of content pages** on Wordpress. Each one maps the most common fields from Wordpress to variables you can grab inside the Flayyer templates.
+We have defined **5 types of content pages** on Wordpress by default. Each one maps the most common fields from Wordpress to variables you can grab inside the Flayyer templates.
 
 ### Home / default
 

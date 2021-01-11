@@ -21,7 +21,7 @@ First, find your theme and open the code editor via: `Online Store` -> `Themes` 
 
 ### Modify meta-tags lines
 
-Then find the file where the rendering logic of the social tags is located. By default it should be at `Snippets` -> `social-meta-tags.liquid`.
+Then find the file where the rendering logic of the social tags is located. By default, it should be at `Snippets` -> `social-meta-tags.liquid`.
 
 ![alt1](/img/guides/shopify2.png)
 
