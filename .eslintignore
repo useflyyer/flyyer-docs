@@ -1,5 +1,7 @@
 !.eslintrc.js
 
 .vscode
-public
+.docusaurus
+static
 node_modules
+build
