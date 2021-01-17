@@ -57,7 +57,7 @@ The general idea is rendering a `<meta />` tag in the `<head />` of the HTML usi
 
 ```jsx title="pages/index.js" {2,4-11,19-21}
 import Head from "next/head"
-import Flayyer from "@flayyer/flayyer"
+import { Flayyer } from "@flayyer/flayyer"
 
 const flayyer = new Flayyer({
   tenant: "your-tenant-slug",
@@ -96,7 +96,7 @@ Make sure you understand how [getStaticProps](https://nextjs.org/docs/basic-feat
 
 ```jsx title="pages/products/[id].js" {2,5-15,21-23}
 import Head from "next/head"
-import Flayyer from "@flayyer/flayyer"
+import { Flayyer } from "@flayyer/flayyer"
 
 export default function ItemPage({ item }) {
   const flayyer = new Flayyer({
@@ -152,7 +152,7 @@ Make sure you understand how [getServerSideProps](https://nextjs.org/docs/basic-
 
 ```jsx title="pages/products/[id].js" {2,5-15,21-23}
 import Head from "next/head"
-import Flayyer from "@flayyer/flayyer"
+import { Flayyer } from "@flayyer/flayyer"
 
 export default function ItemPage({ item }) {
   const flayyer = new Flayyer({

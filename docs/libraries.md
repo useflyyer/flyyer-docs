@@ -8,7 +8,7 @@ Dealing with URL serialization is tough, specially if you have complex variables
 We have some libraries to make this process of creating a Flayyer URL easier for developers.
 
 ```js
-import Flayyer from "@flayyer/flayyer";
+import { Flayyer } from "@flayyer/flayyer";
 
 const flayyer = new Flayyer({
   tenant: "tenant",
