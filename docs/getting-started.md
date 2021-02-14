@@ -154,7 +154,7 @@ npm run-script build
 
 To upload the final bundled templates to our cloud you must have an API Key.
 
-[**Click here to manage your keys 🔑**](https://flayyer.com/settings/keys)
+[**Click here to manage your keys 🔑**](https://flayyer.com/dashboard/settings)
 
 <Tabs groupId="js-manager" defaultValue="yarn" values={jsManagers}>
 <TabItem value="yarn">
