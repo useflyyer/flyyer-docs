@@ -29,7 +29,7 @@ Grab this file [flayyer-yarn.yml](https://raw.githubusercontent.com/flayyer/flay
 
 ### Add FLAYYER_KEY to your GitHub's secrets
 
-Get your FLAYYER_KEY from https://flayyer.com/en/settings/keys then add it to your `Settings` `->` `Secrets` inside the settings of your repository.
+Get your FLAYYER_KEY from https://flayyer.com/dashboard/_/settings then add it to your `Settings` `->` `Secrets` inside the settings of your repository.
 
 ![Github example of adding api keys to secrets](https://github.com/flayyer/flayyer-actions/raw/main/assets/settings-secrets.png)
 
