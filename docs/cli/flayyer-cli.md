@@ -85,7 +85,7 @@ type FlayyerConfigType = {
 ### FLAYYER_KEY
 
 :::note
-Get your API key at: [https://flayyer.com/settings/keys](https://flayyer.com/settings/keys)
+Get your API key at: [https://flayyer.com/dashboard/_/settings](https://flayyer.com/dashboard/_/settings)
 :::
 
 This is the API key required to authenticate before uploading your project to our cloud.
@@ -204,7 +204,7 @@ You must run [**flayyer build**](#flayyer-build) before running this command.
 
 To upload the final bundled templates to our cloud you must have an API Key.
 
-[**Click here to manage your keys 🔑**](https://flayyer.com/settings/keys)
+[**Click here to manage your keys 🔑**](https://flayyer.com/dashboard/_/settings)
 
 Set your API key as `FLAYYER_KEY` and an environment variables or directly in your flayyer.config.js if you are working on a private repository.
 
