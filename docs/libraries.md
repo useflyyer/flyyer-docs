@@ -20,6 +20,10 @@ const flayyer = new Flayyer({
 
 const url = flayyer.href();
 // > https://flayyer.io/v2/tenant/deck/template.jpeg?__v=1596906866&title=Hello+world%21
+
+// Use this `url` in the <head /> of your HTML
+<meta property="og:image" content={url} />
+<meta name="twitter:image" content={url} />
 ```
 
 ## Official
