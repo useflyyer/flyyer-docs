@@ -182,7 +182,7 @@ Before deploying to production via [flayyer deploy](#flayyer-deploy), you must r
 <TabItem value="yarn">
 
 ```bash title="Terminal.app"
-yarn run build
+NODE_ENV=production yarn run build
 ```
 
 </TabItem>
@@ -190,7 +190,7 @@ yarn run build
 <TabItem value="npm">
 
 ```bash title="Terminal.app"
-npm run-script build
+NODE_ENV=production npm run-script build
 ```
 
 </TabItem>

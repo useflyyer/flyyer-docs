@@ -138,7 +138,7 @@ Work on your template, try changing the variables and when you are ready, run:
 <TabItem value="yarn">
 
 ```bash title="Terminal.app"
-yarn build
+NODE_ENV=production yarn build
 ```
 
 </TabItem>
@@ -146,7 +146,7 @@ yarn build
 <TabItem value="npm">
 
 ```bash title="Terminal.app"
-npm run-script build
+NODE_ENV=production npm run-script build
 ```
 
 </TabItem>
