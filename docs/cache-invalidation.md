@@ -17,6 +17,25 @@ When you use one of our [libraries](/docs/libraries) we append a `__v` argument 
 
 **This tries to force social media crawlers to always show the latest version of an image but our system is smart enough to not trigger unnecessary renders of your images.**
 
+### Toggling off
+
+If you are using `flayyer.io` in other ways but _og:images_, lets say:
+
+* Rendering images in your website or app.
+* Using it as an API to render content, etc.
+
+**If you want to improve performance on those cases: we recommend toggling off this feature so the users' browser can store the images on their local cache and prevent extra request to our servers.** This ensures a better UX, less network consumption and less carbon footprint.
+
+To toggle it of —if you are using one of our libraries— just set the `meta.v` parameter to `null` (or `nil`, `NONE`, depending on your programing language):
+
+```js
+const flayyer = new Flayyer({
+  meta: {
+    v: null,
+  },
+});
+```
+
 ## Automatic invalidation
 
 We are working on a system to automatically invalidate cache of links. Stay tuned!
