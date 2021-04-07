@@ -40,6 +40,10 @@ module.exports = {
       id: "libraries",
     },
     {
+      type: "doc",
+      id: "cache-invalidation",
+    },
+    {
       type: "category",
       label: "Advanced",
       // collapsed: false,
