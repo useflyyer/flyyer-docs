@@ -57,8 +57,8 @@ npm install --save @flayyer/flayyer
 Then add Flayyer on your routers, controllers and handlers. Example:
 
 ```js title="routes/index.js" {2,10-17,20}
-// Require `Flayyer` class constructor
-const { Flayyer } = require("@flayyer/flayyer");
+// Require `FlayyerIO` class constructor
+const { FlayyerIO } = require("@flayyer/flayyer");
 
 // Express stuff
 const express = require('express');
@@ -66,7 +66,7 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  const flayyer = new Flayyer({
+  const flayyer = new FlayyerIO({
     tenant: "your-tenant-slug",
     deck: "my-project",
     template: "main",
@@ -82,12 +82,15 @@ router.get('/', function(req, res, next) {
 
 ## Template engines
 
-Use any template engine you like.
+Use your favorite view engine, just make sure to render these three metatags:
 
-:::caution
-Rendering `<meta />` inside the `<body />` of your pages **will no have the desired effect**.
-Make sure you always render Flayyer URLs in the `<head />` of your views.
-:::
+```tsx
+const url = flayyer.href();
+
+<meta property="og:image" content={url} />
+<meta name="twitter:image" content={url} />
+<meta name="twitter:card" content="summary_large_image" />
+```
 
 ### Jade
 
@@ -99,3 +102,8 @@ head
   meta(name='twitter:image', content='#{flayyer}')
   meta(name='twitter:card', content='summary_large_image')
 ```
+
+:::caution
+Rendering `<meta />` inside the `<body />` of your pages **will no have the desired effect**.
+Make sure you always render Flayyer URLs in the `<head />` of your pages.
+:::
