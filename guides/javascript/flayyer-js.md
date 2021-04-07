@@ -36,9 +36,9 @@ npm install --save @flayyer/flayyer
 After installing this module you can format URLs just like this example:
 
 ```js
-import { Flayyer } from "@flayyer/flayyer";
+import { FlayyerIO } from "@flayyer/flayyer";
 
-const flayyer = new Flayyer({
+const flayyer = new FlayyerIO({
   tenant: "tenant",
   deck: "deck",
   template: "template",
@@ -51,6 +51,22 @@ const flayyer = new Flayyer({
 const url = flayyer.href();
 // > https://flayyer.io/v2/tenant/deck/template.jpeg?__v=1596906866&title=Hello+world%21
 ```
+
+If you are using React, you should use this URL as content of some of your HTML's head tags to render link previews:
+
+```tsx
+// This is just an illustrative example, it depends on how you are suing React.
+function Head() {
+  return (
+    <head>
+      <meta property="og:image" content={url} />
+      <meta name="twitter:image" content={url} />
+    </head>
+  );
+}
+```
+
+Take a look into the [Next.js](/guides/javascript/nextjs) or [Gatsby.js](/guides/javascript/gatsbyjs) integration guide to get an idea of how to use this depending on your project setup.
 
 :::note
 For additional information about variables and other terminology please read [Concepts](/docs/concepts).

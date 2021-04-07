@@ -47,10 +47,10 @@ Then on your pages use `react-helmet` to manipulate the contents of the `<head /
 
 ```jsx title="pages/index.js"
 import React from "react"
-import { Flayyer } from "@flayyer/flayyer"
+import { FlayyerIO } from "@flayyer/flayyer"
 import { Helmet } from "react-helmet"
 
-const flayyer = new Flayyer({
+const flayyer = new FlayyerIO({
   tenant: "your-tenant-slug",
   deck: "my-project",
   template: "main",
