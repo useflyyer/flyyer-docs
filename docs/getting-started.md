@@ -5,6 +5,8 @@ slug: /
 ---
 
 [flayyer-studio]: https://flayyer.github.io/flayyer-studio/
+[result-1]: https://flayyer.io/v2/flayyer/probando-update/main.jpeg?title=try+changing+this
+[result-2]: https://flayyer.io/v2/flayyer/probando-update/main.jpeg?title=awesome!+😃&description=Optional+description
 [create-flayyer-app]: https://github.com/flayyer/create-flayyer-app
 
 ## Create project
@@ -35,7 +37,7 @@ yarn create flayyer-app my-project
 Using NPM will create a folder called `my-project` in your current directory:
 
 ```bash title="Terminal.app"
-npm init flayyer-app my-project
+npm init flayyer-app@latest my-project
 ```
 
 </TabItem>
@@ -181,27 +183,30 @@ npm run-script deploy
 If everything is correct, you should see an output with your templates' URLs.
 
 ```bash
-🖼 Created template with URL: https://flayyer.io/v2/COMPANY/DECK/TEMPLATE.jpeg
+🖼 Created template with URL: https://flayyer.io/v2/TENANT/DECK/TEMPLATE.jpeg
 ```
 
 **Congratulations! You deployed your first Flayyer project! 🎉**
 
+[![Resultant flayyer live image](https://github.com/flayyer/create-flayyer-app/blob/master/.github/assets/result-1.png?raw=true)][result-1]
+
+[![Resultant flayyer live image](https://github.com/flayyer/create-flayyer-app/blob/master/.github/assets/result-2.png?raw=true)][result-2]
+
 Here are some examples of how to pass parameters to create images:
 
 * Set extension
-  * `https://flayyer.io/v2/COMPANY/DECK/TEMPLATE.png`
-  * `https://flayyer.io/v2/COMPANY/DECK/TEMPLATE.jpeg`
-  * `https://flayyer.io/v2/COMPANY/DECK/TEMPLATE.webp`
+  * `https://flayyer.io/v2/TENANT/DECK/TEMPLATE.png`
+  * `https://flayyer.io/v2/TENANT/DECK/TEMPLATE.jpeg`
+  * `https://flayyer.io/v2/TENANT/DECK/TEMPLATE.webp`
 * Set dimensions:
-  * Instagram post: `https://flayyer.io/v2/COMPANY/DECK/TEMPLATE.jpeg?_w=1080&_h=1080`
-  * Whatsapp image: `https://flayyer.io/v2/COMPANY/DECK/TEMPLATE.jpeg?_w=400&_h=400`
-  * Story: `https://flayyer.io/v2/COMPANY/DECK/TEMPLATE.jpeg?_w=1080&_h=1920`
+  * Instagram post: `https://flayyer.io/v2/TENANT/DECK/TEMPLATE.jpeg?_w=1080&_h=1080`
+  * Whatsapp image: `https://flayyer.io/v2/TENANT/DECK/TEMPLATE.jpeg?_w=400&_h=400`
+  * Story: `https://flayyer.io/v2/TENANT/DECK/TEMPLATE.jpeg?_w=1080&_h=1920`
 * Replace variables:
-  * `https://flayyer.io/v2/COMPANY/DECK/TEMPLATE.jpeg?title=New+title`
+  * `https://flayyer.io/v2/TENANT/DECK/TEMPLATE.jpeg?title=New+title`
 
 To format URL we recommend using one of [official libraries](/docs/libraries).
 
 ![cat on a rocket](/img/launch.svg)
 
 Continue reading this documentation to understand more about Flayyer and what other amazing features we support.
-
