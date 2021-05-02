@@ -125,8 +125,7 @@ module.exports = {
             },
             {
               label: "Discord",
-              href: "https://discord.gg/aPAv4Gg6h9",
-              // href: "https://discordapp.com/invite/flayyer",
+              href: "https://flayyer.com/discord",
             },
             {
               label: "Twitter",
