@@ -14,7 +14,7 @@ We are glad to announce we added the long awaited Variables UI support on the Fl
 
 **Now an UI Widget will be displayed based on the type of the variable.** We support a _hint_, a _default value_ and even an _array of examples_! 🤯
 
-![demo](https://github.com/flayyer/flayyer-variables/raw/master/.github/assets/dashboard.png)
+[![demo](https://github.com/flayyer/flayyer-variables/raw/master/.github/assets/dashboard.png)](/changelog/flayyer-variables)
 
 You can start using it by upgrading `@flayyer/cli` to `^1.17.0` and installing `@flayyer/variables`:
 
