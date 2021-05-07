@@ -1,16 +1,16 @@
 ---
-slug: publish-to-marketplace
-title: Publish to Marketplace
+slug: publish-to-community
+title: Publish to Community
 author: Patricio Lopez Juri
 author_title: Founder @ Flayyer.com
 author_url: https://github.com/lopezjurip
 author_image_url: https://github.com/lopezjurip.png?size=200
-tags: [marketplace]
+tags: [community]
 ---
 
-Now you can make your templates public by publishing them to the [Flayyer Marketplace](https://flayyer.com/marketplace).
+Now you can make your templates public by publishing them to the [Flayyer Community](https://flayyer.com/community).
 
-It is super easy, just set on your `flayyer.config.js` the `marketplace` flag to `true`.
+It is super easy, just set on your `flayyer.config.js` the `private` flag to `false`.
 
 ```js title=flayyer.config.js {14}
 const {config} = require('@flayyer/flayyer-types');
@@ -26,7 +26,7 @@ module.exports = config({
   description: 'A short description of this deck.',
   homepage: 'https://lopezjuri.com', // your personal webpage.
   keywords: ['news', 'vue', 'tailwind'],
-  marketplace: true,
+  private: false, // 👈 set to false to make it public
   repository: 'https:/github.com/flayyer/impact-news',
   sizes: ['THUMBNAIL', 'BANNER', 'SQUARE', 'STORY'] // supported formats
 });
