@@ -20,7 +20,7 @@ const FEATURES = [
     imageUrl: "img/feature-design.svg",
     description: (
       <>
-        We will guide you trought all the required steps to create your own designs and bring them to life with React
+        We will guide you through all the required steps to create your own designs and bring them to life with React
         and Vue.
       </>
     ),
