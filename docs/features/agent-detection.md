@@ -3,7 +3,7 @@ id: agent-detection
 title: Agent detection
 ---
 
-By _"agent"_ we mean the social platform (or web crawler) you images are being rendered on. You can render custom templates depending on the platform your links are being shared.
+By _"agent"_ we mean the social platform (or web crawler) your images are being rendered for. You can render custom templates depending on the platform your links are being shared.
 
 ![multiple agents demo](/img/images/agents.png)
 
