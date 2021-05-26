@@ -88,7 +88,7 @@ META_TWITTER_SITE="@example"
 META_TWITTER_AUTHOR="@example"
 ```
 
-To render the meta tags, simply add the `meta` dictionary/object to the [template context](https://docs.djangoproject.com/en/3.1/topics/class-based-views/generic-display/#adding-extra-context), and add this inside the `<head>` tags in your main layout file:
+To render the meta-tags, simply add the `meta` dictionary/object to the [template context](https://docs.djangoproject.com/en/3.1/topics/class-based-views/generic-display/#adding-extra-context), and add this inside the `<head>` tags in your main layout file:
 
 ```html title="projectname/templates/base.html" {2,5-6,9}
 {% load static %}
