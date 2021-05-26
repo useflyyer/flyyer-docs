@@ -81,7 +81,7 @@ export default function IndexPage() {
 ```
 
 :::note
-For link previews this code needs to be static or server-side rendered. Next.js does this by default so it should work effortless. If you're having troubles, we suggest to set this up directly on the page handler (inside the `pages/` folder).
+For link previews this code needs to be static or server-side rendered. Next.js does this by default so it should work without any effort. If you're having trouble, we suggest to set this up directly on the page handler (inside the `pages/` folder).
 :::
 
 ## Advanced usage
