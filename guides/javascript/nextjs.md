@@ -3,13 +3,12 @@ id: nextjs
 title: Next.js
 ---
 
-> Repository: https://github.com/flayyer/integration-examples/tree/main/examples/next
+<!-- TODO -->
+<!-- > Repository: https://github.com/flayyer/integration-examples/tree/main/examples/next -->
 
-We are glad you are here, our [landing page and dashboard](https://flayyer.com) sites are built with [Next.js](https://nextjs.org/). The JavaScript module [@flayyer/flayyer](./flayyer-js.md) is the only dependency you will need.
+## Installation
 
-## Setup
-
-We assume you already have a project. If not, you can create a new one with:
+If you don't have a Next.js app yet, create one with:
 
 <!-- MDX variables -->
 import Tabs from '@theme/Tabs';
@@ -26,7 +25,7 @@ export const jsManagers = [
 yarn create next-app
 ```
 
-Then install [@flayyer/flayyer](./flayyer-js.md):
+Install the [@flayyer/flayyer](./flayyer-js.md) module.
 
 ```bash title="Terminal.app"
 yarn add @flayyer/flayyer
@@ -49,22 +48,21 @@ npm install --save @flayyer/flayyer
 </TabItem>
 </Tabs>
 
-For link previews, you need a specific `<meta />` tag inside the `<head />` of the HTML which provides the image link as its content. For the image link, you need your `project-slug` (you can find it in [your dashboard](https://flayyer.com/auth/login)) and the current `path` of your website.
+We will use [next/head](https://nextjs.org/docs/api-reference/next/head) for appending meta tags to the `<head />` of the HTML, then `@flayyer/flayyer` for the smart image link along with [next/router](https://nextjs.org/docs/api-reference/next/router) to get the current `path` dynamically.
 
-We will use [next/head](https://nextjs.org/docs/api-reference/next/head) for appending the meta tag to the `<head />`, then `@flayyer/flayyer` for the smart image link along with [next/router](https://nextjs.org/docs/api-reference/next/router) to get the current `path` dynamically.
+You can find your `project-slug` in [your dashboard](https://flayyer.com/auth/login?ref=docs). Don't have a project yet? Create one [here](https://flayyer.com/get-started?ref=docs).
 
-In this example we work over the index page, but you can set it like this on any of your pages.
+This example is on the index page, but it should work on any of your pages as is.
 
-```jsx title="pages/index.js" {3,7-11,14-16,18}
+```jsx title="pages/index.js" {3,6-9,13-15,17}
 import Head from "next/head"
 import { useRouter } from "next/router"
-import { FlayyerIO } from "@flayyer/flayyer"
+import { FlayyerAI } from "@flayyer/flayyer"
 
 export default function IndexPage() {
-  const router = useRouter();
   const flayyer = new FlayyerAI({
     project: "your-project-slug",
-    path: router.asPath,
+    path: useRouter().asPath,
   });
   return (
     <div>
@@ -72,7 +70,7 @@ export default function IndexPage() {
         <meta property="og:image" content={flayyer.href()} />
         <meta name="twitter:image" content={flayyer.href()} />
         <meta name="twitter:card" content="summary_large_image" />
-        {/* Optional but recommended to keep your original image preview handy for your project */
+        {/* [Recommended] Keep your original og:image handy for your project */
         /* <meta name="flayyer:default" content={your-original-og-image} /> */
         /* ... */}
       </Head>
@@ -83,5 +81,45 @@ export default function IndexPage() {
 ```
 
 :::note
-For link previews this code needs to be static or server-side rendered. Next.js will generate static files in most cases. We recommend you set this up directly on the page handler (i.e. inside the `pages/` folder) to avoid undesired behavior.
+For link previews this code needs to be static or server-side rendered. Next.js does this by default so it should work effortless. If you're having troubles, we suggest to set this up directly on the page handler (inside the `pages/` folder).
 :::
+
+## Advanced usage
+
+### Signed URLs
+
+The module `@flayyer/flayyer` supports HMAC and JWT signatures. It's important to use [getServerSideProps](https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering) so your secret key is not exposed client-side. To find your `secret key`, go to [your dashboard](https://flayyer.com/dashboard/_/projects?ref=docs) > Your project > Advanced settings > Signed URLS, and enable the signing strategy you desire.
+
+```jsx title="pages/index.js" {4,8-9,21-31}
+import Head from "next/head"
+import { FlayyerAI } from "@flayyer/flayyer"
+
+export default function IndexPage(props) {
+  return (
+    <div>
+      <Head>
+        <meta property="og:image" content={props.flayyerHref} />
+        <meta name="twitter:image" content={props.flayyerHref} />
+        <meta name="twitter:card" content="summary_large_image" />
+        {/* [Recommended] Keep your original og:image handy for your project */
+        /* <meta name="flayyer:default" content={your-original-og-image} /> */
+        /* ... */}
+      </Head>
+      {/* ... */}
+    </div>
+  )
+}
+
+// This function runs only server-side, it won't be bundled to the client
+export async function getServerSideProps(context) {
+  const flayyer = new FlayyerAI({
+    project: "your-project-slug",
+    path: context.resolvedUrl,
+    secret: "your-secret-key",
+    strategy: "JWT", // or "HMAC"
+  });
+  return {
+    props: { flayyerHref: flayyer.href() }, // will be passed to the page component as props
+  }
+}
+```
