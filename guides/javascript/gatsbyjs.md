@@ -3,9 +3,12 @@ id: gatsbyjs
 title: Gatsby.js
 ---
 
-> Repository: https://github.com/flayyer/integration-examples/tree/main/examples/gatsby
+<!-- TODO -->
+<!-- > Repository: https://github.com/flayyer/integration-examples/tree/main/examples/gatsby -->
 
-Please refer to [this guide](https://www.gatsbyjs.com/docs/add-seo-component/) first to understand how to handle **meta-tags** for SEO.
+<!-- Please refer to [this guide](https://www.gatsbyjs.com/docs/add-seo-component/) first to understand how to handle **meta-tags** for SEO. -->
+
+## Installation
 
 <!-- MDX variables -->
 import Tabs from '@theme/Tabs';
@@ -18,58 +21,98 @@ export const jsManagers = [
 <Tabs groupId="js-manager" defaultValue="yarn" values={jsManagers}>
 <TabItem value="yarn">
 
-Install [@flayyer/flayyer](./flayyer-js.md):
+Install the following modules: [@flayyer/flayyer](./flayyer-js.md), [react-helmet](https://github.com/nfl/react-helmet) and [gatsby-plugin-react-helmet](https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/).
 
 ```bash title="Terminal.app"
-yarn add @flayyer/flayyer gatsby-plugin-react-helmet react-helmet
+yarn add @flayyer/flayyer react-helmet gatsby-plugin-react-helmet
 ```
 
 </TabItem>
 
 <TabItem value="npm">
 
-Install [@flayyer/flayyer](./flayyer-js.md):
+Install the following modules: [@flayyer/flayyer](./flayyer-js.md), [react-helmet](https://github.com/nfl/react-helmet) and [gatsby-plugin-react-helmet](https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/).
 
 ```bash title="Terminal.app"
-npm install --save @flayyer/flayyer gatsby-plugin-react-helmet react-helmet
+npm install --save @flayyer/flayyer react-helmet gatsby-plugin-react-helmet
 ```
 
 </TabItem>
 </Tabs>
 
-Just add the plugin to the plugins array in your `gatsby-config.js`
+Add the plugin to the plugins array in your `gatsby-config.js`.
 
 ```js title="gatsby-config.js"
 plugins: [`gatsby-plugin-react-helmet`]
 ```
 
-Then on your pages use `react-helmet` to manipulate the contents of the `<head />`:
+Use `react-helmet` to append the meta-tags to the `<head />`. The plugin will make sure it works with static generation ("server-side") which is required for link previews. Then `@flayyer/flayyer` to generate the smart image link along with `props.location` from the page component to set the `pathname` dynamically.
 
-```jsx title="pages/index.js"
+You can find your `project-slug` in [your dashboard](https://flayyer.com/auth/login?ref=docs). Don't have a project yet? [Create one here](https://flayyer.com/get-started?ref=docs).
+
+This example is on the index page, but it should work on any of your pages as is.
+
+```jsx title="pages/index.js" {3,6-9,12-15,17,19}
 import React from "react"
-import { FlayyerIO } from "@flayyer/flayyer"
 import { Helmet } from "react-helmet"
+import { FlayyerAI } from "@flayyer/flayyer"
 
-const flayyer = new FlayyerIO({
-  tenant: "your-tenant-slug",
-  deck: "my-project",
-  template: "main",
-  variables: {
-    title: "Hello world!",
-  },
-})
-
-export default function PageIndex() {
+export default function IndexPage(props) {
+  const flayyer = new FlayyerAI({
+    project: "your-project-slug",
+    path: props.location.pathname,
+  });
   return (
     <div>
       <Helmet>
-        <title>My page title</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta property="og:image" content={flayyer.href()} />
         <meta name="twitter:image" content={flayyer.href()} />
         <meta name="twitter:card" content="summary_large_image" />
+        {/* [Recommended] Keep your original og:image handy for your project */
+        /* <meta name="flayyer:default" content={your-original-og-image} /> */
+        /* ... */}
       </Helmet>
-      <p>Hello world!</p>
+      {/* ... */}
+    </div>
+  )
+}
+```
+
+:::note
+If query params from your URL enrich your image preview, you can get them from `props.location.search`
+:::
+
+## Advanced usage
+
+### Signed URLs
+
+The module `@flayyer/flayyer` supports HMAC and JWT signatures. It's important you make sure `FlayyerAI` is instantiated only on build-time (not in runtime) so your secret key is not exposed client-side, **this should not be expected from this guide**.
+
+To find your `secret key`, go to [your dashboard](https://flayyer.com/dashboard/_/projects?ref=docs) > your project > Advanced settings > Signed URLS, and enable the signing strategy you desire.
+
+```jsx title="pages/index.js" {4,8-9,21-31}
+import React from "react"
+import { Helmet } from "react-helmet"
+import { FlayyerAI } from "@flayyer/flayyer"
+
+export default function IndexPage(props) {
+  const flayyer = new FlayyerAI({
+    project: "your-project-slug",
+    path: props.location.pathname,
+    secret: "your-secret-key",
+    strategy: "JWT", // or "HMAC"
+  });
+  return (
+    <div>
+      <Helmet>
+        <meta property="og:image" content={flayyer.href()} />
+        <meta name="twitter:image" content={flayyer.href()} />
+        <meta name="twitter:card" content="summary_large_image" />
+        {/* [Recommended] Keep your original og:image handy for your project */
+        /* <meta name="flayyer:default" content={your-original-og-image} /> */
+        /* ... */}
+      </Helmet>
+      {/* ... */}
     </div>
   )
 }
