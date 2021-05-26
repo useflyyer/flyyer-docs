@@ -8,8 +8,6 @@ title: Next.js
 
 ## Installation
 
-If you don't have a Next.js app yet, create one with:
-
 <!-- MDX variables -->
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -21,10 +19,6 @@ export const jsManagers = [
 <Tabs groupId="js-manager" defaultValue="yarn" values={jsManagers}>
 <TabItem value="yarn">
 
-```bash title="Terminal.app"
-yarn create next-app
-```
-
 Install the [@flayyer/flayyer](./flayyer-js.md) module.
 
 ```bash title="Terminal.app"
@@ -35,11 +29,7 @@ yarn add @flayyer/flayyer
 
 <TabItem value="npm">
 
-```bash title="Terminal.app"
-npx create-next-app
-```
-
-Then install [@flayyer/flayyer](./flayyer-js.md):
+Install the [@flayyer/flayyer](./flayyer-js.md) module.
 
 ```bash title="Terminal.app"
 npm install --save @flayyer/flayyer
@@ -48,13 +38,14 @@ npm install --save @flayyer/flayyer
 </TabItem>
 </Tabs>
 
-We will use [next/head](https://nextjs.org/docs/api-reference/next/head) for appending meta tags to the `<head />` of the HTML, then `@flayyer/flayyer` for the smart image link along with [next/router](https://nextjs.org/docs/api-reference/next/router) to get the current `path` dynamically.
+Use [next/head](https://nextjs.org/docs/api-reference/next/head) for appending meta-tags to the `<head />`, then `@flayyer/flayyer` to generate the smart image link along with [next/router](https://nextjs.org/docs/api-reference/next/router) to get the current `pathname` dynamically.
 
-You can find your `project-slug` in [your dashboard](https://flayyer.com/auth/login?ref=docs). Don't have a project yet? Create one [here](https://flayyer.com/get-started?ref=docs).
+You can find your `project-slug` in [your dashboard](https://flayyer.com/auth/login?ref=docs). Don't have a project yet? [Create one here](https://flayyer.com/get-started?ref=docs).
 
 This example is on the index page, but it should work on any of your pages as is.
 
-```jsx title="pages/index.js" {3,6-9,13-15,17}
+```jsx title="pages/index.js" {4,7-10,14-16,18}
+import React from "react";
 import Head from "next/head"
 import { useRouter } from "next/router"
 import { FlayyerAI } from "@flayyer/flayyer"
@@ -81,14 +72,14 @@ export default function IndexPage() {
 ```
 
 :::note
-For link previews this code needs to be static or server-side rendered. Next.js does this by default so it should work without any effort. If you're having trouble, we suggest to set this up directly on the page handler (inside the `pages/` folder).
+If you're having trouble, set this up directly on the page handler (inside the `pages/` folder) and make sure your `og:image` and `twitter:image` meta-tags are not being overwritten elsewhere.
 :::
 
 ## Advanced usage
 
 ### Signed URLs
 
-The module `@flayyer/flayyer` supports HMAC and JWT signatures. It's important to use [getServerSideProps](https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering) so your secret key is not exposed client-side. To find your `secret key`, go to [your dashboard](https://flayyer.com/dashboard/_/projects?ref=docs) > Your project > Advanced settings > Signed URLS, and enable the signing strategy you desire.
+The module `@flayyer/flayyer` supports HMAC and JWT signatures. It's important to use [getServerSideProps](https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering) so your secret key is not exposed client-side. To find your `secret key`, go to [your dashboard](https://flayyer.com/dashboard/_/projects?ref=docs) > your project > Advanced settings > Signed URLS, and enable the signing strategy you desire.
 
 ```jsx title="pages/index.js" {4,8-9,21-31}
 import Head from "next/head"
