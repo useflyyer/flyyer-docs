@@ -33,7 +33,7 @@ npm install --save @flayyer/flayyer
 </TabItem>
 </Tabs>
 
-After installing this module, get your smart image URL like this:
+After installing this module, generate smart image URLs like follows:
 
 ```js
 import { FlayyerAI } from "@flayyer/flayyer";
@@ -41,7 +41,7 @@ import { FlayyerAI } from "@flayyer/flayyer";
 const flayyer = new FlayyerAI({
   // Your project slug
   project: "website-com",
-  // Relative path of your website
+  // Current pathname of your website
   path: `/path/to/product`,
 });
 
@@ -68,5 +68,5 @@ function Head() {
 Take a look into the [Next.js](/guides/javascript/nextjs), [Gatsby.js](/guides/javascript/gatsbyjs) or [other JavaScript technologies](/guides/get-started#javascript-guides) integration guides to see a full example depending on your project setup.
 
 :::note
-For link previews this code needs to be static or server-side rendered.
+For link previews to work meta-tags code needs to be static or server-side rendered.
 :::
