@@ -79,7 +79,9 @@ If you're having trouble, set this up directly on the page handler (inside the `
 
 ### Signed URLs
 
-The module `@flayyer/flayyer` supports HMAC and JWT signatures. It's important to use [getServerSideProps](https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering) so your secret key is not exposed client-side. To find your `secret key`, go to [your dashboard](https://flayyer.com/dashboard/_/projects?ref=docs) > your project > Advanced settings > Signed URLS, and enable the signing strategy you desire.
+The module `@flayyer/flayyer` supports HMAC and JWT signatures. It's important to instanciate FlayyerAI [getServerSideProps](https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering) so your secret key is not exposed client-side.
+
+To find your `secret key`, go to [your dashboard](https://flayyer.com/dashboard/_/projects?ref=docs) > your project > Advanced settings > Signed URLS, and enable the signing strategy you desire.
 
 ```jsx title="pages/index.js" {4,8-9,21-31}
 import Head from "next/head"
@@ -114,3 +116,7 @@ export async function getServerSideProps(context) {
   }
 }
 ```
+
+:::note
+You can also instanciate FlayyerAI in [getStaticProps](https://nextjs.org/docs/basic-features/data-fetching#getstaticprops-static-generation) (instead `getServerSideProps`) as it runs at build time. You're invited to [extend this guide](https://github.com/flayyer/flayyer-docs/edit/main/guides/javascript/nextjs.md) if you like.
+:::
