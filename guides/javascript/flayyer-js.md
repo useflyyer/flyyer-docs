@@ -41,7 +41,7 @@ import { FlayyerAI } from "@flayyer/flayyer";
 const flayyer = new FlayyerAI({
   // Your project slug
   project: "website-com",
-  // Current pathname of your website
+  // Current pathname of your website, try to set it dynamically
   path: `/path/to/product`,
 });
 
