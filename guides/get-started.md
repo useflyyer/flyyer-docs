@@ -9,7 +9,7 @@ Setup everything by default in 2 steps and customize later.
 
 1. Create a project [here](https://flayyer.com/dashboard/_/projects/new).
 
-2. Insert the smart image link on your `og:image` meta tag. It's built with your `project-slug` and the current `path` of your site. Why the current path? Our AI system needs to know from which path of your website obtain the information to enrich your preview.
+2. Insert the smart image link on your `og:image` meta-tag. It's built with your `project-slug` and the current `pathname` of your site. Why the current path? Our AI system needs to know from which path of your website obtain the information to enrich your preview automatically.
 
   In HTML it would look like this:
 
@@ -18,7 +18,7 @@ Setup everything by default in 2 steps and customize later.
   <meta name="twitter:image" content="https://flayyer.ai/{project-slug}/_/_/{path}" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Optional but recommended to keep your original image handy for your project -->
+  <!-- [Recommended] Keep your original image handy for your project -->
   <meta property="flayyer:default" content="{your-original-og:image-link}" />
   ```
 
