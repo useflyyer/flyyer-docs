@@ -55,3 +55,30 @@ Take a look into the [Ruby on Rails integration guide](/guides/ruby/rails) to se
 :::note
 For link previews to work meta-tags code needs to be static or server-side rendered.
 :::
+
+## Advanced usage
+
+### Signed URLs
+
+The package `flayyer` supports HMAC and JWT signatures.
+
+Find your `secret key` in [your dashboard](https://flayyer.com/dashboard/_/projects?ref=docs) > your project > Advanced settings > Signed URLS, and enable the signing strategy you desire.
+
+```python {6-7}
+from flayyer import FlayyerAI
+
+flayyer = FlayyerAI(
+  project="website-com",
+  path="/path/to/product",
+  secret="your-secret-key",
+  strategy="JWT", # or "HMAC"
+)
+
+# Use this image in your <head/> tags
+url = flayyer.href()
+# > https://flayyer.ai/v2/website-com/jwt-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXJhbXMiOnsiX19pZCI6ImplYW5zLTEyMyJ9LCJwYXRoIjoiXC9wYXRoXC90b1wvcHJvZHVjdCJ9.X8Vs5SGEA1-3M6bH-h24jhQnbwH95V_G0f-gPhTBTzE?__v=1618283086
+```
+
+:::caution
+Make sure FlayyerAI is instanciated at build time or server-side, so your secret is not exposed on the client.
+:::
