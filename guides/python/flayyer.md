@@ -3,13 +3,13 @@ id: flayyer
 title: flayyer lib
 ---
 
-[flayyer-python]: https://github.com/flayyer/flayyer-python
-
 > Repository: https://github.com/flayyer/flayyer-python
 
 ## Installation
 
 This module is agnostic to any Python framework and requires Python >= 3.6.
+
+### 1. Install `flayyer`
 
 <!-- MDX variables -->
 import Tabs from '@theme/Tabs';
@@ -53,7 +53,11 @@ pip freeze > requirements.txt
 </TabItem>
 </Tabs>
 
-After installing this package, generate smart image URLs as shown below. You can find your `project-slug` in [your dashboard](https://flayyer.com/auth/login?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
+### 2. Generate smart image URLs
+
+Find your `project-slug` in [your dashboard](https://flayyer.com/auth/login?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
+
+Now you can generate smart image URLs like shown below.
 
 ```python
 from flayyer import FlayyerAI
