@@ -5,7 +5,11 @@ title: "@flayyer/flayyer"
 
 > Repository: https://github.com/flayyer/flayyer
 
+## Installation
+
 This module is agnostic to any JS framework.
+
+### 1. Install `@flayyer/flayyer`
 
 <!-- MDX variables -->
 import Tabs from '@theme/Tabs';
@@ -33,7 +37,11 @@ npm install --save @flayyer/flayyer
 </TabItem>
 </Tabs>
 
-After installing this module, generate smart image URLs like follows:
+### 2. Generate smart image URLs
+
+Find your `project-slug` in [your dashboard](https://flayyer.com/auth/login?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
+
+Now you can generate smart image URLs like shown below.
 
 ```js
 import { FlayyerAI } from "@flayyer/flayyer";
