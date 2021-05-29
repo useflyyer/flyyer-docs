@@ -100,5 +100,5 @@ url = flayyer.href()
 ```
 
 :::caution
-Make sure FlayyerAI is instanciated at build-time or server-side, so your secret is not exposed on the client.
+Make sure FlayyerAI is instanciated at build time or server-side, so your secret is not exposed on the client.
 :::
