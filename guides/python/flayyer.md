@@ -92,7 +92,7 @@ Find your `secret key` in [your dashboard](https://flayyer.com/dashboard/_/proje
 from flayyer import FlayyerAI
 
 flayyer = FlayyerAI(
-  project="website-com",
+  project="your-project-slug",
   path="/path/to/product",
   secret="your-secret-key",
   strategy="JWT", # or "HMAC"
@@ -100,7 +100,7 @@ flayyer = FlayyerAI(
 
 # Use this image in your <head/> tags
 url = flayyer.href()
-# > https://flayyer.ai/v2/website-com/jwt-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXJhbXMiOnsiX19pZCI6ImplYW5zLTEyMyJ9LCJwYXRoIjoiXC9wYXRoXC90b1wvcHJvZHVjdCJ9.X8Vs5SGEA1-3M6bH-h24jhQnbwH95V_G0f-gPhTBTzE?__v=1618283086
+# > https://flayyer.ai/v2/your-project-slug/jwt-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXJhbXMiOnsiX19pZCI6ImplYW5zLTEyMyJ9LCJwYXRoIjoiXC9wYXRoXC90b1wvcHJvZHVjdCJ9.X8Vs5SGEA1-3M6bH-h24jhQnbwH95V_G0f-gPhTBTzE?__v=1618283086
 ```
 
 :::caution
