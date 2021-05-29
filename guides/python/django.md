@@ -197,7 +197,7 @@ META_DEFAULT_IMAGE = FlayyerAI(**FLAYYER_DEFAULT).href()
 META_TWITTER_TYPE = "summary_large_image"
 ```
 
-### 3. Set the current `pathname` on FlayyerAI
+### 3. Pass the current `pathname` to FlayyerAI instance
 
 In Django there are [function views](https://docs.djangoproject.com/en/3.2/topics/http/views/) and [class views](https://docs.djangoproject.com/en/3.2/topics/class-based-views/intro/) that may render HTML. Here you have an example for each one of them.
 
@@ -265,3 +265,43 @@ Voilà!
 :::note
 If you inspect the `<head />` of your HTML you should see the `og:image` and `twitter:image` tags with `flayyer.ai` URLs with your `project-slug` and current `pathname` on it. If you're having trouble, please make sure they are not overwritten elsewhere.
 :::
+
+## Advanced usage
+
+### Signed URLs
+
+The package `flayyer` supports HMAC and JWT signatures.
+
+Find your `secret key` in [your dashboard](https://flayyer.com/dashboard/_/projects?ref=docs) > your project > Advanced settings > Signed URLS, and enable the signing strategy you desire.
+
+**If you integrated FlayyerAI with a context processor** then set it like below.
+
+```py title="myapp/custom_context_processors.py" {8-9}
+from django.http.request import HttpRequest
+from flayyer import FlayyerAI
+
+def flayyer_href(request: HttpRequest):
+    flayyer = FlayyerAI(
+        project="your-project-slug",
+        path=request.get_full_path(),
+        secret="your-secret-key",
+        strategy="JWT", # or "HMAC"
+    )
+    return {'flayyer_href': flayyer.href()} # pass smart image link to views templates
+
+# ...
+```
+
+**If you integrated FlayyerAI with `django-meta`**, then in `settings.py` set `FLAYYER_DEFAULT` as follows.
+
+```py title="myapp/settings.py" {5-6}
+# ...
+
+FLAYYER_DEFAULT = {
+    'project': "your-project-slug",
+    'secret': "your-secret-key",
+    'strategy': "JWT", # or "HMAC"
+}
+
+# ...
+```
