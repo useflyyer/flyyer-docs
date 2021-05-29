@@ -5,11 +5,11 @@ title: flayyer gem
 
 > Repository: https://github.com/flayyer/flayyer-ruby
 
-Learn how to ingrate Flayyer with any Ruby framework. Here you will find the required documentation to use your templates on your websites.
+## Installation
 
-We have created a library that can help you creating valid Flayyer URLs and so avoiding any potential issues with manually encoding values.
+This module is agnostic to any Ruby framework.
 
-It is built as a Ruby Gem and is very lightweight and has zero dependencies. You can check the source-code on our GitHub: [flayyer/flayyer-ruby](https://github.com/flayyer/flayyer-ruby).
+### 1. Install `flayyer` gem
 
 Add this line to your application's Gemfile:
 
@@ -26,24 +26,32 @@ bundle install
 Or install it yourself as:
 
 ```bash title="Terminal.app"
-gem install flayyer # not recommended
+gem install flayyer
 ```
 
-After installing the gem you can format URL as:
+### 2. Generate smart image URLs
+
+Find your `project-slug` in [your dashboard](https://flayyer.com/auth/login?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
+
+Now you can generate smart image URLs like shown below.
 
 ```ruby
 require 'flayyer'
 
-flayyer = Flayyer::FlayyerURL.create do |f|
-  f.tenant = 'tenant'
-  f.deck = 'deck'
-  f.template = 'template'
-  f.variables = {
-      title: 'Hello world!'
-  }
+flayyer = Flayyer::FlayyerAI.create do |f|
+  # Your project slug
+  f.project = 'your-project-slug'
+  # The current pathname of your website, try to set it dynamically
+  f.path = '/path/to/product'
 end
 
 # Use this image in your <head/> tags
 url = flayyer.href
-# > https://flayyer.io/v2/tenant/deck/template.jpeg?__v=1596906866&title=Hello+world%21
+# > https://flayyer.ai/v2/project/_/__v=1596906866/path/to/product
 ```
+
+Take a look into the [Ruby on Rails integration guide](/guides/ruby/rails) to see a full example for your specific setup. You're invited to [contribute to the Ruby documentation](https://github.com/flayyer/flayyer-docs/tree/main/guides/ruby) and add your own guide for other technologies.
+
+:::note
+For link previews to work meta-tags code needs to be static or server-side rendered.
+:::
