@@ -92,7 +92,7 @@ TEMPLATES = [
 ```
 
 :::note
-If you're using Django < 1.8, do it like this:
+If you're using Django < 1.8, it should work like this:
 
 ```py title="myapp/settings.py" {4}
 # ...
