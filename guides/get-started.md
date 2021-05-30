@@ -3,26 +3,38 @@ id: get-started
 title: Getting started
 ---
 
-## Install Flayyer previews
+[new-project]: https://flayyer.com/dashboard/_/projects/new
+[current-project]: https://flayyer.com/dashboard/_/projects
+[guides-with-full-examples]: #guides-with-full-examples
 
-Setup everything by default in 2 steps and customize later.
+## Install FlayyerAI previews
 
-1. Create a project [here](https://flayyer.com/dashboard/_/projects/new).
+### 1. Create a project [here][new-project]
 
-2. Insert the smart image link on your `og:image` meta-tag. It's built with your `project-slug` and the current `pathname` of your site. Why the current path? Our AI system needs to know from which path of your website obtain the information to enrich your preview automatically.
+### 2. Insert the smart image link on your `og:image` meta-tag
 
-  In HTML it would look like this:
+It's built with your `project-slug` and the current `pathname` of your site which lets our AI system obtain information to enrich your preview automatically.
 
-  ```html
-  <meta property="og:image" content="https://flayyer.ai/{project-slug}/_/_/{path}" />
-  <meta name="twitter:image" content="https://flayyer.ai/{project-slug}/_/_/{path}" />
-  <meta name="twitter:card" content="summary_large_image" />
+In HTML it would look like this:
 
-  <!-- [Recommended] Keep your original image handy for your project -->
-  <meta property="flayyer:default" content="{your-original-og:image-link}" />
-  ```
+```html
+<meta property="og:image" content="https://flayyer.ai/{project-slug}/_/_/{path}" />
+<meta name="twitter:image" content="https://flayyer.ai/{project-slug}/_/_/{path}" />
+<meta name="twitter:card" content="summary_large_image" />
 
-To see a **full example** please select your website technology or programming language.
+<!-- [Recommended] Keep your original image handy for your project -->
+<meta property="flayyer:default" content="{your-original-og:image-link}" />
+```
+
+To see a **full example** please [select your website technology or programming language][guides-with-full-examples].
+
+### 3. Check and improve template path match
+
+[In your dashboard][current-project] check and manually improve the image template used for each path pattern of your site.
+
+<!-- TODO: Rules getting started here -->
+
+## Guides with full examples
 
 ### JavaScript guides
 
