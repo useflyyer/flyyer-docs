@@ -69,7 +69,7 @@ flayyer = FlayyerAI(
   path="/path/to/product",
 )
 
-# Use this image in your <head/> tags
+# Use this image URL in your <head/> tags
 url = flayyer.href()
 # > https://flayyer.ai/v2/your-project-slug/_/__v=1618281823/path/to/product
 ```

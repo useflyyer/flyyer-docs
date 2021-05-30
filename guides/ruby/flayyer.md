@@ -45,7 +45,7 @@ flayyer = Flayyer::FlayyerAI.create do |f|
   f.path = '/path/to/product'
 end
 
-# Use this image in your <head/> tags
+# Use this image URL in your <head/> tags
 url = flayyer.href
 # > https://flayyer.ai/v2/project/_/__v=1596906866/path/to/product
 ```
