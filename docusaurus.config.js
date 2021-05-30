@@ -60,7 +60,7 @@ module.exports = {
           type: "doc",
           position: "left",
           docId: "getting-started",
-          label: "Customization",
+          label: "Documentation",
         },
         { to: "changelog", label: "Changelog", position: "left" },
         {
