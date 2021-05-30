@@ -8,10 +8,17 @@ slug: /
 [result-1]: https://flayyer.io/v2/flayyer/probando-update/main.jpeg?title=try+changing+this
 [result-2]: https://flayyer.io/v2/flayyer/probando-update/main.jpeg?title=awesome!+😃&description=Optional+description
 [create-flayyer-app]: https://github.com/flayyer/create-flayyer-app
+[flayyer-ai-guides]: /guides/get-started
+
+:::note What's this documentation for
+You'll **learn to create your own templates**, which you can use for your link previews, download social media formats, or offer them in the Marketplace. <!-- TODO: link to Marketplace  -->
+
+Alternatively, you can integrate FlayyerAI to automatically create rich link previews and social media images from your website (no effort). [Check it out][flayyer-ai-guides] before coming here.
+:::
 
 ## Create project
 
-We recommend creating a new Flayyer app using [`create-flayyer-app`][create-flayyer-app], which sets up everything automatically for you. To start a project follow the steps below.
+Create a new Flayyer app using [`create-flayyer-app`][create-flayyer-app], which sets up everything automatically for you. To start a project follow the steps below.
 
 <!-- MDX variables -->
 import Tabs from '@theme/Tabs';
@@ -43,7 +50,7 @@ npm init flayyer-app@latest my-project
 </TabItem>
 </Tabs>
 
-You will be prompted with multiple starting setups. You can choose the one that suites best for you.
+You will be prompted for startup configurations. Choose the one that best suits your needs.
 
 ```txt {2}
 ? Select the best template setup for you …  You can customize the template later
