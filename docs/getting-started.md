@@ -13,7 +13,7 @@ slug: /
 :::note What's this documentation for
 You'll **learn to create your own templates**, which you can use for your link previews, download social media formats, or offer them in the Marketplace. <!-- TODO: link to Marketplace  -->
 
-Alternatively, you can integrate FlayyerAI to automatically create rich link previews and social media images from your website (no effort). [Check it out][flayyer-ai-guides] before coming here.
+Alternatively, you can integrate FlayyerAI to manage link previews and social media images enriched from your website (no effort required). You can choose templates that are already available. [Check it out][flayyer-ai-guides] before coming here.
 :::
 
 ## Create project
