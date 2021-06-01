@@ -28,11 +28,11 @@ In HTML it would look like this:
 
 To see a **full example** please [select your website technology or programming language][guides-with-full-examples].
 
-### 3. Check and improve template path match
+### 3. Voilà 🎉
 
-[In your dashboard][current-project] check and manually improve the image template used for each path pattern of your site.
+Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
 
-<!-- TODO: Rules getting started here -->
+[Go to your dashboard 🚀](https://flayyer.com/auth/login?ref=docs)
 
 ## Guides with full examples
 
