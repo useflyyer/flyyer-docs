@@ -16,10 +16,10 @@ export const jsManagers = [
   {label: "NPM", value: "npm"},
 ]
 
+### 1. Install the [@flayyer/flayyer](./flayyer-js.md) module
+
 <Tabs groupId="js-manager" defaultValue="yarn" values={jsManagers}>
 <TabItem value="yarn">
-
-Install the [@flayyer/flayyer](./flayyer-js.md) module.
 
 ```bash title="Terminal.app"
 yarn add @flayyer/flayyer
@@ -29,14 +29,14 @@ yarn add @flayyer/flayyer
 
 <TabItem value="npm">
 
-Install the [@flayyer/flayyer](./flayyer-js.md) module.
-
 ```bash title="Terminal.app"
 npm install --save @flayyer/flayyer
 ```
 
 </TabItem>
 </Tabs>
+
+### 2. Generate smart image URLs
 
 Use `@flayyer/flayyer` to generate the smart image link on your controllers, then the `req.originalUrl` to set the current `pathname` dynamically.
 
@@ -60,6 +60,8 @@ router.get('/', function(req, res, next) {
 });
 ```
 
+### 3. Render meta-tags on views
+
 Use your favorite view engine, just make sure to render the following meta-tags in the `<head />` of your pages.
 
 ```tsx
@@ -78,8 +80,14 @@ head
 ```
 
 :::note
-Rendering `<meta />` inside the `<body />` of your pages **will no have the desired effect**. Make sure you always render those meta-tags in the `<head />` of your pages, and that they are not overwritten elsewhere.
+If you're having trouble, please make sure you always render those meta-tags in the `<head />` of your pages, and that they are not overwritten elsewhere.
 :::
+
+### 4. Voilà 🎉
+
+Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
+
+[Go to your dashboard 🚀](https://flayyer.com/auth/login?ref=docs)
 
 ## Advanced usage
 
