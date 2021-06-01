@@ -5,11 +5,11 @@ title: Django
 
 ## Installation
 
-> Example Repository: https://github.com/flayyer/integration-examples/tree/main/examples/django-without-extra-dependencies
+> Example Repository: https://github.com/flayyer/integration-examples/tree/main/examples/django/django-without-extra-dependencies
 
 We're going to use [flayyer/flayyer-python](/guides/python/flayyer) to format FlayyerAI URLs in a [context processor](https://docs.djangoproject.com/en/3.2/ref/templates/api/#django.template.RequestContext) to render meta-tags into the `<head />` of your views dynamically with few lines of code.
 
-Alternatively, you can set it with `django-meta` meta-tags helper, [just jump to it ↓](#installation-with-django-meta).
+Alternatively, you can set it with [django-meta](https://github.com/nephila/django-meta) meta-tags helper, [just jump to it ↓](#installation-with-django-meta).
 
 ### 1. Install `flayyer` module
 
@@ -57,7 +57,7 @@ pip freeze > requirements.txt
 
 ### 2. Create a `myapp/custom_context_processors.py` file
 
-You can find your `project-slug` in [your dashboard](https://flayyer.com/auth/login?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
+You can Find your `project-slug` in [your dashboard](https://flayyer.com/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
 
 ```py title="myapp/custom_context_processors.py" {6-11}
 from django.http.request import HttpRequest
@@ -133,7 +133,7 @@ If you inspect the `<head />` of your HTML you should see the `og:image` and `tw
 
 Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
 
-[Go to your dashboard 🚀](https://flayyer.com/auth/login?ref=docs)
+[Go to your dashboard 🚀](https://flayyer.com/dashboard/_/projects/_/)
 
 ## Installation with `django-meta`
 
@@ -141,35 +141,35 @@ Now you're able to manage your link previews from your dashboard, create content
 
 The `django-meta` module helps you rendering meta-tags efficiently.
 
-### 1. Install `flayyer` module
+### 1. Install `flayyer` module and `django-meta`
 
 <Tabs groupId="py-manager" defaultValue="poetry" values={pyManagers}>
 <TabItem value="poetry">
 
-Install it with [Poetry](https://python-poetry.org/), the modern package manager
+Install them with [Poetry](https://python-poetry.org/), the modern package manager
 
 ```bash title="Terminal.app"
-poetry add flayyer
+poetry add flayyer django-meta
 ```
 
 </TabItem>
 
 <TabItem value="pipenv">
 
-Install it with [Pipenv](https://pipenv.pypa.io/), the Python dev workflow for humans
+Install them with [Pipenv](https://pipenv.pypa.io/), the Python dev workflow for humans
 
 ```bash title="Terminal.app"
-pipenv install flayyer
+pipenv install flayyer django-meta
 ```
 
 </TabItem>
 
 <TabItem value="pip">
 
-Install it with [pip](https://pip.pypa.io/en/stable/)
+Install them with [pip](https://pip.pypa.io/en/stable/)
 
 ```bash title="Terminal.app"
-pip install -U flayyer
+pip install -U flayyer django-meta
 pip freeze > requirements.txt
 ```
 
@@ -178,7 +178,7 @@ pip freeze > requirements.txt
 
 ### 2. Complete `settings.py`
 
-You can find your `project-slug` in [your dashboard](https://flayyer.com/auth/login?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
+You can Find your `project-slug` in [your dashboard](https://flayyer.com/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
 
 ```py title="myapp/settings.py" {1,5,10-12,14-18}
 from flayyer import FlayyerAI
@@ -272,7 +272,7 @@ If you inspect the `<head />` of your HTML you should see the `og:image` and `tw
 
 Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
 
-[Go to your dashboard 🚀](https://flayyer.com/auth/login?ref=docs)
+[Go to your dashboard 🚀](https://flayyer.com/dashboard/_/projects/_/)
 
 ## Advanced usage
 
