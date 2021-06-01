@@ -11,9 +11,11 @@ title: Getting started
 
 ### 1. Create a project [here][new-project]
 
-### 2. Insert the smart image link on your `og:image` meta-tag
+### 2. Insert smart image URLs in your meta-tags
 
-It's built with your `project-slug` and the current `pathname` of your site which lets our AI system obtain information to enrich your preview automatically.
+It's built with your `project-slug` and the current `pathname` of your site which lets our AI system enrich your preview automatically.
+
+Find your `project-slug` in [your dashboard](https://flayyer.com/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
 
 In HTML it would look like this:
 
@@ -32,7 +34,7 @@ To see a **full example** please [select your website technology or programming 
 
 Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
 
-[Go to your dashboard 🚀](https://flayyer.com/auth/login?ref=docs)
+[Go to your dashboard 🚀](https://flayyer.com/dashboard/_/projects/_/)
 
 ## Guides with full examples
 
