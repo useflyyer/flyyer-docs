@@ -8,9 +8,9 @@ slug: /
 [twitter]: https://twitter.com/flayyer_com
 [instagram]: https://instagram.com/flayyer_com
 
-Welcome and thanks for visiting the official documentation 👋
+Welcome and thanks for visiting the official documentation 👋 [Jump to installation steps ↓](/guides/get-started)
 
-This documentation is intended for developers who want to integrate Flayyer with their current service, app or any kind of amazing software you are building.
+This documentation is intended for anyone who want to integrate Flayyer with their current service, app or any kind of amazing software you are building.
 
 If you have any questions related to Flayyer you can reach out to us via [Twitter][twitter], [Instagram][instagram] or by sending an email to [help@flayyer.com][help-email].
 
@@ -34,7 +34,7 @@ Remember when YouTube videos used to have very simple thumbnail previews? Those 
 
 ## What is Flayyer?
 
-**Flayyer enables companies to present the best possible links for every page of their website when it is shared**. You don't need to manually create all of your link previews. Just take a Flayyer template and use it everywhere to superpower your website.
+**Flayyer enables companies to present the best possible links for every page of their website when it's shared**. You don't need to create your link previews manually. Just take a Flayyer template and use it everywhere to superpower your website.
 
 We guarantee the best possible links for each social media platform.
 
@@ -42,9 +42,7 @@ We guarantee the best possible links for each social media platform.
 
 ## Who is Flayyer for?
 
-You might not need this service if you have a small business, because you can craft by hand any image preview you may need.
-
-On the other hand, you might need Flayyer if:
+You might need Flayyer if:
 
 * 🏢 You have a medium-to-large company
 * 🗄 Your website has a lot of content and multiple pages

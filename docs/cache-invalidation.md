@@ -5,7 +5,7 @@ title: Cache invalidation
 
 Each time a link is shared on social media, those social networks executes some crawlers/bots to grab content from the website and display rich information to their users.
 
-Regarding images, these crawlers looks for `og:image` and `twitter:image` meta tags to render the preview images we usually see on posts. These crawlers store those images in a cache to deliver content faster to their users the next time the links are shared.
+Regarding images, these crawlers looks for `og:image` and `twitter:image` meta-tags to render the preview images we usually see on posts. These crawlers store those images in a cache to deliver content faster to their users the next time the links are shared.
 
 **The problem comes when an image is cached and you update your flayyers (or the content changes) and these social networks are still rendering the old image from their cache layer**.
 

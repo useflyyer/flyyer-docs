@@ -3,15 +3,13 @@ id: flayyer
 title: flayyer lib
 ---
 
-[flayyer-python]: https://github.com/flayyer/flayyer-python
-
 > Repository: https://github.com/flayyer/flayyer-python
 
-Learn how to ingrate Flayyer with any Python framework. Here you will find the required documentation to use your templates on your websites. **Note: Python 3.6+ is required.**
+## Installation
 
-We have created a library that can help you creating valid Flayyer URLs and so avoiding any potential issues with manually encoding values.
+This module is agnostic to any Python framework and requires Python >= 3.6.
 
-It is built as a Python package and is very lightweight and has zero dependencies. You can check the source-code on our GitHub: [flayyer/flayyer-python][flayyer-python].
+### 1. Install `flayyer` library
 
 <!-- MDX variables -->
 import Tabs from '@theme/Tabs';
@@ -45,7 +43,7 @@ pipenv install flayyer
 
 <TabItem value="pip">
 
-You can also use [pip](https://pip.pypa.io/en/stable/).
+Install it with [pip](https://pip.pypa.io/en/stable/).
 
 ```bash title="Terminal.app"
 pip install flayyer
@@ -55,23 +53,58 @@ pip freeze > requirements.txt
 </TabItem>
 </Tabs>
 
-After installing the package you can format URL as:
+### 2. Generate smart image URLs for your meta-tags
+
+Find your `project-slug` in [your dashboard](https://flayyer.com/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
+
+Now you can generate smart image URLs like shown below.
 
 ```python
-from flayyer import Flayyer
+from flayyer import FlayyerAI
 
-flayyer = Flayyer(
-    tenant="tenant",
-    deck="deck",
-    template="template",
-    variables={"title": "Hello world!"},
+flayyer = FlayyerAI(
+  # Your project slug
+  project="your-project-slug",
+  # The current pathname of your website, try to set it dynamically
+  path="/path/to/product",
+)
+
+# Use this image URL in your <head/> tags
+url = flayyer.href()
+# > https://flayyer.ai/v2/your-project-slug/_/__v=1618281823/path/to/product
+```
+
+Take a look into the [Django integration guide](/guides/python/django) to see a full example for your specific setup. You're invited to [contribute to the Python documentation](https://github.com/flayyer/flayyer-docs/tree/main/guides/python) and add your own guide for other technologies.
+
+:::note
+The meta-tags code needs to be static, processed at build time or server-side rendered for link previews to work.
+:::
+
+### 3. Voilà 🎉
+
+Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
+
+[Go to your dashboard 🚀](https://flayyer.com/dashboard/_/projects/_/)
+
+## Advanced usage
+
+### Signed URLs
+
+The package `flayyer` supports HMAC and JWT signatures.
+
+Find your `secret key` in [your dashboard](https://flayyer.com/dashboard/_/projects?ref=docs) > your project > Advanced settings > Signed URLS, and enable the signing strategy you desire.
+
+```python {6-7}
+from flayyer import FlayyerAI
+
+flayyer = FlayyerAI(
+  project="your-project-slug",
+  path="/path/to/product",
+  secret="your-secret-key",
+  strategy="JWT", # or "HMAC"
 )
 
 # Use this image in your <head/> tags
 url = flayyer.href()
-# > https://flayyer.io/v2/tenant/deck/template.jpeg?__v=1596906866&title=Hello+world%21
+# > https://flayyer.ai/v2/your-project-slug/jwt-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXJhbXMiOnsiX19pZCI6ImplYW5zLTEyMyJ9LCJwYXRoIjoiXC9wYXRoXC90b1wvcHJvZHVjdCJ9.X8Vs5SGEA1-3M6bH-h24jhQnbwH95V_G0f-gPhTBTzE?__v=1618283086
 ```
-
-:::note
-For additional information about variables and other terminology please read [Concepts](/docs/concepts).
-:::

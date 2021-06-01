@@ -3,15 +3,10 @@ id: nextjs
 title: Next.js
 ---
 
-> Repository: https://github.com/flayyer/integration-examples/tree/main/examples/next
+<!-- TODO -->
+<!-- > Repository: https://github.com/flayyer/integration-examples/tree/main/examples/next -->
 
-We are glad you are here, our [landing page and dashboard](https://flayyer.com) sites are built with [Next.js](https://nextjs.org/).
-
-The JavaScript module [@flayyer/flayyer](./flayyer-js.md) is the only dependency you will need. In this guide we are going to show how it can be integrated with Next.js. This guide is only a basic example and you should adapt it to your needs.
-
-## Setup
-
-We assume you already have a project. If not, you can create a new one with:
+## Installation
 
 <!-- MDX variables -->
 import Tabs from '@theme/Tabs';
@@ -21,14 +16,10 @@ export const jsManagers = [
   {label: "NPM", value: "npm"},
 ]
 
+### 1. Install the [@flayyer/flayyer](./flayyer-js.md) module
+
 <Tabs groupId="js-manager" defaultValue="yarn" values={jsManagers}>
 <TabItem value="yarn">
-
-```bash title="Terminal.app"
-yarn create next-app
-```
-
-Then install [@flayyer/flayyer](./flayyer-js.md):
 
 ```bash title="Terminal.app"
 yarn add @flayyer/flayyer
@@ -39,170 +30,99 @@ yarn add @flayyer/flayyer
 <TabItem value="npm">
 
 ```bash title="Terminal.app"
-npx create-next-app
-```
-
-Then install [@flayyer/flayyer](./flayyer-js.md):
-
-```bash title="Terminal.app"
 npm install --save @flayyer/flayyer
 ```
 
 </TabItem>
 </Tabs>
 
-## Basic integration
+### 3. Generate smart image URLs for your meta-tags
 
-The general idea is rendering a `<meta />` tag in the `<head />` of the HTML using [next/head](https://nextjs.org/docs/api-reference/next/head) where the image of the URL is the URL provided by Flayyer.
+Use [next/head](https://nextjs.org/docs/api-reference/next/head) for appending meta-tags to the `<head />`, then `@flayyer/flayyer` to generate the smart image link along with [next/router](https://nextjs.org/docs/api-reference/next/router) to get the current `pathname` dynamically.
 
-```jsx title="pages/index.js" {2,4-11,19-21}
+You can Find your `project-slug` in [your dashboard](https://flayyer.com/dashboard/_/projects/_/integrate?ref=docs). Don't have a project yet? [Create one here](https://flayyer.com/get-started?ref=docs).
+
+This example is on the index page, but it should work on any of your pages as is.
+
+```jsx title="pages/index.js" {4,7-10,14-16,18}
+import React from "react";
 import Head from "next/head"
-import { FlayyerIO } from "@flayyer/flayyer"
-
-const flayyer = new FlayyerIO({
-  tenant: "your-tenant-slug",
-  deck: "my-project",
-  template: "main",
-  variables: {
-    title: "Hello world!",
-  },
-})
+import { useRouter } from "next/router"
+import { FlayyerAI } from "@flayyer/flayyer"
 
 export default function IndexPage() {
+  const flayyer = new FlayyerAI({
+    project: "your-project-slug",
+    path: useRouter().asPath,
+  });
   return (
     <div>
       <Head>
-        <title>My page title</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta property="og:image" content={flayyer.href()} />
         <meta name="twitter:image" content={flayyer.href()} />
         <meta name="twitter:card" content="summary_large_image" />
+        {/* [Recommended] Keep your original og:image handy for your project */
+        /* <meta name="flayyer:default" content={your-original-og-image} /> */
+        /* ... */}
       </Head>
-      <p>Hello world!</p>
+      {/* ... */}
     </div>
   )
 }
 ```
 
-## Advanced integration
+:::note
+If you're having trouble, set this up directly on the page handler (inside the `pages/` folder) and make sure your `og:image` and `twitter:image` meta-tags are not being overwritten elsewhere.
+:::
 
-If you have many dynamic pages you can programmatically assign the variables of the Flayyer URL based on the attributes of the current objects within your page.
+### 3. Voilà 🎉
 
-This is recommended for [static](#static-props) or [server](#server-props) pages:
+Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
 
-### Static props
+[Go to your dashboard 🚀](https://flayyer.com/dashboard/_/projects/_/)
 
-Make sure you understand how [getStaticProps](https://nextjs.org/docs/basic-features/data-fetching#getstaticprops-static-generation) works.
+## Advanced usage
 
-```jsx title="pages/products/[id].js" {2,5-15,21-23}
+### Signed URLs
+
+The module `@flayyer/flayyer` supports HMAC and JWT signatures. It's important to instanciate FlayyerAI [getServerSideProps](https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering) so your secret key is not exposed client-side.
+
+To find your `secret key`, go to [your dashboard](https://flayyer.com/dashboard/_/projects?ref=docs) > your project > Advanced settings > Signed URLS, and enable the signing strategy you desire.
+
+```jsx title="pages/index.js" {4,8-9,21-31}
 import Head from "next/head"
-import { FlayyerIO } from "@flayyer/flayyer"
+import { FlayyerAI } from "@flayyer/flayyer"
 
-export default function ItemPage({ item }) {
-  const flayyer = new FlayyerIO({
-    tenant: "your-tenant-slug",
-    deck: "my-project",
-    template: "product", // here we use a different template for items
-    variables: {
-      title: item.title,
-    },
-    meta: {
-      id: item.id, // for analytics
-    },
-  })
-
+export default function IndexPage(props) {
   return (
     <div>
       <Head>
-        <title>Product: {item.title}</title>
-        <meta property="og:image" content={flayyer.href()} />
-        <meta name="twitter:image" content={flayyer.href()} />
+        <meta property="og:image" content={props.flayyerHref} />
+        <meta name="twitter:image" content={props.flayyerHref} />
         <meta name="twitter:card" content="summary_large_image" />
+        {/* [Recommended] Keep your original og:image handy for your project */
+        /* <meta name="flayyer:default" content={your-original-og-image} /> */
+        /* ... */}
       </Head>
-      <p>You are viewing {item.title}</p>
+      {/* ... */}
     </div>
   )
 }
 
-const ITEMS = [{
-  id: 1,
-  title: "Book",
-}, {
-  id: 2,
-  title: "Laptop",
-}]
-
-export async function getStaticPaths() {
-  return {
-    paths: ITEMS.map(ITEM => ({ params: { id: ITEM.id } })) // [{ id: 1 }, { id: 2 }]
-  }
-}
-
-export async function getStaticProps(context) {
-  const ITEM = ITEMS.find(ITEM => ITEM.id === context.params["id"])
-  return {
-    props: { item: ITEM }, // will be passed to the page component as props
-  }
-}
-```
-
-### Server props
-
-Make sure you understand how [getServerSideProps](https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering)
-
-```jsx title="pages/products/[id].js" {2,5-15,21-23}
-import Head from "next/head"
-import { FlayyerIO } from "@flayyer/flayyer"
-
-export default function ItemPage({ item }) {
-  const flayyer = new FlayyerIO({
-    tenant: "your-tenant-slug",
-    deck: "my-project",
-    template: "product", // here we use a different template for items
-    variables: {
-      title: item.title,
-    },
-    meta: {
-      id: item.id, // for analytics
-    },
-  })
-
-  return (
-    <div>
-      <Head>
-        <title>Product: {item.title}</title>
-        <meta property="og:image" content={flayyer.href()} />
-        <meta name="twitter:image" content={flayyer.href()} />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
-      <p>You are viewing {item.title}</p>
-    </div>
-  )
-}
-
+// This function runs only server-side, it won't be bundled to the client
 export async function getServerSideProps(context) {
-  const id = context.params["id"]
-  const res = await fetch(`https://.../api/products/${id}`)
-  const data = await res.json()
-
-  if (!data) {
-    return {
-      notFound: true,
-    }
-  }
-
+  const flayyer = new FlayyerAI({
+    project: "your-project-slug",
+    path: context.resolvedUrl,
+    secret: "your-secret-key",
+    strategy: "JWT", // or "HMAC"
+  });
   return {
-    props: { item: data }, // will be passed to the page component as props
+    props: { flayyerHref: flayyer.href() }, // will be passed to the page component as props
   }
 }
 ```
 
-## FAQ
-
-### Does Flayyer works with Next.js export feature?
-
-Yes ✅
-
-### Is there any performance impact?
-
-No, it is super lightweight and simple. [See it by yourself](https://bundlephobia.com/result?p=@flayyer/flayyer).
+:::note
+You can also instanciate FlayyerAI in [getStaticProps](https://nextjs.org/docs/basic-features/data-fetching#getstaticprops-static-generation) (instead `getServerSideProps`) as it runs at build time. You're invited to [extend this guide](https://github.com/flayyer/flayyer-docs/edit/main/guides/javascript/nextjs.md) if you like.
+:::

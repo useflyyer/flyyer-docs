@@ -16,30 +16,23 @@ import styles from "./styles.module.scss";
 
 const FEATURES = [
   {
-    title: "Create previews now",
-    imageUrl: "img/feature-design.svg",
+    title: "Our AI system does the work",
+    imageUrl: "img/feature-relax.svg",
     description: (
       <>
-        We will guide you through all the required steps to create your own designs and bring them to life with React
-        and Vue.
+        Get everything ready in 5 minutes, customize later. Let our AI system do everything for you.{" "}
+        <a href="/guides/get-started" target="_self">
+          Try it now
+        </a>
+        .
       </>
     ),
   },
   {
-    title: "Concise and up-to-date",
-    imageUrl: "img/feature-search.svg",
+    title: "Create custom templates",
+    imageUrl: "img/feature-design.svg",
     description: (
-      <>
-        These are the official docs and guides, lead by the same people building{" "}
-        <a href="https://flayyer.io" target="_blank">
-          Flayyer.io
-        </a>
-        {" and "}
-        <a href="https://flayyer.com" target="_blank">
-          Flayyer.com
-        </a>
-        .
-      </>
+      <>We guide you through all the steps to create your own designs and bring them to life with React or Vue.</>
     ),
   },
   {
@@ -90,17 +83,17 @@ export default function Home() {
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
             <Link
+              className={clsx(styles.button, "button button--secondary button--lg", styles.getStarted)}
+              to={useBaseUrl("guides/get-started")}
+            >
+              Integration guides
+            </Link>
+            <Link
               className={clsx(styles.button, "button button--outline button--lg", styles.getStarted)}
               style={{ color: "white" }}
               to={useBaseUrl("docs/")}
             >
-              Create Flayyers
-            </Link>
-            <Link
-              className={clsx(styles.button, "button button--secondary button--lg", styles.getStarted)}
-              to={useBaseUrl("guides/")}
-            >
-              Integration guides
+              Custom templates
             </Link>
           </div>
         </div>

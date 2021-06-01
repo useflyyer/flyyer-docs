@@ -7,7 +7,7 @@ const ALGOLIA_KEY = process.env.ALGOLIA_KEY;
 
 module.exports = {
   title: "Flayyer docs",
-  tagline: "CLI documentation and integration guides",
+  tagline: "Integration guides and CLI documentation",
   url: "https://docs.flayyer.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -50,17 +50,17 @@ module.exports = {
       },
       items: [
         {
-          type: "doc",
-          position: "left",
-          docId: "getting-started",
-          label: "Documentation",
-        },
-        {
           to: "/guides",
           docId: "introduction",
           label: "Guides",
           position: "left",
           activeBaseRegex: `/guides/`,
+        },
+        {
+          type: "doc",
+          position: "left",
+          docId: "getting-started",
+          label: "Documentation",
         },
         { to: "changelog", label: "Changelog", position: "left" },
         {

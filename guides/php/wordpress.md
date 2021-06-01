@@ -3,77 +3,38 @@ id: wordpress
 title: Wordpress
 ---
 
-> Repository: https://github.com/flayyer/flayyer-wp
+## Installation
 
-![demo image of flayyer for wordpress](https://raw.githubusercontent.com/flayyer/flayyer-wp/master/.github/assets/view.png)
+Let our Wordpress plugin integrate FlayyerAI for you. It requires **Yoast SEO** plugin and PHP >= 14.0.
 
-We have developed a Wordpress Plugin but is not listed in the official plugin list yet. Feel free to review it, here is the source code: [github.com/flayyer/flayyer-wp](https://github.com/flayyer/flayyer-wp).
+### 1. Download the plugin zip
 
-## Requirements
+Download the zip here: [flayyer-wordpress-plugin.zip](https://github.com/flayyer/flayyer-wp/releases/latest/download/flayyer-wordpress-plugin.zip). Feel free to review the source code here: [github.com/flayyer/flayyer-wp](https://github.com/flayyer/flayyer-wp).
 
-* [Yoast SEO](https://yoast.com) version 14.0 or newer.
-* PHP version 14.0 or newer
+### 2. Add `Yoast SEO` plugin
 
-## Download
+Download **Yoast SEO** from the plugins list (Plugins > Add New > Search for `Yoast SEO`) or [from here](https://wordpress.org/plugins/wordpress-seo/).
 
-To get started, download the latest plugin version: [flayyer-wordpress-plugin.zip](https://github.com/flayyer/flayyer-wp/releases/latest/download/flayyer-wordpress-plugin.zip)
+### 3. Upload the plugin
 
-If you are looking for an older version of the plugin you can find them in the [releases page](https://github.com/flayyer/flayyer-wp/releases/latest). They	are all listed as zip files named `flayyer-wordpress-plugin.zip`.
-
-## Install
-
-From your admin dashboard go to the **Plugins** menu. Click on **Upload Plugin** and upload	the zipped file `flayyer-wordpress-plugin.zip` (no need to decompress it).
+From your admin dashboard go to the **Plugins** menu. Click on **Upload Plugin** and upload the zipped file `flayyer-wordpress-plugin.zip`. If you downloaded `Yoast SEO` zip, then upload it the same way.
 
 ![demo image of flayyer install](https://raw.githubusercontent.com/flayyer/flayyer-wp/master/.github/assets/install.png)
 
-## Categories and variables
+### 4. Set your `project-slug`
 
-We have defined **5 types of content pages** on Wordpress by default. Each one maps the most common fields from Wordpress to variables you can grab inside the Flayyer templates.
+You can Find your `project-slug` in [your dashboard](https://flayyer.com/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
 
-### Home / default
+Write write it down in the Flayyer settings. By default it's your domain name but it may be different. Looks like this:
 
-The main page of your Wordpress site. If you don't setup the next templates this is going to be used as default.
+![demo image of flayyer for wordpress](https://raw.githubusercontent.com/flayyer/flayyer-wp/master/.github/assets/view.png)
 
-* No variables are pass
+:::note
+If you inspect the `<head />` of your HTML you should see the `og:image` and `twitter:image` tags with `flayyer.ai` URLs with your `project-slug` and current `pathname` on it. If you're having trouble, **please make sure both plugins are active** in the Plugins menu.
+:::
 
-### Posts
+### 5. Voilà 🎉
 
-Each entry you create on your site. This is probably the most important category.
+Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
 
-* `title`: Post title
-* `description`: Post description
-* `images`: Array of images urls (`string[]`)
-* `author`: Author object
-  * `first_name`
-  * `last_name`
-  * `display_name`
-  * `nickname`
-  * `avatar`: Image URL from Gravatar.
-
-### Author / profile
-
-A good use-case is displaying profile images (avatar) or for social media profiles.
-
-* `first_name`
-* `last_name`
-* `display_name`
-* `nickname`
-* `avatar`: Image URL from Gravatar.
-
-### Categories
-
-Also called <em>tags</em>. This is useful to display a collection of items.
-
-* `title`: Category title
-* `description`: Category description
-* `images`: Array of images urls (`string[]`)
-
-### Pages
-
-Any other page like _About_, _Contact us_ or the privacy policy.
-
-* `title`: Page title
-* `description`: Page description
-* `images`: Array of images urls (`string[]`)
-
-**Great! 🎉 This is all you need to start using FLAYYER with Wordpress.**
+[Go to your dashboard 🚀](https://flayyer.com/dashboard/_/projects/_/)
