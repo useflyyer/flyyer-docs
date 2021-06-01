@@ -41,8 +41,14 @@ $url = $flayyer->href();
 Take a look into the [Wordpress integration guide](/guides/php/wordpress) to see a full example for your specific setup. You're invited to [contribute to the PHP documentation](https://github.com/flayyer/flayyer-docs/tree/main/guides/php) and add your own guide for other technologies.
 
 :::note
-For link previews to work meta-tags code needs to be static or server-side rendered.
+The meta-tags code needs to be static, processed at build time or server-side rendered for link previews to work.
 :::
+
+### 3. Voilà 🎉
+
+Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
+
+[Go to your dashboard 🚀](https://flayyer.com/auth/login?ref=docs)
 
 ## Advanced usage
 
