@@ -5,7 +5,7 @@ title: Wordpress
 
 ## Installation
 
-Let our Wordpress plugin integrate FlayyerAI for you. It requires **Yoast SEO** and PHP >= 14.0.
+Let our Wordpress plugin integrate FlayyerAI for you. It requires **Yoast SEO** plugin and PHP >= 14.0.
 
 ### 1. Download the plugin zip
 
