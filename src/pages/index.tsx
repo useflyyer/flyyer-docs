@@ -19,7 +19,13 @@ const FEATURES = [
     title: "Our AI system does the work",
     imageUrl: "img/feature-relax.svg",
     description: (
-      <>Get everything ready in 5 minutes and customize later. Let our AI system do everything for you. Try it now.</>
+      <>
+        Get everything ready in 5 minutes and customize later. Let our AI system do everything for you.{" "}
+        <a href="/guides/get-started" target="_self">
+          Try it now
+        </a>
+        .
+      </>
     ),
   },
   {
@@ -83,15 +89,15 @@ export default function Home() {
               className={clsx(styles.button, "button button--secondary button--lg", styles.getStarted)}
               to={useBaseUrl("guides/get-started")}
             >
-              Get started
+              Integration guides
             </Link>
-            {/* <Link
+            <Link
               className={clsx(styles.button, "button button--outline button--lg", styles.getStarted)}
               style={{ color: "white" }}
-              to={useBaseUrl("guides/")}
+              to={useBaseUrl("docs/")}
             >
-              Create templates
-            </Link> */}
+              Custom templates
+            </Link>
           </div>
         </div>
       </header>
