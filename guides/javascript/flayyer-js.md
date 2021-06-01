@@ -37,7 +37,7 @@ npm install --save @flayyer/flayyer
 </TabItem>
 </Tabs>
 
-### 2. Generate smart image URLs
+### 2. Generate smart image URLs for your meta-tags
 
 Find your `project-slug` in [your dashboard](https://flayyer.com/auth/login?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
 
@@ -76,8 +76,14 @@ function Head() {
 Take a look into the [Next.js](/guides/javascript/nextjs), [Gatsby.js](/guides/javascript/gatsbyjs) or [other JavaScript technologies](/guides/get-started#javascript-guides) integration guides to see a full example depending on your project setup.
 
 :::note
-For link previews to work meta-tags code needs to be static or server-side rendered.
+The meta-tags code needs to be static, processed at build time or server-side rendered for link previews to work.
 :::
+
+### 3. Voilà 🎉
+
+Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
+
+[Go to your dashboard 🚀](https://flayyer.com/auth/login?ref=docs)
 
 ## Advanced usage
 
