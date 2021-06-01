@@ -18,7 +18,9 @@ export const jsManagers = [
   {label: "NPM", value: "npm"},
 ]
 
-### 1. Install [@flayyer/flayyer](./flayyer-js.md), [react-helmet](https://github.com/nfl/react-helmet) and [gatsby-plugin-react-helmet](https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/)
+### 1. Install modules
+
+Install [@flayyer/flayyer](./flayyer-js.md), [react-helmet](https://github.com/nfl/react-helmet) and [gatsby-plugin-react-helmet](https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/).
 
 <Tabs groupId="js-manager" defaultValue="yarn" values={jsManagers}>
 <TabItem value="yarn">
@@ -48,7 +50,7 @@ plugins: [`gatsby-plugin-react-helmet`]
 
 Use `react-helmet` to append the meta-tags to the `<head />`. The plugin will make sure it works with static generation ("server-side") which is required for link previews. Then `@flayyer/flayyer` to generate the smart image link along with `props.location` from the page component to set the `pathname` dynamically.
 
-You can find your `project-slug` in [your dashboard](https://flayyer.com/auth/login?ref=docs). Don't have a project yet? [Create one here](https://flayyer.com/get-started?ref=docs).
+You can Find your `project-slug` in [your dashboard](https://flayyer.com/dashboard/_/projects/_/integrate?ref=docs). Don't have a project yet? [Create one here](https://flayyer.com/get-started?ref=docs).
 
 This example is on the index page, but it should work on any of your pages as is.
 
@@ -86,13 +88,13 @@ If query params from your URL enrich your image preview, you can get them from `
 
 Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
 
-[Go to your dashboard 🚀](https://flayyer.com/auth/login?ref=docs)
+[Go to your dashboard 🚀](https://flayyer.com/dashboard/_/projects/_/)
 
 ## Advanced usage
 
 ### Signed URLs
 
-The module `@flayyer/flayyer` supports HMAC and JWT signatures. It's important you make sure `FlayyerAI` is instantiated only on build-time (not in runtime) so your secret key is not exposed client-side, **this should not be expected from this guide**.
+The module `@flayyer/flayyer` supports HMAC and JWT signatures.
 
 To find your `secret key`, go to [your dashboard](https://flayyer.com/dashboard/_/projects?ref=docs) > your project > Advanced settings > Signed URLS, and enable the signing strategy you desire.
 
@@ -123,3 +125,7 @@ export default function IndexPage(props) {
   )
 }
 ```
+
+:::caution
+Make sure FlayyerAI is instanciated at build time or server-side, so your secret is not exposed on the client. You're invited to [contribute to this guide](https://github.com/flayyer/flayyer-docs/edit/main/guides/javascript/gatsbyjs.md) with your preferred method.
+:::
