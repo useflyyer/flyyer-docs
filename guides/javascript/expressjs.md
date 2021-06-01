@@ -40,7 +40,7 @@ npm install --save @flayyer/flayyer
 
 Use `@flayyer/flayyer` to generate the smart image link on your controllers, then the `req.originalUrl` to set the current `pathname` dynamically.
 
-You can find your `project-slug` in [your dashboard](https://flayyer.com/auth/login?ref=docs). Don't have a project yet? [Create one here](https://flayyer.com/get-started?ref=docs).
+You can Find your `project-slug` in [your dashboard](https://flayyer.com/dashboard/_/projects/_/integrate?ref=docs). Don't have a project yet? [Create one here](https://flayyer.com/get-started?ref=docs).
 
 In this example we do it for the root path (`/`) but should work for any path as is.
 
@@ -87,7 +87,7 @@ If you're having trouble, please make sure you always render those meta-tags in 
 
 Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
 
-[Go to your dashboard 🚀](https://flayyer.com/auth/login?ref=docs)
+[Go to your dashboard 🚀](https://flayyer.com/dashboard/_/projects/_/)
 
 ## Advanced usage
 
