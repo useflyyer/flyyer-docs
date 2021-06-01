@@ -30,7 +30,7 @@ rails generate meta_tags:install
 
 Use `before_action` to provide the smart image URL to every view.
 
-You can find your `project-slug` in [your dashboard](https://flayyer.com/auth/login?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
+You can Find your `project-slug` in [your dashboard](https://flayyer.com/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
 
 ```ruby title="app/controllers/application_controller.rb" {2,4-23}
 class ApplicationController < ActionController::Base
@@ -85,8 +85,6 @@ Add `display_meta_tags` to your layout.
 </html>
 ```
 
-Voilà!
-
 :::note
 If you inspect the `<head />` of your HTML you should see the `og:image` and `twitter:image` tags with `flayyer.ai` URLs with your `project-slug` and current `pathname` on it. If you're having trouble, please make sure they are not overwritten elsewhere.
 :::
@@ -95,7 +93,7 @@ If you inspect the `<head />` of your HTML you should see the `og:image` and `tw
 
 Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
 
-[Go to your dashboard 🚀](https://flayyer.com/auth/login?ref=docs)
+[Go to your dashboard 🚀](https://flayyer.com/dashboard/_/projects/_/)
 
 ## Advanced usage
 

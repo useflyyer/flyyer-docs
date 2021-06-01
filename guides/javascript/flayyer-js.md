@@ -7,7 +7,7 @@ title: "@flayyer/flayyer"
 
 ## Installation
 
-This module is agnostic to any JS framework.
+This module is agnostic to any JS framework and supports TypeScript out of the box.
 
 ### 1. Install `@flayyer/flayyer`
 
@@ -39,7 +39,7 @@ npm install --save @flayyer/flayyer
 
 ### 2. Generate smart image URLs for your meta-tags
 
-Find your `project-slug` in [your dashboard](https://flayyer.com/auth/login?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
+Find your `project-slug` in [your dashboard](https://flayyer.com/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
 
 Now you can generate smart image URLs like shown below.
 
@@ -83,7 +83,7 @@ The meta-tags code needs to be static, processed at build time or server-side re
 
 Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
 
-[Go to your dashboard 🚀](https://flayyer.com/auth/login?ref=docs)
+[Go to your dashboard 🚀](https://flayyer.com/dashboard/_/projects/_/)
 
 ## Advanced usage
 

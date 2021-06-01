@@ -31,7 +31,7 @@ gem install flayyer
 
 ### 2. Generate smart image URLs for your meta-tags
 
-Find your `project-slug` in [your dashboard](https://flayyer.com/auth/login?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
+Find your `project-slug` in [your dashboard](https://flayyer.com/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
 
 Now you can generate smart image URLs like shown below.
 
@@ -60,7 +60,7 @@ The meta-tags code needs to be static, processed at build time or server-side re
 
 Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
 
-[Go to your dashboard 🚀](https://flayyer.com/auth/login?ref=docs)
+[Go to your dashboard 🚀](https://flayyer.com/dashboard/_/projects/_/)
 
 ## Advanced usage
 
@@ -84,7 +84,3 @@ flayyer = FlayyerAI(
 url = flayyer.href()
 # > https://flayyer.ai/v2/website-com/jwt-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXJhbXMiOnsiX19pZCI6ImplYW5zLTEyMyJ9LCJwYXRoIjoiXC9wYXRoXC90b1wvcHJvZHVjdCJ9.X8Vs5SGEA1-3M6bH-h24jhQnbwH95V_G0f-gPhTBTzE?__v=1618283086
 ```
-
-:::caution
-Make sure FlayyerAI is instanciated at build time or server-side, so your secret is not exposed on the client.
-:::

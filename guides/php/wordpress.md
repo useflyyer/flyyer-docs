@@ -23,7 +23,7 @@ From your admin dashboard go to the **Plugins** menu. Click on **Upload Plugin**
 
 ### 4. Set your `project-slug`
 
-You can find your `project-slug` in [your dashboard](https://flayyer.com/auth/login?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
+You can Find your `project-slug` in [your dashboard](https://flayyer.com/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
 
 Write write it down in the Flayyer settings. By default it's your domain name but it may be different. Looks like this:
 
@@ -37,4 +37,4 @@ If you inspect the `<head />` of your HTML you should see the `og:image` and `tw
 
 Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
 
-[Go to your dashboard 🚀](https://flayyer.com/auth/login?ref=docs)
+[Go to your dashboard 🚀](https://flayyer.com/dashboard/_/projects/_/)

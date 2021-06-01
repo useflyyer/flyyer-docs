@@ -40,7 +40,7 @@ npm install --save @flayyer/flayyer
 
 Use [next/head](https://nextjs.org/docs/api-reference/next/head) for appending meta-tags to the `<head />`, then `@flayyer/flayyer` to generate the smart image link along with [next/router](https://nextjs.org/docs/api-reference/next/router) to get the current `pathname` dynamically.
 
-You can find your `project-slug` in [your dashboard](https://flayyer.com/auth/login?ref=docs). Don't have a project yet? [Create one here](https://flayyer.com/get-started?ref=docs).
+You can Find your `project-slug` in [your dashboard](https://flayyer.com/dashboard/_/projects/_/integrate?ref=docs). Don't have a project yet? [Create one here](https://flayyer.com/get-started?ref=docs).
 
 This example is on the index page, but it should work on any of your pages as is.
 
@@ -79,7 +79,7 @@ If you're having trouble, set this up directly on the page handler (inside the `
 
 Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
 
-[Go to your dashboard 🚀](https://flayyer.com/auth/login?ref=docs)
+[Go to your dashboard 🚀](https://flayyer.com/dashboard/_/projects/_/)
 
 ## Advanced usage
 
