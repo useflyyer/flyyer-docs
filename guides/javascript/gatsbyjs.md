@@ -18,10 +18,10 @@ export const jsManagers = [
   {label: "NPM", value: "npm"},
 ]
 
+### 1. Install [@flayyer/flayyer](./flayyer-js.md), [react-helmet](https://github.com/nfl/react-helmet) and [gatsby-plugin-react-helmet](https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/)
+
 <Tabs groupId="js-manager" defaultValue="yarn" values={jsManagers}>
 <TabItem value="yarn">
-
-Install the following modules: [@flayyer/flayyer](./flayyer-js.md), [react-helmet](https://github.com/nfl/react-helmet) and [gatsby-plugin-react-helmet](https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/).
 
 ```bash title="Terminal.app"
 yarn add @flayyer/flayyer react-helmet gatsby-plugin-react-helmet
@@ -31,8 +31,6 @@ yarn add @flayyer/flayyer react-helmet gatsby-plugin-react-helmet
 
 <TabItem value="npm">
 
-Install the following modules: [@flayyer/flayyer](./flayyer-js.md), [react-helmet](https://github.com/nfl/react-helmet) and [gatsby-plugin-react-helmet](https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/).
-
 ```bash title="Terminal.app"
 npm install --save @flayyer/flayyer react-helmet gatsby-plugin-react-helmet
 ```
@@ -40,11 +38,13 @@ npm install --save @flayyer/flayyer react-helmet gatsby-plugin-react-helmet
 </TabItem>
 </Tabs>
 
-Add the plugin to the plugins array in your `gatsby-config.js`.
+### 2. Add the plugin to the plugins array in your `gatsby-config.js`
 
 ```js title="gatsby-config.js"
 plugins: [`gatsby-plugin-react-helmet`]
 ```
+
+### 3. Generate smart image URLs for your meta-tags
 
 Use `react-helmet` to append the meta-tags to the `<head />`. The plugin will make sure it works with static generation ("server-side") which is required for link previews. Then `@flayyer/flayyer` to generate the smart image link along with `props.location` from the page component to set the `pathname` dynamically.
 
@@ -81,6 +81,12 @@ export default function IndexPage(props) {
 :::note
 If query params from your URL enrich your image preview, you can get them from `props.location.search`
 :::
+
+### 4. Voilà 🎉
+
+Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
+
+[Go to your dashboard 🚀](https://flayyer.com/auth/login?ref=docs)
 
 ## Advanced usage
 
