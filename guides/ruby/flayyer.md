@@ -29,7 +29,7 @@ Or install it yourself as:
 gem install flayyer
 ```
 
-### 2. Generate smart image URLs
+### 2. Generate smart image URLs for your meta-tags
 
 Find your `project-slug` in [your dashboard](https://flayyer.com/auth/login?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
 
@@ -53,8 +53,14 @@ url = flayyer.href
 Take a look into the [Ruby on Rails integration guide](/guides/ruby/rails) to see a full example for your specific setup. You're invited to [contribute to the Ruby documentation](https://github.com/flayyer/flayyer-docs/tree/main/guides/ruby) and add your own guide for other technologies.
 
 :::note
-For link previews to work meta-tags code needs to be static or server-side rendered.
+The meta-tags code needs to be static, processed at build time or server-side rendered for link previews to work.
 :::
+
+### 3. Voilà 🎉
+
+Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
+
+[Go to your dashboard 🚀](https://flayyer.com/auth/login?ref=docs)
 
 ## Advanced usage
 
