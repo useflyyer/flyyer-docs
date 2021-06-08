@@ -3,7 +3,7 @@ id: flayyer-js
 title: "@flayyer/flayyer"
 ---
 
-> Repository: https://github.com/flayyer/flayyer
+> Repository: https://github.com/flayyer/flayyer-js
 
 ## Installation
 
