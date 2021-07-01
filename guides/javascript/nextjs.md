@@ -36,7 +36,7 @@ npm install --save @flayyer/flayyer
 </TabItem>
 </Tabs>
 
-### 3. Generate smart image URLs for your meta-tags
+### 2. Generate smart image URLs for your meta-tags
 
 Use [next/head](https://nextjs.org/docs/api-reference/next/head) for appending meta-tags to the `<head />`, then `@flayyer/flayyer` to generate the smart image link along with [next/router](https://nextjs.org/docs/api-reference/next/router) to get the current `pathname` dynamically.
 
