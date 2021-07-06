@@ -58,11 +58,11 @@ export default function IndexPage() {
   return (
     <div>
       <Head>
-        <meta property="og:image" content={flayyer.href()} />
-        <meta name="twitter:image" content={flayyer.href()} />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta key="og:image" property="og:image" content={flayyer.href()} />
+        <meta key="twitter:image" name="twitter:image" content={flayyer.href()} />
+        <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
         {/* [Recommended] Keep your original og:image handy for your project */
-        /* <meta name="flayyer:default" content={your-original-og-image} /> */
+        /* <meta key="flayyer:default" name="flayyer:default" content={your-original-og-image} /> */
         /* ... */}
       </Head>
       {/* ... */}
@@ -72,7 +72,7 @@ export default function IndexPage() {
 ```
 
 :::note
-If you're having trouble, set this up directly on the page handler (inside the `pages/` folder) and make sure your `og:image` and `twitter:image` meta-tags are not being overwritten elsewhere.
+If you're having trouble, set this up directly on the page handler (inside the `pages/` folder) and make sure your `og:image` and `twitter:image` meta-tags are not being overwritten elsewhere. Tip: Next.js overwrites tags with the same `key`.
 :::
 
 ### 3. Voilà 🎉
@@ -97,11 +97,11 @@ export default function IndexPage(props) {
   return (
     <div>
       <Head>
-        <meta property="og:image" content={props.flayyerHref} />
-        <meta name="twitter:image" content={props.flayyerHref} />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta key="og:image" property="og:image" content={props.flayyerHref} />
+        <meta key="twitter:image" name="twitter:image" content={props.flayyerHref} />
+        <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
         {/* [Recommended] Keep your original og:image handy for your project */
-        /* <meta name="flayyer:default" content={your-original-og-image} /> */
+        /* <meta key="flayyer:default" name="flayyer:default" content={your-original-og-image} /> */
         /* ... */}
       </Head>
       {/* ... */}
