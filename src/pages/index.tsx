@@ -41,7 +41,7 @@ const FEATURES = [
     description: (
       <>
         All of this pages are{" "}
-        <a href="https://github.com/flayyer/flayyer-docs" target="_blank">
+        <a href="https://github.com/useflyyer/flyyer-docs" target="_blank">
           open-source
         </a>{" "}
         and open to every contribution. {"Let's"} build a better community!

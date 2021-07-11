@@ -1,10 +1,10 @@
 ---
-id: flayyer-cli
-title: "@flayyer/cli"
+id: flyyer-cli
+title: "@flyyer/cli"
 ---
 
-> * Repository: https://github.com/flayyer/flayyer-cli
-> * NPM Package: https://www.npmjs.com/package/@flayyer/cli
+> * Repository: https://github.com/useflyyer/flyyer-cli
+> * NPM Package: https://www.npmjs.com/package/@flyyer/cli
 
 This is a Command-Line Interface (CLI) to develop dynamic og:images. Behind the scenes this package starts a development server with Parcel.js and enables developers to create Flayyer Templates using their favorite apps and technologies.
 
@@ -22,7 +22,7 @@ export const jsManagers = [
 It is recommended to install it as a development dependency (`devDependencies`):
 
 ```bash title="Terminal.app"
-yarn add --dev @flayyer/cli
+yarn add --dev @flyyer/cli
 ```
 
 </TabItem>
@@ -32,23 +32,23 @@ yarn add --dev @flayyer/cli
 It is recommended to install it as a development dependency (`devDependencies`):
 
 ```bash title="Terminal.app"
-npm install --save-dev @flayyer/cli
+npm install --save-dev @flyyer/cli
 ```
 
 </TabItem>
 </Tabs>
 
 :::note
-This module is included when creating a project with [`create-flayyer-app`](../getting-started.md)
+This module is included when creating a project with [`create-flyyer-app`](../getting-started.md)
 :::
 
-## flayyer.config.js
+## flyyer.config.js
 
-This file is loaded when submitting the bundled file to Flayyer servers through [`flayyer deploy`](#flayyer-deploy).
+This file is loaded when submitting the bundled file to Flayyer servers through [`flyyer deploy`](#flyyer-deploy).
 
 Basic file structure is:
 
-```js title="flayyer.config.js"
+```js title="flyyer.config.js"
 module.exports = {
   engine: "react",
   key: process.env.FLAYYER_KEY,
@@ -85,7 +85,7 @@ type FlayyerConfigType = {
 ### FLAYYER_KEY
 
 :::note
-Get your API key at: [https://flayyer.com/dashboard/_/settings](https://flayyer.com/dashboard/_/settings)
+Get your API key at: [https://flyyer.io/dashboard/_/settings](https://flyyer.io/dashboard/_/settings)
 :::
 
 This is the API key required to authenticate before uploading your project to our cloud.
@@ -97,24 +97,24 @@ Every script here assumes you have the following `package.json`:
 ```json title="package.json"
 {
   "scripts": {
-    "start": "flayyer start",
-    "build": "flayyer build",
-    "deploy": "flayyer deploy",
+    "start": "flyyer start",
+    "build": "flyyer build",
+    "deploy": "flyyer deploy",
   },
 }
 ```
 
-### flayyer start
+### flyyer start
 
-[flayyer-studio]: https://flayyer.github.io/flayyer-studio/
+[flyyer-studio]: https://useflyyer.github.io/studio
 
 :::caution
 Please use Google Chrome, Firefox or Opera. Safari is not widely supported.
 :::
 
-This command starts a development server using Parcel.js. Then open [Flayyer Studio][flayyer-studio] in your browser for a better developer experience.
+This command starts a development server using Parcel.js. Then open [Flayyer Studio][flyyer-studio] in your browser for a better developer experience.
 
-[![Flayyer Studio screenshot](https://github.com/flayyer/flayyer-studio/raw/main/.github/screenshot.png)][flayyer-studio]
+[![Flayyer Studio screenshot](https://github.com/useflyyer/flyyer-studio/raw/main/.github/screenshot.png)][flyyer-studio]
 
 To run the server at the default host and port [http://localhost:7777](http://localhost:7777) just execute:
 
@@ -160,13 +160,13 @@ You should get a message like this on your terminal:
     Please restart the server if something goes wrong.
 
 📄  Found template 'main' at: http://localhost:7777/main.html
-    Go to: https://flayyer.github.io/flayyer-studio/?template=main
+    Go to: https://useflyyer.github.io/studio?template=main
 
 💻  Remember to preview and develop your templates at:
-    https://flayyer.github.io/flayyer-studio/
+    https://useflyyer.github.io/studio
 ```
 
-Visit [Flayyer Studio][flayyer-studio] to preview your template while developing.
+Visit [Flayyer Studio][flyyer-studio] to preview your template while developing.
 
 #### Caveats
 
@@ -174,9 +174,9 @@ Visit [Flayyer Studio][flayyer-studio] to preview your template while developing
 * If the server crashes: you need to restart it.
 * If hot-reloading is not working: Move your components to the same file as your template
 
-### flayyer build
+### flyyer build
 
-Before deploying to production via [flayyer deploy](#flayyer-deploy), you must run this build command:
+Before deploying to production via [flyyer deploy](#flyyer-deploy), you must run this build command:
 
 <Tabs groupId="js-manager" defaultValue="yarn" values={jsManagers}>
 <TabItem value="yarn">
@@ -196,17 +196,17 @@ NODE_ENV=production npm run-script build
 </TabItem>
 </Tabs>
 
-### flayyer deploy
+### flyyer deploy
 
 :::info
-You must run [**flayyer build**](#flayyer-build) before running this command.
+You must run [**flyyer build**](#flyyer-build) before running this command.
 :::
 
 To upload the final bundled templates to our cloud you must have an API Key.
 
-[**Click here to manage your keys 🔑**](https://flayyer.com/dashboard/_/settings)
+[**Click here to manage your keys 🔑**](https://flyyer.io/dashboard/_/settings)
 
-Set your API key as `FLAYYER_KEY` and an environment variables or directly in your flayyer.config.js if you are working on a private repository.
+Set your API key as `FLAYYER_KEY` and an environment variables or directly in your flyyer.config.js if you are working on a private repository.
 
 ```bash title="Terminal.app"
 export FLAYYER_KEY=...
@@ -243,5 +243,5 @@ npm run-script deploy
 If everything is correct, you should see an output with your templates' URLs.
 
 ```bash
-🖼 Created template with URL: https://flayyer.io/v2/company/deck/template.jpeg
+🖼 Created template with URL: https://cdn.flyyer.io/render/v2/company/deck/template.jpeg
 ```

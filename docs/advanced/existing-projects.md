@@ -21,11 +21,11 @@ export const jsManagers = [
 <Tabs groupId="js-manager" defaultValue="yarn" values={jsManagers}>
 <TabItem value="yarn">
 
-Install `react`, `react-dom` and `@flayyer/cli` with:
+Install `react`, `react-dom` and `@flyyer/cli` with:
 
 ```bash title="Terminal.app"
 yarn add react react-dom
-yarn add --dev @flayyer/cli
+yarn add --dev @flyyer/cli
 ```
 
 Add the following scripts to your `package.json`:
@@ -33,9 +33,9 @@ Add the following scripts to your `package.json`:
 ```json title="package.json" {3-5}
 {
   "scripts": {
-    "flayyer:start": "flayyer start",
-    "flayyer:build": "flayyer build",
-    "flayyer:deploy": "flayyer deploy"
+    "flyyer:start": "flyyer start",
+    "flyyer:build": "flyyer build",
+    "flyyer:deploy": "flyyer deploy"
   },
 }
 ```
@@ -43,24 +43,24 @@ Add the following scripts to your `package.json`:
 Add the following to your `.gitignore`:
 
 ```gitignore title=".gitignore"
-.flayyer-*
+.flyyer-*
 ```
 
 Now you can start the development server with:
 
 ```bash title="Terminal.app"
-yarn run flayyer:start
+yarn run flyyer:start
 ```
 
 </TabItem>
 
 <TabItem value="npm">
 
-Install `react`, `react-dom` and `@flayyer/cli` with:
+Install `react`, `react-dom` and `@flyyer/cli` with:
 
 ```bash title="Terminal.app"
 npm install react react-dom
-npm install --save-dev @flayyer/cli
+npm install --save-dev @flyyer/cli
 ```
 
 Add the following scrips to your `package.json`:
@@ -68,9 +68,9 @@ Add the following scrips to your `package.json`:
 ```json title="package.json" {3-5}
 {
   "scripts": {
-    "flayyer:start": "flayyer start",
-    "flayyer:build": "flayyer build",
-    "flayyer:deploy": "flayyer deploy"
+    "flyyer:start": "flyyer start",
+    "flyyer:build": "flyyer build",
+    "flyyer:deploy": "flyyer deploy"
   },
 }
 ```
@@ -78,13 +78,13 @@ Add the following scrips to your `package.json`:
 Add the following to your `.gitignore`:
 
 ```gitignore title=".gitignore"
-.flayyer-*
+.flyyer-*
 ```
 
 Now you can start the development server with:
 
 ```bash title="Terminal.app"
-npm run-script flayyer:start
+npm run-script flyyer:start
 ```
 
 </TabItem>

@@ -9,12 +9,12 @@ Let's speak the same language:
 
 Here is the list of the technical terms.
 
-### Flayyer
+### Flyyer
 
-The name of the company but also **we call "Flayyer" every created [dynamic template](#template)**. As a company we are composed by two main domains:
+The name of the company but also **we call "flyyer" a [template](#template)**. As a company we are composed by two main services:
 
-* [Flayyer.com](https://flayyer.com) — Main service with dashboard, billing, account management and it's much more user-friendly.
-* [Flayyer.io](https://flayyer.io) — "Og:Image as a Service" rendering server.
+* [Flyyer](https://flyyer.io) — Main service with dashboard, billing, account management and it's much more user-friendly as it infers content for templates from a website.
+* [Flyyer Render](https://flyyer.io/render) — "Og:Image as a Service" rendering server. Content provided explicitly through variables for full customization.
 
 ### Slug
 
@@ -22,7 +22,7 @@ The machine-friendly version of a text. Example: `Hello there!` as slug would be
 
 ### Template
 
-This is the most important thing about Flayyer. **This is in reality a webpage (HTML, CSS and JavaScript) acting as a template to create dynamic images** . What is great about this templates is that you can use them to generate infinite amount of images based on variables. 
+This is the most important thing about Flyyer. **This is in reality a webpage (HTML, CSS and JavaScript) acting as a template to create dynamic images** . What is great about this templates is that you can use them to generate infinite amount of images based on variables.
 
 For developers and engineers: a template is a **web component** (React, Vue, etc). To develop templates you can start a project following this [section](./getting-started.md). **Every template has a name corresponding to the name of its file** (similar to Next.js and _pages_).
 
@@ -32,12 +32,12 @@ Take a look at this example, here we have a template with multiple [variables](#
 
 #### Variables
 
-These templates receives **variables** as input and renders images based on those inputs. This is way more smarter than other image services whom only allows to compose images, add watermarks, etc. You can do all of that and even more with custom login and your own styles. 
+These templates receives **variables** as input and renders images based on those inputs. This is way more smarter than other image services whom only allows to compose images, add watermarks, etc. You can do all of that and even more with custom login and your own styles.
 
-Variables are passed through the unique URL of a flayyer as **queryparams**. Eg: This is an actual URL of a Flayyer with a param `title`:
+Variables are passed through the unique URL of a flyyer as **queryparams**. Eg: This is an actual URL of a Flyyer with a param `title`:
 
 ```bash
-https://flayyer.io/v2/flayyer/landing/demo.png?title=Title
+https://cdn.flyyer.io/render/v2/flyyer/landing/demo.png?title=Title
 ```
 
 Inside the component it looks like this:
@@ -65,7 +65,7 @@ Every user belongs to an organization. We call this entities "tenants" or "compa
 
 ## URL anatomy
 
-Every Flayyer.io URL is built around this schema. For variables refer to [Variables](#variables) and [Complex variables](./advanced/complex-variables.md).
+Every FlyyerRender URL is built around this schema. For variables refer to [Variables](#variables) and [Complex variables](./advanced/complex-variables.md).
 
 * `:tenant` — is the Tenant's slug
 * `:deck` — is the Deck's slug
@@ -86,10 +86,10 @@ Please note that `:tenant`, `:deck` and `:template` are always **required**, eve
 Shortest form: always latest version and defaults to `.jpeg` format.
 
 ```bash
-https://flayyer.io/v2/:tenant/:deck/:template?variable=value
+https://cdn.flyyer.io/render/v2/:tenant/:deck/:template?variable=value
 
 # Example:
-https://flayyer.io/v2/flayyer/landing/demo?title=Title
+https://cdn.flyyer.io/render/v2/flyyer/landing/demo?title=Title
 ```
 
 ### Long format
@@ -97,12 +97,12 @@ https://flayyer.io/v2/flayyer/landing/demo?title=Title
 Longest form: explicit version and extension.
 
 ```bash
-https://flayyer.io/v2/:tenant/:deck/:template.:version.:extension?variable=value
+https://cdn.flyyer.io/render/v2/:tenant/:deck/:template.:version.:extension?variable=value
 
 # Example:
-https://flayyer.io/v2/flayyer/landing/demo.1608497482.png?title=Title&description=Description+text
+https://cdn.flyyer.io/render/v2/flyyer/landing/demo.1608497482.png?title=Title&description=Description+text
 ```
 
 :::tip
-To easily compose and format Flayyer URLs please use one of our [libraries](libraries.md).
+To easily compose and format Flyyer URLs please use one of our [libraries](libraries.md).
 :::

@@ -3,9 +3,9 @@ id: project-structure
 title: Project structure
 ---
 
-[create-flayyer-app]: https://npmjs.com/package/create-flayyer-app
+[create-flyyer-app]: https://npmjs.com/package/create-flyyer-app
 
-The most basic project structure (if you used [create-flayyer-app][create-flayyer-app]) should look something like:
+The most basic project structure (if you used [create-flyyer-app][create-flyyer-app]) should look something like:
 
 <!-- MDX variables -->
 import Tabs from '@theme/Tabs';
@@ -27,7 +27,7 @@ PROJECT-NAME/
 │   └── hello.js
 ├── .eslintrc.js
 ├── .gitignore
-├── flayyer.config.js
+├── flyyer.config.js
 ├── package.json
 └── README.md
 ```
@@ -44,7 +44,7 @@ PROJECT-NAME/
 │   └── hello.tsx
 ├── .eslintrc.js
 ├── .gitignore
-├── flayyer.config.js
+├── flyyer.config.js
 ├── package.json
 ├── tsconfig.json
 ├── types.d.ts

@@ -38,7 +38,7 @@ export default function MainTemplate({ agent, variables }) {
 
 ```tsx title="templates/main.tsx"
 import React from "react";
-import { TemplateProps, FlayyerAgentName } from "@flayyer/flayyer-types";
+import { TemplateProps, FlayyerAgentName } from "@flyyer/types";
 
 export default function MainTemplate({ agent, variables }: TemplateProps) {
   if (agent.name === FlayyerAgentName.WHATSAPP) {

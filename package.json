@@ -1,5 +1,5 @@
 {
-  "name": "@flayyer/flayyer-docs",
+  "name": "@flyyer/flyyer-docs",
   "version": "0.8.0",
   "private": true,
   "scripts": {
@@ -50,7 +50,7 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^2.0.0-alpha.75",
-    "@flayyer/eslint-config": "^1.1.1",
+    "@flyyer/eslint-config": "^2.0.1",
     "@tsconfig/docusaurus": "^1.0.2",
     "@types/dedent": "^0.7.0",
     "@types/react": "^17.0.5",

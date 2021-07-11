@@ -2,10 +2,10 @@
 slug: cache-invalidation
 title: Cache invalidation
 author: Patricio Lopez Juri
-author_title: Founder @ Flayyer.com
+author_title: Founder @ Flyyer.io
 author_url: https://github.com/lopezjurip
 author_image_url: https://github.com/lopezjurip.png?size=200
-tags: [flayyer-io]
+tags: [flyyer-render]
 ---
 
 We added a new section about [Cache invalidation](/docs/cache-invalidation) to our docs page so you can check it out 👀

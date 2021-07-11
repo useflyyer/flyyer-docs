@@ -18,7 +18,7 @@ module.exports = {
       collapsed: false,
       items: [
         //
-        "javascript/flayyer-js",
+        "javascript/flyyer-js",
         "javascript/nextjs",
         "javascript/gatsbyjs",
         "javascript/expressjs",
@@ -31,7 +31,7 @@ module.exports = {
       collapsed: false,
       items: [
         //
-        "python/flayyer",
+        "python/flyyer",
         "python/django",
       ],
     },
@@ -41,7 +41,7 @@ module.exports = {
       collapsed: false,
       items: [
         //
-        "ruby/flayyer",
+        "ruby/flyyer",
         "ruby/rails",
       ],
     },
@@ -51,7 +51,7 @@ module.exports = {
       collapsed: false,
       items: [
         //
-        "php/flayyer",
+        "php/flyyer",
         "php/wordpress",
       ],
     },

@@ -4,7 +4,7 @@ title: Next.js
 ---
 
 <!-- TODO -->
-<!-- > Repository: https://github.com/flayyer/integration-examples/tree/main/examples/next -->
+<!-- > Repository: https://github.com/useflyyer/integration-examples/tree/main/examples/next -->
 
 ## Installation
 
@@ -16,13 +16,13 @@ export const jsManagers = [
   {label: "NPM", value: "npm"},
 ]
 
-### 1. Install the [@flayyer/flayyer](./flayyer-js.md) module
+### 1. Install the [@flyyer/flyyer](./flyyer-js.md) module
 
 <Tabs groupId="js-manager" defaultValue="yarn" values={jsManagers}>
 <TabItem value="yarn">
 
 ```bash title="Terminal.app"
-yarn add @flayyer/flayyer
+yarn add @flyyer/flyyer
 ```
 
 </TabItem>
@@ -30,7 +30,7 @@ yarn add @flayyer/flayyer
 <TabItem value="npm">
 
 ```bash title="Terminal.app"
-npm install --save @flayyer/flayyer
+npm install --save @flyyer/flyyer
 ```
 
 </TabItem>
@@ -38,9 +38,9 @@ npm install --save @flayyer/flayyer
 
 ### 2. Generate smart image URLs for your meta-tags
 
-Use [next/head](https://nextjs.org/docs/api-reference/next/head) for appending meta-tags to the `<head />`, then `@flayyer/flayyer` to generate the smart image link along with [next/router](https://nextjs.org/docs/api-reference/next/router) to get the current `pathname` dynamically.
+Use [next/head](https://nextjs.org/docs/api-reference/next/head) for appending meta-tags to the `<head />`, then `@flyyer/flyyer` to generate the smart image link along with [next/router](https://nextjs.org/docs/api-reference/next/router) to get the current `pathname` dynamically.
 
-You can Find your `project-slug` in [your dashboard](https://flayyer.com/dashboard/_/projects/_/integrate?ref=docs). Don't have a project yet? [Create one here](https://flayyer.com/get-started?ref=docs).
+You can Find your `project-slug` in [your dashboard](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). Don't have a project yet? [Create one here](https://flyyer.io/get-started?ref=docs).
 
 This example is on the index page, but it should work on any of your pages as is.
 
@@ -48,21 +48,21 @@ This example is on the index page, but it should work on any of your pages as is
 import React from "react";
 import Head from "next/head"
 import { useRouter } from "next/router"
-import { FlayyerAI } from "@flayyer/flayyer"
+import { Flyyer } from "@flyyer/flyyer"
 
 export default function IndexPage() {
-  const flayyer = new FlayyerAI({
+  const flyyer = new Flyyer({
     project: "your-project-slug",
     path: useRouter().asPath,
   });
   return (
     <div>
       <Head>
-        <meta key="og:image" property="og:image" content={flayyer.href()} />
-        <meta key="twitter:image" name="twitter:image" content={flayyer.href()} />
+        <meta key="og:image" property="og:image" content={flyyer.href()} />
+        <meta key="twitter:image" name="twitter:image" content={flyyer.href()} />
         <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
         {/* [Recommended] Keep your original og:image handy for your project */
-        /* <meta key="flayyer:default" name="flayyer:default" content={your-original-og-image} /> */
+        /* <meta key="flyyer:default" name="flyyer:default" content={your-original-og-image} /> */
         /* ... */}
       </Head>
       {/* ... */}
@@ -79,29 +79,29 @@ If you're having trouble, set this up directly on the page handler (inside the `
 
 Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
 
-[Go to your dashboard 🚀](https://flayyer.com/dashboard/_/projects/_/)
+[Go to your dashboard 🚀](https://flyyer.io/dashboard/_/projects/_/)
 
 ## Advanced usage
 
 ### Signed URLs
 
-The module `@flayyer/flayyer` supports HMAC and JWT signatures. It's important to instanciate FlayyerAI [getServerSideProps](https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering) so your secret key is not exposed client-side.
+The module `@flyyer/flyyer` supports HMAC and JWT signatures. It's important to instanciate Flyyer [getServerSideProps](https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering) so your secret key is not exposed client-side.
 
-To find your `secret key`, go to [your dashboard](https://flayyer.com/dashboard/_/projects?ref=docs) > your project > Advanced settings > Signed URLS, and enable the signing strategy you desire.
+To find your `secret key`, go to [your dashboard](https://flyyer.io/dashboard/_/projects?ref=docs) > your project > Advanced settings > Signed URLS, and enable the signing strategy you desire.
 
 ```jsx title="pages/index.js" {4,8-9,21-31}
 import Head from "next/head"
-import { FlayyerAI } from "@flayyer/flayyer"
+import { Flyyer } from "@flyyer/flyyer"
 
 export default function IndexPage(props) {
   return (
     <div>
       <Head>
-        <meta key="og:image" property="og:image" content={props.flayyerHref} />
-        <meta key="twitter:image" name="twitter:image" content={props.flayyerHref} />
+        <meta key="og:image" property="og:image" content={props.flyyerHref} />
+        <meta key="twitter:image" name="twitter:image" content={props.flyyerHref} />
         <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
         {/* [Recommended] Keep your original og:image handy for your project */
-        /* <meta key="flayyer:default" name="flayyer:default" content={your-original-og-image} /> */
+        /* <meta key="flyyer:default" name="flyyer:default" content={your-original-og-image} /> */
         /* ... */}
       </Head>
       {/* ... */}
@@ -111,18 +111,18 @@ export default function IndexPage(props) {
 
 // This function runs only server-side, it won't be bundled to the client
 export async function getServerSideProps(context) {
-  const flayyer = new FlayyerAI({
+  const flyyer = new Flyyer({
     project: "your-project-slug",
     path: context.resolvedUrl,
     secret: "your-secret-key",
     strategy: "JWT", // or "HMAC"
   });
   return {
-    props: { flayyerHref: flayyer.href() }, // will be passed to the page component as props
+    props: { flyyerHref: flyyer.href() }, // will be passed to the page component as props
   }
 }
 ```
 
 :::note
-You can also instanciate FlayyerAI in [getStaticProps](https://nextjs.org/docs/basic-features/data-fetching#getstaticprops-static-generation) (instead `getServerSideProps`) as it runs at build time. You're invited to [extend this guide](https://github.com/flayyer/flayyer-docs/edit/main/guides/javascript/nextjs.md) if you like.
+You can also instanciate Flyyer in [getStaticProps](https://nextjs.org/docs/basic-features/data-fetching#getstaticprops-static-generation) (instead `getServerSideProps`) as it runs at build time. You're invited to [extend this guide](https://github.com/useflyyer/flyyer-docs/edit/main/guides/javascript/nextjs.md) if you like.
 :::

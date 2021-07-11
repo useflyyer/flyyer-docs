@@ -1,4 +1,4 @@
-# docs.flayyer.com
+# docs.flyyer.io
 
 > CSS Theme: https://facebookincubator.github.io/infima/
 
@@ -44,7 +44,7 @@ export const RemoteFile = ({children, source, ...props}) => {
   )
 };
 
-<RemoteFile source="https://raw.githubusercontent.com/flayyer/flayyer-actions/main/workflow-templates/flayyer-yarn.yml" />
+<RemoteFile source="https://raw.githubusercontent.com/useflyyer/flyyer-actions/main/workflow-templates/flyyer-yarn.yml" />
 ```
 
 ## Build

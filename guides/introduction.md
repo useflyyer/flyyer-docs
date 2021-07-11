@@ -4,15 +4,15 @@ title: Introduction
 slug: /
 ---
 
-[help-email]: mailto:help@flayyer.com
-[twitter]: https://twitter.com/flayyer_com
-[instagram]: https://instagram.com/flayyer_com
+[help-email]: mailto:help@flyyer.io
+[twitter]: https://twitter.com/useflyyer
+[instagram]: https://instagram.com/useflyyer
 
 Welcome and thanks for visiting the official documentation 👋 [Jump to installation steps ↓](/guides/get-started)
 
 This documentation is intended for anyone who want to integrate Flayyer with their current service, app or any kind of amazing software you are building.
 
-If you have any questions related to Flayyer you can reach out to us via [Twitter][twitter], [Instagram][instagram] or by sending an email to [help@flayyer.com][help-email].
+If you have any questions related to Flayyer you can reach out to us via [Twitter][twitter], [Instagram][instagram] or by sending an email to [help@flyyer.io][help-email].
 
 ![a row of 5 demo images](/img/images/row.png)
 
