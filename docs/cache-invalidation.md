@@ -13,7 +13,7 @@ There is two ways of dealing with this issue 👇
 
 ## The __v parameter
 
-When you use one of our [libraries](/docs/libraries) we append a `__v` argument to any generated URL. This argument is a timestamp that changes every time an URL is generated to force a cache invalidation on the social media crawlers but it is ignored on Flayyer's servers when retrieving images from caches layers.
+When you use one of our [libraries](/docs/libraries) we append a `__v` argument to any generated URL. This argument is a timestamp that changes every time an URL is generated to force a cache invalidation on the social media crawlers but it is ignored on Flyyer's servers when retrieving images from caches layers.
 
 **This tries to force social media crawlers to always show the latest version of an image but our system is smart enough to not trigger unnecessary renders of your images.**
 

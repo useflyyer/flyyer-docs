@@ -10,7 +10,7 @@ tags: [flyyer-render]
 
 We added a new section about [Cache invalidation](/docs/cache-invalidation) to our docs page so you can check it out 👀
 
-This section explains the `__v` parameter that usually pops up in Flayyer URLs.
+This section explains the `__v` parameter that usually pops up in Flyyer URLs.
 
 This is a random value (not so random, it is just a timestamp) to trigger cache invalidation on social networks crawlers.
 

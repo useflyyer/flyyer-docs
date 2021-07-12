@@ -8,7 +8,7 @@ author_image_url: https://github.com/lopezjurip.png?size=200
 tags: [community]
 ---
 
-Now you can make your templates public by publishing them to the [Flayyer Community](https://flyyer.io/community).
+Now you can make your templates public by publishing them to the [Flyyer Community](https://flyyer.io/community).
 
 It is super easy, just set on your `flyyer.config.js` the `private` flag to `false`.
 
@@ -18,7 +18,7 @@ require('dotenv').config();
 
 module.exports = config({
   engine: 'react-typescript',
-  key: process.env.FLAYYER_KEY,
+  key: process.env.FLYYER_KEY,
   deck: 'impact-news',
 
   // Optionals

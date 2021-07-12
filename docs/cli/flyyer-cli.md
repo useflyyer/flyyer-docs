@@ -6,7 +6,7 @@ title: "@flyyer/cli"
 > * Repository: https://github.com/useflyyer/flyyer-cli
 > * NPM Package: https://www.npmjs.com/package/@flyyer/cli
 
-This is a Command-Line Interface (CLI) to develop dynamic og:images. Behind the scenes this package starts a development server with Parcel.js and enables developers to create Flayyer Templates using their favorite apps and technologies.
+This is a Command-Line Interface (CLI) to develop dynamic og:images. Behind the scenes this package starts a development server with Parcel.js and enables developers to create Flyyer Templates using their favorite apps and technologies.
 
 <!-- MDX variables -->
 import Tabs from '@theme/Tabs';
@@ -44,14 +44,14 @@ This module is included when creating a project with [`create-flyyer-app`](../ge
 
 ## flyyer.config.js
 
-This file is loaded when submitting the bundled file to Flayyer servers through [`flyyer deploy`](#flyyer-deploy).
+This file is loaded when submitting the bundled file to Flyyer servers through [`flyyer deploy`](#flyyer-deploy).
 
 Basic file structure is:
 
 ```js title="flyyer.config.js"
 module.exports = {
   engine: "react",
-  key: process.env.FLAYYER_KEY,
+  key: process.env.FLYYER_KEY,
   deck: "my-project",
 };
 ```
@@ -60,15 +60,15 @@ Here is the expected format of the file using a Typescript Type notation:
 
 ```ts
 // Typescript type for reference
-type FlayyerConfigType = {
+type FlyyerConfigType = {
   /**
    * Engine/framework used to develop the templates
    */
   engine: "react" | "react-typescript" | "vue" | "vue-typescript";
 
   /**
-   * Flayyer API key.
-   * @default process.env.FLAYYER_KEY
+   * Flyyer API key.
+   * @default process.env.FLYYER_KEY
    */
   key: string;
 
@@ -82,7 +82,7 @@ type FlayyerConfigType = {
 }
 ```
 
-### FLAYYER_KEY
+### FLYYER_KEY
 
 :::note
 Get your API key at: [https://flyyer.io/dashboard/_/settings](https://flyyer.io/dashboard/_/settings)
@@ -112,9 +112,9 @@ Every script here assumes you have the following `package.json`:
 Please use Google Chrome, Firefox or Opera. Safari is not widely supported.
 :::
 
-This command starts a development server using Parcel.js. Then open [Flayyer Studio][flyyer-studio] in your browser for a better developer experience.
+This command starts a development server using Parcel.js. Then open [Flyyer Studio][flyyer-studio] in your browser for a better developer experience.
 
-[![Flayyer Studio screenshot](https://github.com/useflyyer/flyyer-studio/raw/main/.github/screenshot.png)][flyyer-studio]
+[![Flyyer Studio screenshot](https://github.com/useflyyer/flyyer-studio/raw/main/.github/screenshot.png)][flyyer-studio]
 
 To run the server at the default host and port [http://localhost:7777](http://localhost:7777) just execute:
 
@@ -151,7 +151,7 @@ npm run-script start -- -H 0.0.0.0 -p 8000
 You should get a message like this on your terminal:
 
 ```bash {10,13}
-🌠  FLAYYER dev server running at http://localhost:7777
+🌠  FLYYER dev server running at http://localhost:7777
 
 💡  Pass variables as query-params in the URL.
     Example: http://localhost:7777/hello.html?title=Hello+world
@@ -166,7 +166,7 @@ You should get a message like this on your terminal:
     https://useflyyer.github.io/studio
 ```
 
-Visit [Flayyer Studio][flyyer-studio] to preview your template while developing.
+Visit [Flyyer Studio][flyyer-studio] to preview your template while developing.
 
 #### Caveats
 
@@ -206,16 +206,16 @@ To upload the final bundled templates to our cloud you must have an API Key.
 
 [**Click here to manage your keys 🔑**](https://flyyer.io/dashboard/_/settings)
 
-Set your API key as `FLAYYER_KEY` and an environment variables or directly in your flyyer.config.js if you are working on a private repository.
+Set your API key as `FLYYER_KEY` and an environment variables or directly in your flyyer.config.js if you are working on a private repository.
 
 ```bash title="Terminal.app"
-export FLAYYER_KEY=...
+export FLYYER_KEY=...
 ```
 
 Dotenv files are supported via `dotenv`:
 
 ```bash title=".env"
-FLAYYER_KEY=...
+FLYYER_KEY=...
 ```
 
 <Tabs groupId="js-manager" defaultValue="yarn" values={jsManagers}>

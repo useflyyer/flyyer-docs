@@ -6,7 +6,7 @@ sidebar_label: Existing projects
 
 If you already have a repository or project and you want your templates to live inside that project, then you can follow these steps.
 
-The main benefit of having Flayyer inside your project is being able to reuse your current styles and components.
+The main benefit of having Flyyer inside your project is being able to reuse your current styles and components.
 
 ### React.js projects
 
@@ -90,7 +90,7 @@ npm run-script flyyer:start
 </TabItem>
 </Tabs>
 
-Be aware of the terminal output when running Flayyer in this mode. You are probably going to be asked to install some extra _devDependencies_.
+Be aware of the terminal output when running Flyyer in this mode. You are probably going to be asked to install some extra _devDependencies_.
 
 :::note Typescript support
 To use Typescript instead of plain Javascript go to: [Typescript](./typescript.md).

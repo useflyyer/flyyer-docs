@@ -18,7 +18,7 @@ Alternatively, you can integrate Flyyer to manage link previews and social media
 
 ## Create project
 
-Create a new Flayyer app using [`create-flyyer-app`][create-flyyer-app], which sets up everything automatically for you. To start a project follow the steps below.
+Create a new Flyyer app using [`create-flyyer-app`][create-flyyer-app], which sets up everything automatically for you. To start a project follow the steps below.
 
 <!-- MDX variables -->
 import Tabs from '@theme/Tabs';
@@ -135,9 +135,9 @@ npm start
 Please use Google Chrome, Firefox or Opera. Safari is not widely supported.
 :::
 
-This command starts a development server using Parcel.js. Then open [Flayyer Studio][flyyer-studio] in your browser for a better developer experience.
+This command starts a development server using Parcel.js. Then open [Flyyer Studio][flyyer-studio] in your browser for a better developer experience.
 
-[![Flayyer Studio screenshot](/img/images/studio-hello-world.png)][flyyer-studio]
+[![Flyyer Studio screenshot](/img/images/studio-hello-world.png)][flyyer-studio]
 
 ## Deploy
 
@@ -193,7 +193,7 @@ If everything is correct, you should see an output with your templates' URLs.
 🖼 Created template with URL: https://cdn.flyyer.io/render/v2/TENANT/DECK/TEMPLATE.jpeg
 ```
 
-**Congratulations! You deployed your first Flayyer project! 🎉**
+**Congratulations! You deployed your first Flyyer project! 🎉**
 
 [![Resultant flyyer live image](https://github.com/useflyyer/create-flyyer-app/blob/master/.github/assets/result-1.png?raw=true)][result-1]
 
@@ -216,4 +216,4 @@ To format URL we recommend using one of [official libraries](/docs/libraries).
 
 ![cat on a rocket](/img/launch.svg)
 
-Continue reading this documentation to understand more about Flayyer and what other amazing features we support.
+Continue reading this documentation to understand more about Flyyer and what other amazing features we support.

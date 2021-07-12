@@ -5,7 +5,7 @@ title: Libraries
 
 Dealing with URL serialization is tough, specially if you have complex variables.
 
-We have some libraries to make this process of creating a Flayyer URL easier for developers.
+We have some libraries to make this process of creating a Flyyer URL easier for developers.
 
 ```js
 import { FlyyerRender } from "@flyyer/flyyer";
@@ -35,5 +35,5 @@ const url = flyyer.href();
   * Wordpress — [github.com/useflyyer/flyyer-wp](https://github.com/useflyyer/flyyer-wp)
 
 :::note
-These libraries are for composing and formatting parameters into Flayyer URLs, **not for creating Flayyer projects**. To create a project go to [Getting started](./getting-started.md).
+These libraries are for composing and formatting parameters into Flyyer URLs, **not for creating Flyyer projects**. To create a project go to [Getting started](./getting-started.md).
 :::

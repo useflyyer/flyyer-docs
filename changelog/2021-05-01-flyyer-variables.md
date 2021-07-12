@@ -1,6 +1,6 @@
 ---
 slug: flyyer-variables
-title: Flayyer Variables
+title: Flyyer Variables
 author: Patricio Lopez Juri
 author_title: Founder @ Flyyer.io
 author_url: https://github.com/lopezjurip
@@ -34,7 +34,7 @@ import defaultImage from "../static/background.jpeg":
 
 export const schema = V.Object({
   title: V.String({
-    default: 'Flayyer blog entry',
+    default: 'Flyyer blog entry',
   }),
   image: V.Optional(V.Image({
     title: 'Background image URL',
