@@ -15,10 +15,10 @@ We just released [@flyyer/cli@1.11.0](https://www.npmjs.com/package/@flyyer/cli)
 Here is an example:
 
 ```txt
-https://cdn.flyyer.io/render/v2/flyyer/flyyer-landing-demo/main
+https://cdn.flyyer.io/render/v2/flyyer/charming-man/main
   ?title=Now+with+Emojis+😃
 ```
 
-![Emoji example](https://cdn.flyyer.io/render/v2/flyyer/flyyer-landing-demo/main?title=Now+with+Emojis+😃)
+![Emoji example](https://cdn.flyyer.io/render/v2/flyyer/charming-man/main?title=Now+with+Emojis+😃)
 
 Are we missing a feature? Have you found a bug? Let us know via Github: [github.com/useflyyer/flyyer-cli](https://github.com/useflyyer/flyyer-cli).

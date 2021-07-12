@@ -198,29 +198,10 @@ module.exports = {
     [
       "@flyyer/docusaurus-preset",
       {
-        main: {
-          tenant: "flyyer",
-          deck: "flyyer-docs",
-          template: "page",
-        },
-        docs: {
-          tenant: "flyyer",
-          deck: "flyyer-docs",
-          template: "page",
-          // variables: {
-          //   title: "{{description}}",
-          //   section: "{{title}}",
-          // },
-        },
-        blog: {
-          tenant: "flyyer",
-          deck: "flyyer-docs",
-          template: "page",
-          // variables: {
-          //   title: "{{description}}",
-          //   section: "{{title}}",
-          // },
-        },
+        /**
+         * Get your project's identifier at https://flyyer.io/dashboard/_/projects/_/integrate
+         */
+        project: "flyyer-docs",
       },
     ],
   ],
