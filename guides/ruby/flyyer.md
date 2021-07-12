@@ -68,7 +68,7 @@ Now you're able to manage your link previews from your dashboard, create content
 
 The package `flyyer` supports HMAC and JWT signatures.
 
-Find your `secret key` in [your dashboard](https://flyyer.io/dashboard/_/projects?ref=docs) > your project > Advanced settings > Signed URLS, and enable the signing strategy you desire.
+Find your `secret key` [here](https://www.flyyer.io/dashboard/_/projects/_/advanced) under Signed URLS, and enable the signing strategy you desire.
 
 ```python {6-7}
 from flyyer import Flyyer

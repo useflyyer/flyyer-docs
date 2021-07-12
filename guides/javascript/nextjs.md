@@ -87,7 +87,7 @@ Now you're able to manage your link previews from your dashboard, create content
 
 The module `@flyyer/flyyer` supports HMAC and JWT signatures. It's important to instanciate Flyyer [getServerSideProps](https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering) so your secret key is not exposed client-side.
 
-To find your `secret key`, go to [your dashboard](https://flyyer.io/dashboard/_/projects?ref=docs) > your project > Advanced settings > Signed URLS, and enable the signing strategy you desire.
+Find your `secret key` [here](https://www.flyyer.io/dashboard/_/projects/_/advanced) under Signed URLS, and enable the signing strategy you desire.
 
 ```jsx title="pages/index.js" {4,8-9,21-31}
 import Head from "next/head"

@@ -3,9 +3,9 @@ id: django
 title: Django
 ---
 
-## Installation
-
 > Example Repository: https://github.com/useflyyer/integration-examples/tree/main/examples/django/django-without-extra-dependencies
+
+## Installation
 
 We're going to use [flyyer/flyyer-python](/guides/python/flyyer) to format Flyyer URLs in a [context processor](https://docs.djangoproject.com/en/3.2/ref/templates/api/#django.template.RequestContext) to render meta-tags into the `<head />` of your views dynamically with few lines of code.
 
@@ -190,14 +190,14 @@ INSTALLED_APPS = [
 
 # ...
 
-FLAYYER_DEFAULT = {
+FLYYER_DEFAULT = {
     'project': "your-project-slug",
 }
 
 META_SITE_DOMAIN = 'mydomain.com'
 META_USE_OG_PROPERTIES = True
 META_USE_TWITTER_PROPERTIES = True
-META_DEFAULT_IMAGE = Flyyer(**FLAYYER_DEFAULT).href()
+META_DEFAULT_IMAGE = Flyyer(**FLYYER_DEFAULT).href()
 META_TWITTER_TYPE = "summary_large_image"
 ```
 
@@ -216,7 +216,7 @@ from .models import Choice, Question
 # Flyyer smart image link helper
 def flyyer_href(current_pathname):
     flyyer = Flyyer(**{
-        **settings.FLAYYER_DEFAULT,
+        **settings.FLYYER_DEFAULT,
         'path': current_pathname,
     })
     return flyyer.href()
@@ -280,7 +280,7 @@ Now you're able to manage your link previews from your dashboard, create content
 
 The package `flyyer` supports HMAC and JWT signatures.
 
-Find your `secret key` in [your dashboard](https://flyyer.io/dashboard/_/projects?ref=docs) > your project > Advanced settings > Signed URLS, and enable the signing strategy you desire.
+Find your `secret key` [here](https://www.flyyer.io/dashboard/_/projects/_/advanced) under Signed URLS, and enable the signing strategy you desire.
 
 **If you integrated Flyyer with a context processor** then set it like below.
 
@@ -300,12 +300,12 @@ def flyyer_href(request: HttpRequest):
 # ...
 ```
 
-**If you integrated Flyyer with `django-meta`**, then in `settings.py` set `FLAYYER_DEFAULT` as follows.
+**If you integrated Flyyer with `django-meta`**, then in `settings.py` set `FLYYER_DEFAULT` as follows.
 
 ```py title="myapp/settings.py" {5-6}
 # ...
 
-FLAYYER_DEFAULT = {
+FLYYER_DEFAULT = {
     'project': "your-project-slug",
     'secret': "your-secret-key",
     'strategy': "JWT", # or "HMAC"

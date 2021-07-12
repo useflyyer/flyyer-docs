@@ -25,7 +25,7 @@ From your admin dashboard go to the **Plugins** menu. Click on **Upload Plugin**
 
 You can Find your `project-slug` in [your dashboard](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
 
-Write write it down in the Flayyer settings. By default it's your domain name but it may be different. Looks like this:
+Write write it down in the Flyyer settings. By default it's your domain name but it may be different. Looks like this:
 
 ![demo image of flyyer for wordpress](https://raw.githubusercontent.com/useflyyer/flyyer-wp/master/.github/assets/view.png)
 

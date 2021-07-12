@@ -3,9 +3,9 @@ id: rails
 title: Ruby on Rails
 ---
 
-## Installation
-
 > Example Repository: https://github.com/useflyyer/integration-examples/tree/main/examples/rails
+
+## Installation
 
 We're going to use [flyyer/flyyer-ruby](https://github.com/useflyyer/flyyer-ruby) to format Flyyer URLs and [kpumuk/meta-tags](https://github.com/kpumuk/meta-tags) to render them into the `<head />` of your views. Signed URLs are made with [jwt/ruby-jwt](https://github.com/jwt/ruby-jwt) explained in the [Advanced usage](#advanced-usage) section.
 
@@ -101,7 +101,7 @@ Now you're able to manage your link previews from your dashboard, create content
 
 The `flyyer` gem supports HMAC and JWT signatures.
 
-Find your `secret key` in [your dashboard](https://flyyer.io/dashboard/_/projects?ref=docs) > your project > Advanced settings > Signed URLS, and enable the signing strategy you desire.
+Find your `secret key` [here](https://www.flyyer.io/dashboard/_/projects/_/advanced) under Signed URLS, and enable the signing strategy you desire.
 
 ```ruby title="app/controllers/application_controller.rb" {8-9}
 class ApplicationController < ActionController::Base

@@ -95,7 +95,7 @@ Now you're able to manage your link previews from your dashboard, create content
 
 The module `@flyyer/flyyer` supports HMAC and JWT signatures.
 
-To find your `secret key`, go to [your dashboard](https://flyyer.io/dashboard/_/projects?ref=docs) > your project > Advanced settings > Signed URLS, and enable the signing strategy you desire.
+Find your `secret key` [here](https://www.flyyer.io/dashboard/_/projects/_/advanced) under Signed URLS, and enable the signing strategy you desire.
 
 ```js title="routes/index.js" {10-11}
 const { Flyyer } = require("@flyyer/flyyer");
