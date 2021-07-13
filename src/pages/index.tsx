@@ -41,7 +41,7 @@ const FEATURES = [
     description: (
       <>
         All of this pages are{" "}
-        <a href="https://github.com/flayyer/flayyer-docs" target="_blank">
+        <a href="https://github.com/useflyyer/flyyer-docs" target="_blank">
           open-source
         </a>{" "}
         and open to every contribution. {"Let's"} build a better community!
@@ -74,7 +74,7 @@ export default function Home() {
     <Layout
       title={`Create dynamic image previews and integrate them`}
       description={dedent`
-        Enables companies to present the best possible links for every page of their website when it is shared. Just take a Flayyer template and use it everywhere to superpower your website.
+        Enables companies to present the best possible links for every page of their website when it is shared. Just take a Flyyer template and use it everywhere to superpower your website.
       `}
     >
       <header className={clsx("hero hero--primary", styles.heroBanner)}>

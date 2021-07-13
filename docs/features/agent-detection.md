@@ -38,10 +38,10 @@ export default function MainTemplate({ agent, variables }) {
 
 ```tsx title="templates/main.tsx"
 import React from "react";
-import { TemplateProps, FlayyerAgentName } from "@flayyer/flayyer-types";
+import { TemplateProps, FlyyerAgentName } from "@flyyer/types";
 
 export default function MainTemplate({ agent, variables }: TemplateProps) {
-  if (agent.name === FlayyerAgentName.WHATSAPP) {
+  if (agent.name === FlyyerAgentName.WHATSAPP) {
     // Custom rules for squared template
     return <WhatsappComponent variables={variables} />
   }

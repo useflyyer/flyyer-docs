@@ -4,15 +4,15 @@ title: Introduction
 slug: /
 ---
 
-[help-email]: mailto:help@flayyer.com
-[twitter]: https://twitter.com/flayyer_com
-[instagram]: https://instagram.com/flayyer_com
+[help-email]: mailto:help@flyyer.io
+[twitter]: https://twitter.com/useflyyer
+[instagram]: https://instagram.com/useflyyer
 
 Welcome and thanks for visiting the official documentation 👋 [Jump to installation steps ↓](/guides/get-started)
 
-This documentation is intended for anyone who want to integrate Flayyer with their current service, app or any kind of amazing software you are building.
+This documentation is intended for anyone who want to integrate Flyyer with their current service, app or any kind of amazing software you are building.
 
-If you have any questions related to Flayyer you can reach out to us via [Twitter][twitter], [Instagram][instagram] or by sending an email to [help@flayyer.com][help-email].
+If you have any questions related to Flyyer you can reach out to us via [Twitter][twitter], [Instagram][instagram] or by sending an email to [help@flyyer.io][help-email].
 
 ![a row of 5 demo images](/img/images/row.png)
 
@@ -32,17 +32,17 @@ Your site can have 100/100 score on [Lighthouse](https://developers.google.com/w
 
 Remember when YouTube videos used to have very simple thumbnail previews? Those days are over, today every video on YouTube has very well-crafted cover images with text and images, every single video wants to be unique. This is the next step we are working for, but for the whole internet.
 
-## What is Flayyer?
+## What is Flyyer?
 
-**Flayyer enables companies to present the best possible links for every page of their website when it's shared**. You don't need to create your link previews manually. Just take a Flayyer template and use it everywhere to superpower your website.
+**Flyyer enables companies to present the best possible links for every page of their website when it's shared**. You don't need to create your link previews manually. Just take a Flyyer template and use it everywhere to superpower your website.
 
 We guarantee the best possible links for each social media platform.
 
 ![multiple agents demo](/img/images/agents.png)
 
-## Who is Flayyer for?
+## Who is Flyyer for?
 
-You might need Flayyer if:
+You might need Flyyer if:
 
 * 🏢 You have a medium-to-large company
 * 🗄 Your website has a lot of content and multiple pages
@@ -50,7 +50,7 @@ You might need Flayyer if:
 * ⚡️ More important: you want people to click your links
 * 🔭 You are a perfectionist with deadlines and you love details
 
-Some example of companies who may take advantage from their competition if they use Flayyer to create meaningfully link previews:
+Some example of companies who may take advantage from their competition if they use Flyyer to create meaningfully link previews:
 
 * E-commerces
 * News or magazines

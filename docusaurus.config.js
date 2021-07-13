@@ -6,15 +6,15 @@ dotenv.config();
 const ALGOLIA_KEY = process.env.ALGOLIA_KEY;
 
 module.exports = {
-  title: "Flayyer docs",
+  title: "Flyyer docs",
   tagline: "Integration guides and CLI documentation",
-  url: "https://docs.flayyer.com",
+  url: "https://docs.flyyer.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "flayyer", // Usually your GitHub org/user name.
-  projectName: "flayyer-docs", // Usually your repo name.
+  organizationName: "useflyyer", // Usually your GitHub org/user name.
+  projectName: "flyyer-docs", // Usually your repo name.
   themeConfig: {
     respectPrefersColorScheme: true,
     // image: "img/logo.svg",
@@ -25,7 +25,7 @@ module.exports = {
     },
     algolia: {
       apiKey: ALGOLIA_KEY,
-      indexName: "flayyer",
+      indexName: "flyyer",
       // Optional: see doc section bellow
       contextualSearch: false,
       // Optional: Algolia search parameters
@@ -40,11 +40,11 @@ module.exports = {
       isCloseable: false, // Defaults to `true`.
     },
     navbar: {
-      title: "docs.Flayyer",
+      title: "docs.Flyyer",
       logo: {
-        // href: "https://flayyer.com",
+        // href: "https://flyyer.io",
         href: "/",
-        alt: "Flayyer logo",
+        alt: "Flyyer logo",
         src: "img/logo.svg",
         srcDark: "img/logo-dark.svg",
       },
@@ -64,12 +64,12 @@ module.exports = {
         },
         { to: "changelog", label: "Changelog", position: "left" },
         {
-          href: "https://flayyer.com?ref=docs",
-          label: "Flayyer.com",
+          href: "https://flyyer.io?ref=docs",
+          label: "Flyyer.io",
           position: "right",
         },
         {
-          href: "https://github.com/flayyer",
+          href: "https://github.com/useflyyer",
           label: "GitHub",
           position: "right",
         },
@@ -82,12 +82,12 @@ module.exports = {
           title: "Pages",
           items: [
             {
-              label: "Flayyer.io",
-              to: "https://flayyer.io?ref=docs",
+              label: "Flyyer",
+              to: "https://flyyer.io?ref=docs",
             },
             {
-              label: "Flayyer.com",
-              to: "https://flayyer.com?ref=docs",
+              label: "Flyyer Render",
+              to: "https://flyyer.io/render?ref=docs",
             },
           ],
         },
@@ -96,19 +96,19 @@ module.exports = {
           items: [
             {
               label: "GitHub",
-              href: "https://github.com/flayyer",
+              href: "https://github.com/useflyyer",
             },
             {
               label: "About",
-              href: "https://flayyer.com/about",
+              href: "https://flyyer.io/about",
             },
             {
               label: "Partnerships",
-              href: "https://flayyer.com/partners",
+              href: "https://flyyer.io/partners",
             },
             {
               label: "Jobs",
-              href: "https://flayyer.com/jobs",
+              href: "https://flyyer.io/jobs",
             },
           ],
         },
@@ -117,33 +117,33 @@ module.exports = {
           items: [
             {
               label: "Instagram",
-              href: "https://instagram.com/flayyer_com",
+              href: "https://instagram.com/useflyyer",
             },
             {
               label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/flayyer",
+              href: "https://stackoverflow.com/questions/tagged/flyyer",
             },
             {
               label: "Discord",
-              href: "https://flayyer.com/discord",
+              href: "https://flyyer.io/discord",
             },
             {
               label: "Twitter",
-              href: "https://twitter.com/flayyer_com",
+              href: "https://twitter.com/useflyyer",
             },
             {
               label: "Facebook",
-              href: "https://www.facebook.com/flayyercom",
+              href: "https://www.facebook.com/useflyyer",
             },
           ],
         },
       ],
       logo: {
-        alt: "Flayyer logo",
+        alt: "Flyyer logo",
         src: "img/logo.svg",
-        href: "https://flayyer.com?ref=docs",
+        href: "https://flyyer.io?ref=docs",
       },
-      copyright: `Copyright © ${new Date().getFullYear()} Flayyer.com — Santiago, Chile`,
+      copyright: `Copyright © ${new Date().getFullYear()} Flyyer.io — Santiago, Chile`,
     },
     gtag: {
       trackingID: "G-15BQ7WPJJL",
@@ -157,7 +157,7 @@ module.exports = {
       {
         id: "guides",
         path: "guides",
-        editUrl: "https://github.com/flayyer/flayyer-docs/edit/main/",
+        editUrl: "https://github.com/useflyyer/flyyer-docs/edit/main/",
         routeBasePath: "guides",
         sidebarPath: require.resolve("./sidebars-guides.js"),
         showLastUpdateAuthor: true,
@@ -173,7 +173,7 @@ module.exports = {
         routeBasePath: "changelog",
         /** Path to data on filesystem relative to site dir. */
         path: "changelog",
-        editUrl: "https://github.com/flayyer/flayyer-docs/edit/main/",
+        editUrl: "https://github.com/useflyyer/flyyer-docs/edit/main/",
       },
     ],
   ],
@@ -184,11 +184,11 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           path: "docs",
-          editUrl: "https://github.com/flayyer/flayyer-docs/edit/main/",
+          editUrl: "https://github.com/useflyyer/flyyer-docs/edit/main/",
         },
         blog: {
           showReadingTime: true,
-          editUrl: "https://github.com/flayyer/flayyer-docs/edit/main/",
+          editUrl: "https://github.com/useflyyer/flyyer-docs/edit/main/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.scss"),
@@ -196,31 +196,12 @@ module.exports = {
       },
     ],
     [
-      "@flayyer/docusaurus-preset",
+      "@flyyer/docusaurus-preset",
       {
-        main: {
-          tenant: "flayyer",
-          deck: "flayyer-docs",
-          template: "page",
-        },
-        docs: {
-          tenant: "flayyer",
-          deck: "flayyer-docs",
-          template: "page",
-          // variables: {
-          //   title: "{{description}}",
-          //   section: "{{title}}",
-          // },
-        },
-        blog: {
-          tenant: "flayyer",
-          deck: "flayyer-docs",
-          template: "page",
-          // variables: {
-          //   title: "{{description}}",
-          //   section: "{{title}}",
-          // },
-        },
+        /**
+         * Get your project's identifier at https://flyyer.io/dashboard/_/projects/_/integrate
+         */
+        project: "flyyer-docs",
       },
     ],
   ],

@@ -4,21 +4,21 @@ title: Getting started
 slug: /
 ---
 
-[flayyer-studio]: https://flayyer.github.io/flayyer-studio/
-[result-1]: https://flayyer.io/v2/flayyer/probando-update/main.jpeg?title=try+changing+this
-[result-2]: https://flayyer.io/v2/flayyer/probando-update/main.jpeg?title=awesome!+😃&description=Optional+description
-[create-flayyer-app]: https://github.com/flayyer/create-flayyer-app
-[flayyer-ai-guides]: /guides/get-started
+[flyyer-studio]: https://useflyyer.github.io/studio
+[result-1]: https://cdn.flyyer.io/render/v2/flyyer/probando-update/main.jpeg?title=try+changing+this
+[result-2]: https://cdn.flyyer.io/render/v2/flyyer/probando-update/main.jpeg?title=awesome!+😃&description=Optional+description
+[create-flyyer-app]: https://github.com/useflyyer/create-flyyer-app
+[flyyer-guides]: /guides/get-started
 
 :::note What's this documentation for
 You'll **learn to create your own templates**, which you can use for your link previews, download social media formats, or offer them in the Marketplace. <!-- TODO: link to Marketplace  -->
 
-Alternatively, you can integrate FlayyerAI to manage link previews and social media images enriched from your website (no effort required). You can choose templates that are already available. [Check it out][flayyer-ai-guides] before coming here.
+Alternatively, you can integrate Flyyer to manage link previews and social media images enriched from your website (no effort required). You can choose templates that are already available. [Check it out][flyyer-guides] before coming here.
 :::
 
 ## Create project
 
-Create a new Flayyer app using [`create-flayyer-app`][create-flayyer-app], which sets up everything automatically for you. To start a project follow the steps below.
+Create a new Flyyer app using [`create-flyyer-app`][create-flyyer-app], which sets up everything automatically for you. To start a project follow the steps below.
 
 <!-- MDX variables -->
 import Tabs from '@theme/Tabs';
@@ -34,7 +34,7 @@ export const jsManagers = [
 Using Yarn will create a folder called `my-project` in your current directory:
 
 ```bash title="Terminal.app"
-yarn create flayyer-app my-project
+yarn create flyyer-app my-project
 ```
 
 </TabItem>
@@ -44,7 +44,7 @@ yarn create flayyer-app my-project
 Using NPM will create a folder called `my-project` in your current directory:
 
 ```bash title="Terminal.app"
-npm init flayyer-app@latest my-project
+npm init flyyer-app@latest my-project
 ```
 
 </TabItem>
@@ -65,12 +65,12 @@ vue-typescript
 ## Your first template
 
 :::note CLI
-For more details about the available commands refer to [Command-Line Interface](./cli/flayyer-cli.md).
+For more details about the available commands refer to [Command-Line Interface](./cli/flyyer-cli.md).
 :::
 
-Create (if you don't have) a file with the desired name of your template in a directory called `templates`. Every project created with `create-flayyer-app` starts with a file named `templates/main.js`, `template/main.tsx`, or `template/main.vue`.
+Create (if you don't have) a file with the desired name of your template in a directory called `templates`. Every project created with `create-flyyer-app` starts with a file named `templates/main.js`, `template/main.tsx`, or `template/main.vue`.
 
-Let's take https://github.com/flayyer/create-flayyer-app/tree/master/templates/react as example
+Let's take https://github.com/useflyyer/create-flyyer-app/tree/master/templates/react as example
 
 ```tree
 PROJECT-NAME/
@@ -135,9 +135,9 @@ npm start
 Please use Google Chrome, Firefox or Opera. Safari is not widely supported.
 :::
 
-This command starts a development server using Parcel.js. Then open [Flayyer Studio][flayyer-studio] in your browser for a better developer experience.
+This command starts a development server using Parcel.js. Then open [Flyyer Studio][flyyer-studio] in your browser for a better developer experience.
 
-[![Flayyer Studio screenshot](/img/images/studio-hello-world.png)][flayyer-studio]
+[![Flyyer Studio screenshot](/img/images/studio-hello-world.png)][flyyer-studio]
 
 ## Deploy
 
@@ -163,7 +163,7 @@ NODE_ENV=production npm run-script build
 
 To upload the final bundled templates to our cloud you must have an API Key.
 
-[**Click here to manage your keys 🔑**](https://flayyer.com/dashboard/_/settings)
+[**Click here to manage your keys 🔑**](https://flyyer.io/dashboard/_/settings)
 
 <Tabs groupId="js-manager" defaultValue="yarn" values={jsManagers}>
 <TabItem value="yarn">
@@ -190,30 +190,30 @@ npm run-script deploy
 If everything is correct, you should see an output with your templates' URLs.
 
 ```bash
-🖼 Created template with URL: https://flayyer.io/v2/TENANT/DECK/TEMPLATE.jpeg
+🖼 Created template with URL: https://cdn.flyyer.io/render/v2/TENANT/DECK/TEMPLATE.jpeg
 ```
 
-**Congratulations! You deployed your first Flayyer project! 🎉**
+**Congratulations! You deployed your first Flyyer project! 🎉**
 
-[![Resultant flayyer live image](https://github.com/flayyer/create-flayyer-app/blob/master/.github/assets/result-1.png?raw=true)][result-1]
+[![Resultant flyyer live image](https://github.com/useflyyer/create-flyyer-app/blob/master/.github/assets/result-1.png?raw=true)][result-1]
 
-[![Resultant flayyer live image](https://github.com/flayyer/create-flayyer-app/blob/master/.github/assets/result-2.png?raw=true)][result-2]
+[![Resultant flyyer live image](https://github.com/useflyyer/create-flyyer-app/blob/master/.github/assets/result-2.png?raw=true)][result-2]
 
 Here are some examples of how to pass parameters to create images:
 
 * Set extension
-  * `https://flayyer.io/v2/TENANT/DECK/TEMPLATE.png`
-  * `https://flayyer.io/v2/TENANT/DECK/TEMPLATE.jpeg`
-  * `https://flayyer.io/v2/TENANT/DECK/TEMPLATE.webp`
+  * `https://cdn.flyyer.io/render/v2/TENANT/DECK/TEMPLATE.png`
+  * `https://cdn.flyyer.io/render/v2/TENANT/DECK/TEMPLATE.jpeg`
+  * `https://cdn.flyyer.io/render/v2/TENANT/DECK/TEMPLATE.webp`
 * Set dimensions:
-  * Instagram post: `https://flayyer.io/v2/TENANT/DECK/TEMPLATE.jpeg?_w=1080&_h=1080`
-  * Whatsapp image: `https://flayyer.io/v2/TENANT/DECK/TEMPLATE.jpeg?_w=400&_h=400`
-  * Story: `https://flayyer.io/v2/TENANT/DECK/TEMPLATE.jpeg?_w=1080&_h=1920`
+  * Instagram post: `https://cdn.flyyer.io/render/v2/TENANT/DECK/TEMPLATE.jpeg?_w=1080&_h=1080`
+  * Whatsapp image: `https://cdn.flyyer.io/render/v2/TENANT/DECK/TEMPLATE.jpeg?_w=400&_h=400`
+  * Story: `https://cdn.flyyer.io/render/v2/TENANT/DECK/TEMPLATE.jpeg?_w=1080&_h=1920`
 * Replace variables:
-  * `https://flayyer.io/v2/TENANT/DECK/TEMPLATE.jpeg?title=New+title`
+  * `https://cdn.flyyer.io/render/v2/TENANT/DECK/TEMPLATE.jpeg?title=New+title`
 
 To format URL we recommend using one of [official libraries](/docs/libraries).
 
 ![cat on a rocket](/img/launch.svg)
 
-Continue reading this documentation to understand more about Flayyer and what other amazing features we support.
+Continue reading this documentation to understand more about Flyyer and what other amazing features we support.

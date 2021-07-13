@@ -3,7 +3,7 @@ id: complex-variables
 title: Complex variables
 ---
 
-Variables are passed through the unique URL of a flayyer as **queryparams**.
+Variables are passed through the unique URL of a flyyer as **queryparams**.
 
 ## Multiple variables
 
@@ -12,7 +12,7 @@ This is easy, just follow the [correct queryparams standard](https://en.wikipedi
 Here is an example: `?first=` and `&second=`, `&third=`, etc.
 
 ```bash
-https://flayyer.io/v2/flayyer/landing/demo.png?first=Foo&second=Bar&third=Baz
+https://cdn.flyyer.io/render/v2/flyyer/landing/demo.png?first=Foo&second=Bar&third=Baz
 ```
 
 Inside the component it looks like this:
@@ -31,7 +31,7 @@ export default function DemoTemplate({ variables }) {
 For arrays use this syntax: `?array[0]=a&array[1]=b`. Example with an array variables named `items`:
 
 ```bash
-https://flayyer.io/v2/flayyer/landing/demo.png?items[0]=apple&items[1]=pear
+https://cdn.flyyer.io/render/v2/flyyer/landing/demo.png?items[0]=apple&items[1]=pear
 ```
 
 ```jsx title="templates/main.js" {4}
@@ -46,7 +46,7 @@ export default function DemoTemplate({ variables }) {
 For objects use this syntax: `?object[firstname]=a&object[lastname]=b`. Example with an object variables named `user`:
 
 ```bash
-https://flayyer.io/v2/flayyer/landing/demo.png?user[firstname]=John&user[lastname]=Appleseed
+https://cdn.flyyer.io/render/v2/flyyer/landing/demo.png?user[firstname]=John&user[lastname]=Appleseed
 ```
 
 ```jsx title="templates/main.js" {4}
@@ -63,20 +63,20 @@ Of course you can mix variables and arrays, but **try to keep variables simple.*
 ## Types
 
 :::note
-This requires [Typescript integration](./typescript.md). For Experimental JavaScript support see [this](https://github.com/flayyer/flayyer-types#experimental-javascript-support).
+This requires [Typescript integration](./typescript.md). For Experimental JavaScript support see [this](https://github.com/useflyyer/types#experimental-javascript-support).
 :::
 
-You can type the variables coming from the props. First install [`@flayyer/flayyer-types`](https://github.com/flayyer/flayyer-types):
+You can type the variables coming from the props. First install [`@flyyer/types`](https://github.com/useflyyer/types):
 
 ```bash title="Terminal.app"
-yarn add --dev @flayyer/flayyer-types
+yarn add --dev @flyyer/types
 ```
 
 Then on your templates:
 
 ```tsx title="templates/main.tsx" {2,20}
 import React from "react";
-import { TemplateProps } from "@flayyer/flayyer-types";
+import { TemplateProps } from "@flyyer/types";
 
 type Variables = {
   title: string;

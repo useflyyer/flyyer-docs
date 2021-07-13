@@ -2,23 +2,23 @@
 slug: publish-to-community
 title: Publish to Community
 author: Patricio Lopez Juri
-author_title: Founder @ Flayyer.com
+author_title: Founder @ Flyyer.io
 author_url: https://github.com/lopezjurip
 author_image_url: https://github.com/lopezjurip.png?size=200
 tags: [community]
 ---
 
-Now you can make your templates public by publishing them to the [Flayyer Community](https://flayyer.com/community).
+Now you can make your templates public by publishing them to the [Flyyer Community](https://flyyer.io/community).
 
-It is super easy, just set on your `flayyer.config.js` the `private` flag to `false`.
+It is super easy, just set on your `flyyer.config.js` the `private` flag to `false`.
 
-```js title=flayyer.config.js {14}
-const {config} = require('@flayyer/flayyer-types');
+```js title=flyyer.config.js {14}
+const {config} = require('@flyyer/types');
 require('dotenv').config();
 
 module.exports = config({
   engine: 'react-typescript',
-  key: process.env.FLAYYER_KEY,
+  key: process.env.FLYYER_KEY,
   deck: 'impact-news',
 
   // Optionals
@@ -27,7 +27,7 @@ module.exports = config({
   homepage: 'https://lopezjuri.com', // your personal webpage.
   keywords: ['news', 'vue', 'tailwind'],
   private: false, // 👈 set to false to make it public
-  repository: 'https:/github.com/flayyer/impact-news',
+  repository: 'https:/github.com/useflyyer/impact-news',
   sizes: ['THUMBNAIL', 'BANNER', 'SQUARE', 'STORY'] // supported formats
 });
 ```

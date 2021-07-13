@@ -1,15 +1,15 @@
 ---
-id: flayyer
-title: flayyer lib
+id: flyyer
+title: flyyer lib
 ---
 
-> Repository: https://github.com/flayyer/flayyer-python
+> Repository: https://github.com/useflyyer/flyyer-python
 
 ## Installation
 
 This module is agnostic to any Python framework and requires Python >= 3.6.
 
-### 1. Install `flayyer` library
+### 1. Install `flyyer` library
 
 <!-- MDX variables -->
 import Tabs from '@theme/Tabs';
@@ -26,7 +26,7 @@ export const pyManagers = [
 Install it with [Poetry](https://python-poetry.org/), the modern package manager.
 
 ```bash title="Terminal.app"
-poetry add flayyer
+poetry add flyyer
 ```
 
 </TabItem>
@@ -36,7 +36,7 @@ poetry add flayyer
 Install it with [Pipenv](https://pipenv.pypa.io/), the Python dev workflow for humans.
 
 ```bash title="Terminal.app"
-pipenv install flayyer
+pipenv install flyyer
 ```
 
 </TabItem>
@@ -46,7 +46,7 @@ pipenv install flayyer
 Install it with [pip](https://pip.pypa.io/en/stable/).
 
 ```bash title="Terminal.app"
-pip install flayyer
+pip install flyyer
 pip freeze > requirements.txt
 ```
 
@@ -55,26 +55,26 @@ pip freeze > requirements.txt
 
 ### 2. Generate smart image URLs for your meta-tags
 
-Find your `project-slug` in [your dashboard](https://flayyer.com/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
+[Find your project identifier here](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
 
 Now you can generate smart image URLs like shown below.
 
 ```python
-from flayyer import FlayyerAI
+from flyyer import Flyyer
 
-flayyer = FlayyerAI(
-  # Your project slug
-  project="your-project-slug",
+flyyer = Flyyer(
+  # Your project identifier
+  project="your-project-identifier",
   # The current pathname of your website, try to set it dynamically
   path="/path/to/product",
 )
 
 # Use this image URL in your <head/> tags
-url = flayyer.href()
-# > https://flayyer.ai/v2/your-project-slug/_/__v=1618281823/path/to/product
+url = flyyer.href()
+# > https://cdn.flyyer.io/v2/your-project-identifier/_/__v=1618281823/path/to/product
 ```
 
-Take a look into the [Django integration guide](/guides/python/django) to see a full example for your specific setup. You're invited to [contribute to the Python documentation](https://github.com/flayyer/flayyer-docs/tree/main/guides/python) and add your own guide for other technologies.
+Take a look into the [Django integration guide](/guides/python/django) to see a full example for your specific setup. You're invited to [contribute to the Python documentation](https://github.com/useflyyer/flyyer-docs/tree/main/guides/python) and add your own guide for other technologies.
 
 :::note
 The meta-tags code needs to be static, processed at build time or server-side rendered for link previews to work.
@@ -84,27 +84,27 @@ The meta-tags code needs to be static, processed at build time or server-side re
 
 Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
 
-[Go to your dashboard 🚀](https://flayyer.com/dashboard/_/projects/_/)
+[Go to your dashboard 🚀](https://flyyer.io/dashboard/_/projects/_/)
 
 ## Advanced usage
 
 ### Signed URLs
 
-The package `flayyer` supports HMAC and JWT signatures.
+The package `flyyer` supports HMAC and JWT signatures.
 
-Find your `secret key` in [your dashboard](https://flayyer.com/dashboard/_/projects?ref=docs) > your project > Advanced settings > Signed URLS, and enable the signing strategy you desire.
+Find your `secret key` [here](https://www.flyyer.io/dashboard/_/projects/_/advanced) under Signed URLS, and enable the signing strategy you desire.
 
 ```python {6-7}
-from flayyer import FlayyerAI
+from flyyer import Flyyer
 
-flayyer = FlayyerAI(
-  project="your-project-slug",
+flyyer = Flyyer(
+  project="your-project-identifier",
   path="/path/to/product",
   secret="your-secret-key",
   strategy="JWT", # or "HMAC"
 )
 
 # Use this image in your <head/> tags
-url = flayyer.href()
-# > https://flayyer.ai/v2/your-project-slug/jwt-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXJhbXMiOnsiX19pZCI6ImplYW5zLTEyMyJ9LCJwYXRoIjoiXC9wYXRoXC90b1wvcHJvZHVjdCJ9.X8Vs5SGEA1-3M6bH-h24jhQnbwH95V_G0f-gPhTBTzE?__v=1618283086
+url = flyyer.href()
+# > https://cdn.flyyer.io/v2/your-project-identifier/jwt-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXJhbXMiOnsiX19pZCI6ImplYW5zLTEyMyJ9LCJwYXRoIjoiXC9wYXRoXC90b1wvcHJvZHVjdCJ9.X8Vs5SGEA1-3M6bH-h24jhQnbwH95V_G0f-gPhTBTzE?__v=1618283086
 ```

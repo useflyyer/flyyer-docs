@@ -26,30 +26,30 @@ We are going to modify few lines of code. You can always go back to a previous v
 
 ![alt1](/img/guides/shopify2.png)
 
-### 3. Add FlayyerAI meta-tags
+### 3. Add Flyyer meta-tags
 
-At the start of the file, press `Enter ⏎` to create a new line and paste the code below **replacing `your-project-slug` with your project slug** (it's on the first line).
+At the start of the file, press `Enter ⏎` to create a new line and paste the code below **replacing `your-project-identifier` with your project identifier** (it's on the first line).
 
-You can find your `project-slug` in [your dashboard](https://flayyer.com/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
+[Find your project identifier here](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
 
 ```liquid title="Snippets/social-meta-tags.liquid" {1}
-{% assign f_project = 'your-project-slug' %}
+{% assign f_project = 'your-project-identifier' %}
 
-{%- capture f_url -%}https://flayyer.ai/v2/{{ f_project }}/_/__v={{ "now" | date: "%N" }}{{ request.path }}{% endcapture %}
+{%- capture f_url -%}https://cdn.flyyer.io/v2/{{ f_project }}/_/__v={{ "now" | date: "%N" }}{{ request.path }}{% endcapture %}
 <meta property="og:image" content="{{ f_url }}">
 <meta property="og:image:secure_url" content="{{ f_url }}">
 <meta name="twitter:image" content="{{ f_url }}">
 <meta name="twitter:card" content="summary_large_image">
 
 {% if product %}
-<meta name="flayyer:default" content="{{ product.featured_image | img_url: 'medium' }}">
+<meta name="flyyer:default" content="{{ product.featured_image | img_url: 'medium' }}">
 {% elsif article and article.image %}
-<meta name="flayyer:default" content="{{ article.image | img_url: 'medium' }}">
+<meta name="flyyer:default" content="{{ article.image | img_url: 'medium' }}">
 {% elsif collection and collection.featured_image %}
-<meta name="flayyer:default" content="{{ collection.featured_image | img_url: 'medium' }}">
+<meta name="flyyer:default" content="{{ collection.featured_image | img_url: 'medium' }}">
 {% elsif collection and collection.products %}
 {% for item in collection.products limit:4 %}
-<meta name="flayyer:default" content="{{ item.featured_image | img_url: 'medium' }}">
+<meta name="flyyer:default" content="{{ item.featured_image | img_url: 'medium' }}">
 {% endfor %}
 {% endif %}
 ```
@@ -64,4 +64,4 @@ In case your meta-tags were in 2 different files, just put this code in one of t
 
 Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
 
-[Go to your dashboard 🚀](https://flayyer.com/dashboard/_/projects/_/)
+[Go to your dashboard 🚀](https://flyyer.io/dashboard/_/projects/_/)

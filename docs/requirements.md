@@ -14,7 +14,7 @@ But don't worry! You only need basic HTML and CSS knowledge to create your first
 
 ### Creation
 
-This is what you can use to develop Flayyers:
+This is what you can use to develop flyyers:
 
 * **React.js ✅**
 * **Vue.js ✅**
@@ -28,10 +28,10 @@ This is what you can use to develop Flayyers:
 * **Babel ✅**
 * CoffeeScript (coming soon)
 
-> Remember: a Flayyer is just a webpage that acts as a template to create dynamic images.
+> Remember: a flyyer is just a webpage that acts as a template to create dynamic images.
 
 ### Integration
 
-**Anything! 😮 there is no restrictions where you can use Flayyer!**
+**Anything! 😮 there is no restrictions where you can use Flyyer!**
 
-Checkout our [Guides](/guides/) for some common workflows of how to integrate Flayyer with the most popular technologies.
+Checkout our [Guides](/guides/) for some common workflows of how to integrate Flyyer with the most popular technologies.

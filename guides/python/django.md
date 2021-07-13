@@ -3,15 +3,15 @@ id: django
 title: Django
 ---
 
+> Example Repository: https://github.com/useflyyer/integration-examples/tree/main/examples/django/django-without-extra-dependencies
+
 ## Installation
 
-> Example Repository: https://github.com/flayyer/integration-examples/tree/main/examples/django/django-without-extra-dependencies
-
-We're going to use [flayyer/flayyer-python](/guides/python/flayyer) to format FlayyerAI URLs in a [context processor](https://docs.djangoproject.com/en/3.2/ref/templates/api/#django.template.RequestContext) to render meta-tags into the `<head />` of your views dynamically with few lines of code.
+We're going to use [flyyer/flyyer-python](/guides/python/flyyer) to format Flyyer URLs in a [context processor](https://docs.djangoproject.com/en/3.2/ref/templates/api/#django.template.RequestContext) to render meta-tags into the `<head />` of your views dynamically with few lines of code.
 
 Alternatively, you can set it with [django-meta](https://github.com/nephila/django-meta) meta-tags helper, [just jump to it ↓](#installation-with-django-meta).
 
-### 1. Install `flayyer` module
+### 1. Install `flyyer` module
 
 <!-- MDX variables -->
 import Tabs from '@theme/Tabs';
@@ -28,7 +28,7 @@ export const pyManagers = [
 Install it with [Poetry](https://python-poetry.org/), the modern package manager
 
 ```bash title="Terminal.app"
-poetry add flayyer
+poetry add flyyer
 ```
 
 </TabItem>
@@ -38,7 +38,7 @@ poetry add flayyer
 Install it with [Pipenv](https://pipenv.pypa.io/), the Python dev workflow for humans
 
 ```bash title="Terminal.app"
-pipenv install flayyer
+pipenv install flyyer
 ```
 
 </TabItem>
@@ -48,7 +48,7 @@ pipenv install flayyer
 Install it with [pip](https://pip.pypa.io/en/stable/)
 
 ```bash title="Terminal.app"
-pip install -U flayyer
+pip install -U flyyer
 pip freeze > requirements.txt
 ```
 
@@ -57,23 +57,23 @@ pip freeze > requirements.txt
 
 ### 2. Create a `myapp/custom_context_processors.py` file
 
-You can Find your `project-slug` in [your dashboard](https://flayyer.com/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
+[Find your project identifier here](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
 
 ```py title="myapp/custom_context_processors.py" {6-11}
 from django.http.request import HttpRequest
-from flayyer import FlayyerAI
+from flyyer import Flyyer
 
 # ...
 
-def flayyer_href(request: HttpRequest):
-    flayyer = FlayyerAI(
-        project="your-project-slug",
+def flyyer_href(request: HttpRequest):
+    flyyer = Flyyer(
+        project="your-project-identifier",
         path=request.get_full_path(),  # set current pathname dynamically
     )
-    return {'flayyer_href': flayyer.href()} # pass smart image link to views templates
+    return {'flyyer_href': flyyer.href()} # pass smart image link to views templates
 ```
 
-### 3. Add `myapp.custom_context_processors.flayyer_href` to project settings
+### 3. Add `myapp.custom_context_processors.flyyer_href` to project settings
 
 ```py title="myapp/settings.py" {9}
 # ...
@@ -84,7 +84,7 @@ TEMPLATES = [
             # ...
             'context_processors': [
                 # ...
-                'myapp.custom_context_processors.flayyer_href',
+                'myapp.custom_context_processors.flyyer_href',
             ],
         },
     },
@@ -98,7 +98,7 @@ If you're using Django < 1.8, it should work like this:
 # ...
 TEMPLATE_CONTEXT_PROCESSORS = (
     # ...
-    'myapp.custom_context_processors.flayyer_href',
+    'myapp.custom_context_processors.flyyer_href',
 )
 ```
 
@@ -112,12 +112,12 @@ When added to the `base.html` they should be added to each one of your pages. Pl
 <!-- ... -->
 
 <head>
-  <meta property="og:image" content="{{ flayyer_href }}" />
-  <meta name="twitter:image" content="{{ flayyer_href }}" />
+  <meta property="og:image" content="{{ flyyer_href }}" />
+  <meta name="twitter:image" content="{{ flyyer_href }}" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- [Recommended] Keep your original og:image handy for your project -->
-  <!-- <meta name="flayyer:default" content={{your-original-og-image}} /> -->
+  <!-- <meta name="flyyer:default" content={{your-original-og-image}} /> -->
 
   <!-- ... -->
 </head>
@@ -126,22 +126,22 @@ When added to the `base.html` they should be added to each one of your pages. Pl
 ```
 
 :::note
-If you inspect the `<head />` of your HTML you should see the `og:image` and `twitter:image` tags with `flayyer.ai` URLs with your `project-slug` and current `pathname` on it. If you're having trouble, please make sure they are not overwritten elsewhere.
+If you inspect the `<head />` of your HTML you should see the `og:image` and `twitter:image` tags with `cdn.flyyer.io` URLs with your **project identifier** and current `pathname` on it. If you're having trouble, please make sure they are not overwritten elsewhere.
 :::
 
 ### 5. Voilà 🎉
 
 Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
 
-[Go to your dashboard 🚀](https://flayyer.com/dashboard/_/projects/_/)
+[Go to your dashboard 🚀](https://flyyer.io/dashboard/_/projects/_/)
 
 ## Installation with `django-meta`
 
-> Example Repository: https://github.com/flayyer/integration-examples/tree/main/examples/django/django-with-django-meta
+> Example Repository: https://github.com/useflyyer/integration-examples/tree/main/examples/django/django-with-django-meta
 
 The `django-meta` module helps you rendering meta-tags efficiently.
 
-### 1. Install `flayyer` module and `django-meta`
+### 1. Install `flyyer` module and `django-meta`
 
 <Tabs groupId="py-manager" defaultValue="poetry" values={pyManagers}>
 <TabItem value="poetry">
@@ -149,7 +149,7 @@ The `django-meta` module helps you rendering meta-tags efficiently.
 Install them with [Poetry](https://python-poetry.org/), the modern package manager
 
 ```bash title="Terminal.app"
-poetry add flayyer django-meta
+poetry add flyyer django-meta
 ```
 
 </TabItem>
@@ -159,7 +159,7 @@ poetry add flayyer django-meta
 Install them with [Pipenv](https://pipenv.pypa.io/), the Python dev workflow for humans
 
 ```bash title="Terminal.app"
-pipenv install flayyer django-meta
+pipenv install flyyer django-meta
 ```
 
 </TabItem>
@@ -169,7 +169,7 @@ pipenv install flayyer django-meta
 Install them with [pip](https://pip.pypa.io/en/stable/)
 
 ```bash title="Terminal.app"
-pip install -U flayyer django-meta
+pip install -U flyyer django-meta
 pip freeze > requirements.txt
 ```
 
@@ -178,10 +178,10 @@ pip freeze > requirements.txt
 
 ### 2. Complete `settings.py`
 
-You can Find your `project-slug` in [your dashboard](https://flayyer.com/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
+You can [Find your project identifier here](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
 
 ```py title="myapp/settings.py" {1,5,10-12,14-18}
-from flayyer import FlayyerAI
+from flyyer import Flyyer
 
 INSTALLED_APPS = [
     # ...
@@ -190,18 +190,18 @@ INSTALLED_APPS = [
 
 # ...
 
-FLAYYER_DEFAULT = {
-    'project': "your-project-slug",
+FLYYER_DEFAULT = {
+    'project': "your-project-identifier",
 }
 
 META_SITE_DOMAIN = 'mydomain.com'
 META_USE_OG_PROPERTIES = True
 META_USE_TWITTER_PROPERTIES = True
-META_DEFAULT_IMAGE = FlayyerAI(**FLAYYER_DEFAULT).href()
+META_DEFAULT_IMAGE = Flyyer(**FLYYER_DEFAULT).href()
 META_TWITTER_TYPE = "summary_large_image"
 ```
 
-### 3. Pass the current `pathname` to FlayyerAI instance
+### 3. Pass the current `pathname` to Flyyer instance
 
 In Django there are [function views](https://docs.djangoproject.com/en/3.2/topics/http/views/) and [class views](https://docs.djangoproject.com/en/3.2/topics/class-based-views/intro/) that may render HTML. Here you have an example for each one of them.
 
@@ -210,16 +210,16 @@ from django.http import HttpRequest
 from django.shortcuts import render
 from django.conf import settings
 from meta.views import Meta
-from flayyer import FlayyerAI
+from flyyer import Flyyer
 from .models import Choice, Question
 
-# FlayyerAI smart image link helper
-def flayyer_href(current_pathname):
-    flayyer = FlayyerAI(**{
-        **settings.FLAYYER_DEFAULT,
+# Flyyer smart image link helper
+def flyyer_href(current_pathname):
+    flyyer = Flyyer(**{
+        **settings.FLYYER_DEFAULT,
         'path': current_pathname,
     })
-    return flayyer.href()
+    return flyyer.href()
 
 # Class view example
 class DetailView(generic.DetailView):
@@ -232,19 +232,19 @@ class DetailView(generic.DetailView):
         context['meta'] = Meta(
             title=f'Question: #{question.id}',
             description=question.question_text,
-            image=flayyer_href(self.request.get_full_path()),
+            image=flyyer_href(self.request.get_full_path()),
         )
         return context
 
 # Function view example
 def index(request: HttpRequest):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
-    meta = Meta(image=flayyer_href(request.get_full_path()))
+    meta = Meta(image=flyyer_href(request.get_full_path()))
     context = {'latest_question_list': latest_question_list, 'meta': meta}
     return render(request, 'polls/index.html', context)
 ```
 
-Check [other ways](https://django-meta.readthedocs.io/en/latest/views.html) to integrate FlayyerAI on Django views. Then don't hesitate to [contribute](https://github.com/flayyer/flayyer-docs/edit/main/guides/python/django.md) to the docs.
+Check [other ways](https://django-meta.readthedocs.io/en/latest/views.html) to integrate Flyyer on Django views. Then don't hesitate to [contribute](https://github.com/useflyyer/flyyer-docs/edit/main/guides/python/django.md) to the docs.
 
 ### 4. Render meta-tags on views
 
@@ -265,48 +265,48 @@ Put the following code in your `base.html`.
 ```
 
 :::note
-If you inspect the `<head />` of your HTML you should see the `og:image` and `twitter:image` tags with `flayyer.ai` URLs with your `project-slug` and current `pathname` on it. If you're having trouble, please make sure they are not overwritten elsewhere.
+If you inspect the `<head />` of your HTML you should see the `og:image` and `twitter:image` tags with `cdn.flyyer.io` URLs with your **project identifier** and current `pathname` on it. If you're having trouble, please make sure they are not overwritten elsewhere.
 :::
 
 ### 5. Voilà 🎉
 
 Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
 
-[Go to your dashboard 🚀](https://flayyer.com/dashboard/_/projects/_/)
+[Go to your dashboard 🚀](https://flyyer.io/dashboard/_/projects/_/)
 
 ## Advanced usage
 
 ### Signed URLs
 
-The package `flayyer` supports HMAC and JWT signatures.
+The package `flyyer` supports HMAC and JWT signatures.
 
-Find your `secret key` in [your dashboard](https://flayyer.com/dashboard/_/projects?ref=docs) > your project > Advanced settings > Signed URLS, and enable the signing strategy you desire.
+Find your `secret key` [here](https://www.flyyer.io/dashboard/_/projects/_/advanced) under Signed URLS, and enable the signing strategy you desire.
 
-**If you integrated FlayyerAI with a context processor** then set it like below.
+**If you integrated Flyyer with a context processor** then set it like below.
 
 ```py title="myapp/custom_context_processors.py" {8-9}
 from django.http.request import HttpRequest
-from flayyer import FlayyerAI
+from flyyer import Flyyer
 
-def flayyer_href(request: HttpRequest):
-    flayyer = FlayyerAI(
-        project="your-project-slug",
+def flyyer_href(request: HttpRequest):
+    flyyer = Flyyer(
+        project="your-project-identifier",
         path=request.get_full_path(),
         secret="your-secret-key",
         strategy="JWT", # or "HMAC"
     )
-    return {'flayyer_href': flayyer.href()} # pass smart image link to views templates
+    return {'flyyer_href': flyyer.href()} # pass smart image link to views templates
 
 # ...
 ```
 
-**If you integrated FlayyerAI with `django-meta`**, then in `settings.py` set `FLAYYER_DEFAULT` as follows.
+**If you integrated Flyyer with `django-meta`**, then in `settings.py` set `FLYYER_DEFAULT` as follows.
 
 ```py title="myapp/settings.py" {5-6}
 # ...
 
-FLAYYER_DEFAULT = {
-    'project': "your-project-slug",
+FLYYER_DEFAULT = {
+    'project': "your-project-identifier",
     'secret': "your-secret-key",
     'strategy': "JWT", # or "HMAC"
 }

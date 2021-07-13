@@ -6,7 +6,7 @@ sidebar_label: Existing projects
 
 If you already have a repository or project and you want your templates to live inside that project, then you can follow these steps.
 
-The main benefit of having Flayyer inside your project is being able to reuse your current styles and components.
+The main benefit of having Flyyer inside your project is being able to reuse your current styles and components.
 
 ### React.js projects
 
@@ -21,11 +21,11 @@ export const jsManagers = [
 <Tabs groupId="js-manager" defaultValue="yarn" values={jsManagers}>
 <TabItem value="yarn">
 
-Install `react`, `react-dom` and `@flayyer/cli` with:
+Install `react`, `react-dom` and `@flyyer/cli` with:
 
 ```bash title="Terminal.app"
 yarn add react react-dom
-yarn add --dev @flayyer/cli
+yarn add --dev @flyyer/cli
 ```
 
 Add the following scripts to your `package.json`:
@@ -33,9 +33,9 @@ Add the following scripts to your `package.json`:
 ```json title="package.json" {3-5}
 {
   "scripts": {
-    "flayyer:start": "flayyer start",
-    "flayyer:build": "flayyer build",
-    "flayyer:deploy": "flayyer deploy"
+    "flyyer:start": "flyyer start",
+    "flyyer:build": "flyyer build",
+    "flyyer:deploy": "flyyer deploy"
   },
 }
 ```
@@ -43,24 +43,24 @@ Add the following scripts to your `package.json`:
 Add the following to your `.gitignore`:
 
 ```gitignore title=".gitignore"
-.flayyer-*
+.flyyer-*
 ```
 
 Now you can start the development server with:
 
 ```bash title="Terminal.app"
-yarn run flayyer:start
+yarn run flyyer:start
 ```
 
 </TabItem>
 
 <TabItem value="npm">
 
-Install `react`, `react-dom` and `@flayyer/cli` with:
+Install `react`, `react-dom` and `@flyyer/cli` with:
 
 ```bash title="Terminal.app"
 npm install react react-dom
-npm install --save-dev @flayyer/cli
+npm install --save-dev @flyyer/cli
 ```
 
 Add the following scrips to your `package.json`:
@@ -68,9 +68,9 @@ Add the following scrips to your `package.json`:
 ```json title="package.json" {3-5}
 {
   "scripts": {
-    "flayyer:start": "flayyer start",
-    "flayyer:build": "flayyer build",
-    "flayyer:deploy": "flayyer deploy"
+    "flyyer:start": "flyyer start",
+    "flyyer:build": "flyyer build",
+    "flyyer:deploy": "flyyer deploy"
   },
 }
 ```
@@ -78,19 +78,19 @@ Add the following scrips to your `package.json`:
 Add the following to your `.gitignore`:
 
 ```gitignore title=".gitignore"
-.flayyer-*
+.flyyer-*
 ```
 
 Now you can start the development server with:
 
 ```bash title="Terminal.app"
-npm run-script flayyer:start
+npm run-script flyyer:start
 ```
 
 </TabItem>
 </Tabs>
 
-Be aware of the terminal output when running Flayyer in this mode. You are probably going to be asked to install some extra _devDependencies_.
+Be aware of the terminal output when running Flyyer in this mode. You are probably going to be asked to install some extra _devDependencies_.
 
 :::note Typescript support
 To use Typescript instead of plain Javascript go to: [Typescript](./typescript.md).

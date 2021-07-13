@@ -74,4 +74,4 @@ import "../styles/style.styl";
 
 ## Tailwind CSS
 
-For Tailwind support refer to our starter template: [react-typescript-tailwind](https://github.com/flayyer/create-flayyer-app/tree/master/templates/react-typescript-tailwind).
+For Tailwind support refer to our starter template: [react-typescript-tailwind](https://github.com/useflyyer/create-flyyer-app/tree/master/templates/react-typescript-tailwind).

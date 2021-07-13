@@ -17,7 +17,7 @@ export const jsManagers = [
 <TabItem value="yarn">
 
 ```bash title="Terminal.app"
-yarn add --dev typescript @flayyer/flayyer-types @types/react
+yarn add --dev typescript @flyyer/types @types/react
 ```
 
 </TabItem>
@@ -25,7 +25,7 @@ yarn add --dev typescript @flayyer/flayyer-types @types/react
 <TabItem value="npm">
 
 ```bash title="Terminal.app"
-npm i --save-dev typescript @flayyer/flayyer-types @types/react
+npm i --save-dev typescript @flyyer/types @types/react
 ```
 
 </TabItem>
@@ -34,7 +34,7 @@ npm i --save-dev typescript @flayyer/flayyer-types @types/react
 Create a file named `types.d.ts` to silence errors when importing assets such as `import logo from "../assets/logo.png"`.
 
 ```tsx title="types.d.ts"
-/// <reference types="@flayyer/flayyer-types/global" />
+/// <reference types="@flyyer/types/global" />
 ```
 
 Add this minimal `tsconfig.json`:
@@ -47,7 +47,7 @@ Add this minimal `tsconfig.json`:
     "esModuleInterop": true,
     "allowJs": true,
   },
-  "exclude": ["node_modules", ".flayyer-cache", ".flayyer-dev", ".flayyer-dist", ".flayyer-processed"],
+  "exclude": ["node_modules", ".flyyer-cache", ".flyyer-dev", ".flyyer-dist", ".flyyer-processed"],
   "include": ["types.d.ts", "**/*.ts", "**/*.tsx"]
 }
 ```
@@ -56,7 +56,7 @@ Now you can code your templates using Typescript:
 
 ```tsx title="templates/main.tsx"
 import React from "react";
-import { TemplateProps } from "@flayyer/flayyer-types";
+import { TemplateProps } from "@flyyer/types";
 
 type Variables = {
   title: string;
@@ -73,5 +73,5 @@ Remember to use the extension `.tsx` for Typescript files.
 :::
 
 :::tip
-Visit the repository [@flayyer/flayyer-types](https://github.com/flayyer/flayyer-types) for more info regarding types.
+Visit the repository [@flyyer/types](https://github.com/useflyyer/types) for more info regarding types.
 :::

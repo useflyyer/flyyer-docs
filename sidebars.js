@@ -33,7 +33,7 @@ module.exports = {
       type: "category",
       label: "Command-line interfaces",
       collapsed: false,
-      items: ["cli/flayyer-cli"],
+      items: ["cli/flyyer-cli"],
     },
     {
       type: "doc",

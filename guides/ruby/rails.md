@@ -3,18 +3,18 @@ id: rails
 title: Ruby on Rails
 ---
 
+> Example Repository: https://github.com/useflyyer/integration-examples/tree/main/examples/rails
+
 ## Installation
 
-> Example Repository: https://github.com/flayyer/integration-examples/tree/main/examples/rails
+We're going to use [flyyer/flyyer-ruby](https://github.com/useflyyer/flyyer-ruby) to format Flyyer URLs and [kpumuk/meta-tags](https://github.com/kpumuk/meta-tags) to render them into the `<head />` of your views. Signed URLs are made with [jwt/ruby-jwt](https://github.com/jwt/ruby-jwt) explained in the [Advanced usage](#advanced-usage) section.
 
-We're going to use [flayyer/flayyer-ruby](https://github.com/flayyer/flayyer-ruby) to format FlayyerAI URLs and [kpumuk/meta-tags](https://github.com/kpumuk/meta-tags) to render them into the `<head />` of your views. Signed URLs are made with [jwt/ruby-jwt](https://github.com/jwt/ruby-jwt) explained in the [Advanced usage](#advanced-usage) section.
-
-### 1. Install `flayyer`, `meta-tags` and `jwt` gems
+### 1. Install `flyyer`, `meta-tags` and `jwt` gems
 
 Add to your Gemfile:
 
 ```ruby title="Gemfile"
-gem 'flayyer'
+gem 'flyyer'
 gem 'meta-tags'
 gem 'jwt'
 ```
@@ -30,18 +30,18 @@ rails generate meta_tags:install
 
 Use `before_action` to provide the smart image URL to every view.
 
-You can Find your `project-slug` in [your dashboard](https://flayyer.com/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flayyer.com/get-started?ref=docs).
+[Find your project identifier here](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
 
 ```ruby title="app/controllers/application_controller.rb" {2,4-23}
 class ApplicationController < ActionController::Base
-  before_action :set_flayyer
+  before_action :set_flyyer
 
-  def set_flayyer(&block)
-    flayyer = Flayyer::FlayyerAI.create(&block)
-    flayyer.project = "your-project-slug"
-    flayyer.path = request.path
+  def set_flyyer(&block)
+    flyyer = Flyyer::Flyyer.create(&block)
+    flyyer.project = "your-project-identifier"
+    flyyer.path = request.path
 
-    image_src = flayyer.href.html_safe
+    image_src = flyyer.href.html_safe
 
     social_image = {
       _: image_src,
@@ -86,35 +86,35 @@ Add `display_meta_tags` to your layout.
 ```
 
 :::note
-If you inspect the `<head />` of your HTML you should see the `og:image` and `twitter:image` tags with `flayyer.ai` URLs with your `project-slug` and current `pathname` on it. If you're having trouble, please make sure they are not overwritten elsewhere.
+If you inspect the `<head />` of your HTML you should see the `og:image` and `twitter:image` tags with `cdn.flyyer.io` URLs with your **project identifier** and current `pathname` on it. If you're having trouble, please make sure they are not overwritten elsewhere.
 :::
 
 ### 4. Voilà 🎉
 
 Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
 
-[Go to your dashboard 🚀](https://flayyer.com/dashboard/_/projects/_/)
+[Go to your dashboard 🚀](https://flyyer.io/dashboard/_/projects/_/)
 
 ## Advanced usage
 
 ### Signed URLs
 
-The `flayyer` gem supports HMAC and JWT signatures.
+The `flyyer` gem supports HMAC and JWT signatures.
 
-Find your `secret key` in [your dashboard](https://flayyer.com/dashboard/_/projects?ref=docs) > your project > Advanced settings > Signed URLS, and enable the signing strategy you desire.
+Find your `secret key` [here](https://www.flyyer.io/dashboard/_/projects/_/advanced) under Signed URLS, and enable the signing strategy you desire.
 
 ```ruby title="app/controllers/application_controller.rb" {8-9}
 class ApplicationController < ActionController::Base
-  before_action :set_flayyer
+  before_action :set_flyyer
 
-  def set_flayyer(&block)
-    flayyer = Flayyer::FlayyerAI.create(&block)
-    flayyer.project = "your-project-slug"
-    flayyer.path = request.path
-    flayyer.secret = "your-secret-key"
-    flayyer.strategy = "JWT" # or "HMAC"
+  def set_flyyer(&block)
+    flyyer = Flyyer::Flyyer.create(&block)
+    flyyer.project = "your-project-identifier"
+    flyyer.path = request.path
+    flyyer.secret = "your-secret-key"
+    flyyer.strategy = "JWT" # or "HMAC"
 
-    image_src = flayyer.href.html_safe
+    image_src = flyyer.href.html_safe
 
     social_image = {
       _: image_src,
