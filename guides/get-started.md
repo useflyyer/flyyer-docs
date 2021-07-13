@@ -20,8 +20,8 @@ It's built with your **project identifier** and the current `pathname` of your s
 In HTML it would look like this:
 
 ```html
-<meta property="og:image" content="https://cdn.flyyer.io/v2/{project-slug}/_/_/{path}" />
-<meta name="twitter:image" content="https://cdn.flyyer.io/v2/{project-slug}/_/_/{path}" />
+<meta property="og:image" content="https://cdn.flyyer.io/v2/{project-identifier}/_/_/{path}" />
+<meta name="twitter:image" content="https://cdn.flyyer.io/v2/{project-identifier}/_/_/{path}" />
 <meta name="twitter:card" content="summary_large_image" />
 
 <!-- [Recommended] Keep your original image handy for your project -->
