@@ -57,7 +57,7 @@ pip freeze > requirements.txt
 
 ### 2. Create a `myapp/custom_context_processors.py` file
 
-You can Find your `project-slug` in [your dashboard](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
+[Find your project identifier here](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
 
 ```py title="myapp/custom_context_processors.py" {6-11}
 from django.http.request import HttpRequest
@@ -67,7 +67,7 @@ from flyyer import Flyyer
 
 def flyyer_href(request: HttpRequest):
     flyyer = Flyyer(
-        project="your-project-slug",
+        project="your-project-identifier",
         path=request.get_full_path(),  # set current pathname dynamically
     )
     return {'flyyer_href': flyyer.href()} # pass smart image link to views templates
@@ -126,7 +126,7 @@ When added to the `base.html` they should be added to each one of your pages. Pl
 ```
 
 :::note
-If you inspect the `<head />` of your HTML you should see the `og:image` and `twitter:image` tags with `cdn.flyyer.io` URLs with your `project-slug` and current `pathname` on it. If you're having trouble, please make sure they are not overwritten elsewhere.
+If you inspect the `<head />` of your HTML you should see the `og:image` and `twitter:image` tags with `cdn.flyyer.io` URLs with your **project identifier** and current `pathname` on it. If you're having trouble, please make sure they are not overwritten elsewhere.
 :::
 
 ### 5. Voilà 🎉
@@ -178,7 +178,7 @@ pip freeze > requirements.txt
 
 ### 2. Complete `settings.py`
 
-You can Find your `project-slug` in [your dashboard](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
+You can [Find your project identifier here](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
 
 ```py title="myapp/settings.py" {1,5,10-12,14-18}
 from flyyer import Flyyer
@@ -191,7 +191,7 @@ INSTALLED_APPS = [
 # ...
 
 FLYYER_DEFAULT = {
-    'project': "your-project-slug",
+    'project': "your-project-identifier",
 }
 
 META_SITE_DOMAIN = 'mydomain.com'
@@ -265,7 +265,7 @@ Put the following code in your `base.html`.
 ```
 
 :::note
-If you inspect the `<head />` of your HTML you should see the `og:image` and `twitter:image` tags with `cdn.flyyer.io` URLs with your `project-slug` and current `pathname` on it. If you're having trouble, please make sure they are not overwritten elsewhere.
+If you inspect the `<head />` of your HTML you should see the `og:image` and `twitter:image` tags with `cdn.flyyer.io` URLs with your **project identifier** and current `pathname` on it. If you're having trouble, please make sure they are not overwritten elsewhere.
 :::
 
 ### 5. Voilà 🎉
@@ -290,7 +290,7 @@ from flyyer import Flyyer
 
 def flyyer_href(request: HttpRequest):
     flyyer = Flyyer(
-        project="your-project-slug",
+        project="your-project-identifier",
         path=request.get_full_path(),
         secret="your-secret-key",
         strategy="JWT", # or "HMAC"
@@ -306,7 +306,7 @@ def flyyer_href(request: HttpRequest):
 # ...
 
 FLYYER_DEFAULT = {
-    'project': "your-project-slug",
+    'project': "your-project-identifier",
     'secret': "your-secret-key",
     'strategy': "JWT", # or "HMAC"
 }

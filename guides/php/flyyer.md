@@ -19,7 +19,7 @@ composer require flyyer/flyyer
 
 ### 2. Generate smart image URLs
 
-Find your `project-slug` in [your dashboard](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
+[Find your project identifier here](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
 
 Now you can generate smart image URLs like shown below.
 
@@ -27,15 +27,15 @@ Now you can generate smart image URLs like shown below.
 require_once 'vendor/flyyer/flyyer/src/Flyyer.php';
 
 $flyyer = new Flyyer
-  # Your project slug
-  'your-project-slug',
+  # Your project identifier
+  'your-project-identifier',
   # The current pathname of your website, try to set it dynamically
   '/path/to/product',
 );
 
 // Use this image URL in your <head/> tags
 $url = $flyyer->href();
-// > https://cdn.flyyer.io/v2/your-project-slug/_/__v=1618281823/path/to/product
+// > https://cdn.flyyer.io/v2/your-project-identifier/_/__v=1618281823/path/to/product
 ```
 
 Take a look into the [Wordpress integration guide](/guides/php/wordpress) to see a full example for your specific setup. You're invited to [contribute to the PHP documentation](https://github.com/useflyyer/flyyer-docs/tree/main/guides/php) and add your own guide for other technologies.
@@ -61,11 +61,11 @@ Find your `secret key` [here](https://www.flyyer.io/dashboard/_/projects/_/advan
 ```php
 require_once 'vendor/flyyer/flyyer/src/Flyyer.php';
 
-$flyyer = new Flyyer('your-project-slug', '/path/to/product');
+$flyyer = new Flyyer('your-project-identifier', '/path/to/product');
 $flyyer->secret="your-secret-key";
 $flyyer->strategy="JWT"; // or "HMAC"
 
 // Use this image URL in your <head/> tags
 $url = $flyyer->href();
-// > https://cdn.flyyer.io/v2/your-project-slug/jwt-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXJhbXMiOnsiX19pZCI6ImplYW5zLTEyMyJ9LCJwYXRoIjoiXC9wYXRoXC90b1wvcHJvZHVjdCJ9.X8Vs5SGEA1-3M6bH-h24jhQnbwH95V_G0f-gPhTBTzE?__v=1618283086
+// > https://cdn.flyyer.io/v2/your-project-identifier/jwt-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXJhbXMiOnsiX19pZCI6ImplYW5zLTEyMyJ9LCJwYXRoIjoiXC9wYXRoXC90b1wvcHJvZHVjdCJ9.X8Vs5SGEA1-3M6bH-h24jhQnbwH95V_G0f-gPhTBTzE?__v=1618283086
 ```

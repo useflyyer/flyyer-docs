@@ -21,16 +21,16 @@ From your admin dashboard go to the **Plugins** menu. Click on **Upload Plugin**
 
 ![demo image of flyyer install](https://raw.githubusercontent.com/useflyyer/flyyer-wp/master/.github/assets/install.png)
 
-### 4. Set your `project-slug`
+### 4. Set your **project identifier**
 
-You can Find your `project-slug` in [your dashboard](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
+[Find your project identifier here](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
 
-Write write it down in the Flyyer settings. By default it's your domain name but it may be different. Looks like this:
+Write it down in the Flyyer settings, then hit Save Settings. By default it's your domain name but it may be different. Looks like this:
 
 ![demo image of flyyer for wordpress](https://raw.githubusercontent.com/useflyyer/flyyer-wp/master/.github/assets/view.png)
 
 :::note
-If you inspect the `<head />` of your HTML you should see the `og:image` and `twitter:image` tags with `cdn.flyyer.io` URLs with your `project-slug` and current `pathname` on it. If you're having trouble, **please make sure both plugins are active** in the Plugins menu.
+If you inspect the `<head />` of your HTML you should see the `og:image` and `twitter:image` tags with `cdn.flyyer.io` URLs with your **project identifier** and current `pathname` on it. If you're having trouble, **please make sure both plugins are active** in the Plugins menu.
 :::
 
 ### 5. Voilà 🎉

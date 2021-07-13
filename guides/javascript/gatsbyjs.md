@@ -50,7 +50,7 @@ plugins: [`gatsby-plugin-react-helmet`]
 
 Use `react-helmet` to append the meta-tags to the `<head />`. The plugin will make sure it works with static generation ("server-side") which is required for link previews. Then `@flyyer/flyyer` to generate the smart image link along with `props.location` from the page component to set the `pathname` dynamically.
 
-You can Find your `project-slug` in [your dashboard](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). Don't have a project yet? [Create one here](https://flyyer.io/get-started?ref=docs).
+[Find your project identifier here](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
 
 This example is on the index page, but it should work on any of your pages as is.
 
@@ -61,7 +61,7 @@ import { Flyyer } from "@flyyer/flyyer"
 
 export default function IndexPage(props) {
   const flyyer = new Flyyer({
-    project: "your-project-slug",
+    project: "your-project-identifier",
     path: props.location.pathname,
   });
   return (
@@ -105,7 +105,7 @@ import { Flyyer } from "@flyyer/flyyer"
 
 export default function IndexPage(props) {
   const flyyer = new Flyyer({
-    project: "your-project-slug",
+    project: "your-project-identifier",
     path: props.location.pathname,
     secret: "your-secret-key",
     strategy: "JWT", // or "HMAC"

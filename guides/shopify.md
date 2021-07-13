@@ -28,12 +28,12 @@ We are going to modify few lines of code. You can always go back to a previous v
 
 ### 3. Add Flyyer meta-tags
 
-At the start of the file, press `Enter ⏎` to create a new line and paste the code below **replacing `your-project-slug` with your project slug** (it's on the first line).
+At the start of the file, press `Enter ⏎` to create a new line and paste the code below **replacing `your-project-identifier` with your project identifier** (it's on the first line).
 
-You can find your `project-slug` in [your dashboard](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
+[Find your project identifier here](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
 
 ```liquid title="Snippets/social-meta-tags.liquid" {1}
-{% assign f_project = 'your-project-slug' %}
+{% assign f_project = 'your-project-identifier' %}
 
 {%- capture f_url -%}https://cdn.flyyer.io/v2/{{ f_project }}/_/__v={{ "now" | date: "%N" }}{{ request.path }}{% endcapture %}
 <meta property="og:image" content="{{ f_url }}">

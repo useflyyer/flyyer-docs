@@ -30,7 +30,7 @@ rails generate meta_tags:install
 
 Use `before_action` to provide the smart image URL to every view.
 
-You can Find your `project-slug` in [your dashboard](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
+[Find your project identifier here](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
 
 ```ruby title="app/controllers/application_controller.rb" {2,4-23}
 class ApplicationController < ActionController::Base
@@ -38,7 +38,7 @@ class ApplicationController < ActionController::Base
 
   def set_flyyer(&block)
     flyyer = Flyyer::Flyyer.create(&block)
-    flyyer.project = "your-project-slug"
+    flyyer.project = "your-project-identifier"
     flyyer.path = request.path
 
     image_src = flyyer.href.html_safe
@@ -86,7 +86,7 @@ Add `display_meta_tags` to your layout.
 ```
 
 :::note
-If you inspect the `<head />` of your HTML you should see the `og:image` and `twitter:image` tags with `cdn.flyyer.io` URLs with your `project-slug` and current `pathname` on it. If you're having trouble, please make sure they are not overwritten elsewhere.
+If you inspect the `<head />` of your HTML you should see the `og:image` and `twitter:image` tags with `cdn.flyyer.io` URLs with your **project identifier** and current `pathname` on it. If you're having trouble, please make sure they are not overwritten elsewhere.
 :::
 
 ### 4. Voilà 🎉
@@ -109,7 +109,7 @@ class ApplicationController < ActionController::Base
 
   def set_flyyer(&block)
     flyyer = Flyyer::Flyyer.create(&block)
-    flyyer.project = "your-project-slug"
+    flyyer.project = "your-project-identifier"
     flyyer.path = request.path
     flyyer.secret = "your-secret-key"
     flyyer.strategy = "JWT" # or "HMAC"

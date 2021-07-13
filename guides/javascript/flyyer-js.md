@@ -39,7 +39,7 @@ npm install --save @flyyer/flyyer
 
 ### 2. Generate smart image URLs for your meta-tags
 
-Find your `project-slug` in [your dashboard](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
+[Find your project identifier here](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
 
 Now you can generate smart image URLs like shown below.
 
@@ -47,15 +47,15 @@ Now you can generate smart image URLs like shown below.
 import { Flyyer } from "@flyyer/flyyer";
 
 const flyyer = new Flyyer({
-  // Your project slug
-  project: "your-project-slug",
+  // Your project identifier
+  project: "your-project-identifier",
   // Current pathname of your website, try to set it dynamically
   path: `/path/to/product`,
 });
 
 // Use this smart image link in your <head/> tags
 const url = flyyer.href();
-// > https://cdn.flyyer.io/v2/your-project-slug/_/__v=1618281823/path/to/product
+// > https://cdn.flyyer.io/v2/your-project-identifier/_/__v=1618281823/path/to/product
 ```
 
 If you are using React, you should use this URL as content of some of your HTML's head tags to render link previews:
@@ -97,7 +97,7 @@ Find your `secret key` [here](https://www.flyyer.io/dashboard/_/projects/_/advan
 import { Flyyer } from "@flyyer/flyyer";
 
 const flyyer = new Flyyer({
-  project: "your-project-slug",
+  project: "your-project-identifier",
   path: `/path/to/product`,
   secret: "your-secret-key",
   strategy: "JWT", // or "HMAC"
@@ -105,7 +105,7 @@ const flyyer = new Flyyer({
 
 // Use this smart image link in your <head/> tags
 const url = flyyer.href();
-// > https://cdn.flyyer.io/v2/your-project-slug/jwt-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXJhbXMiOnsiX19pZCI6ImplYW5zLTEyMyJ9LCJwYXRoIjoiXC9wYXRoXC90b1wvcHJvZHVjdCJ9.X8Vs5SGEA1-3M6bH-h24jhQnbwH95V_G0f-gPhTBTzE?__v=1618283086
+// > https://cdn.flyyer.io/v2/your-project-identifier/jwt-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXJhbXMiOnsiX19pZCI6ImplYW5zLTEyMyJ9LCJwYXRoIjoiXC9wYXRoXC90b1wvcHJvZHVjdCJ9.X8Vs5SGEA1-3M6bH-h24jhQnbwH95V_G0f-gPhTBTzE?__v=1618283086
 ```
 
 :::note

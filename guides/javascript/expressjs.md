@@ -40,7 +40,7 @@ npm install --save @flyyer/flyyer
 
 Use `@flyyer/flyyer` to generate the smart image link on your controllers, then the `req.originalUrl` to set the current `pathname` dynamically.
 
-You can Find your `project-slug` in [your dashboard](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). Don't have a project yet? [Create one here](https://flyyer.io/get-started?ref=docs).
+[Find your project identifier here](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
 
 In this example we do it for the root path (`/`) but should work for any path as is.
 
@@ -52,7 +52,7 @@ const router = express.Router();
 
 router.get('/', function(req, res, next) {
   const flyyer = new Flyyer({
-    project: "your-project-slug",
+    project: "your-project-identifier",
     path: req.originalUrl,
   })
   // Pass `flyyer` variables to views.
@@ -105,7 +105,7 @@ const router = express.Router();
 
 router.get('/', function(req, res, next) {
   const flyyer = new Flyyer({
-    project: "your-project-slug",
+    project: "your-project-identifier",
     path: req.originalUrl,
     secret: "your-secret-key",
     strategy: "JWT", // or "HMAC"

@@ -13,9 +13,9 @@ title: Getting started
 
 ### 2. Insert smart image URLs in your meta-tags
 
-It's built with your `project-slug` and the current `pathname` of your site which lets our AI system enrich your preview automatically.
+It's built with your **project identifier** and the current `pathname` of your site which lets our AI system enrich your preview automatically.
 
-Find your `project-slug` in [your dashboard](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
+[Find your project identifier here](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
 
 In HTML it would look like this:
 

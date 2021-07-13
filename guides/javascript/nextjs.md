@@ -40,7 +40,7 @@ npm install --save @flyyer/flyyer
 
 Use [next/head](https://nextjs.org/docs/api-reference/next/head) for appending meta-tags to the `<head />`, then `@flyyer/flyyer` to generate the smart image link along with [next/router](https://nextjs.org/docs/api-reference/next/router) to get the current `pathname` dynamically.
 
-You can Find your `project-slug` in [your dashboard](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). Don't have a project yet? [Create one here](https://flyyer.io/get-started?ref=docs).
+[Find your project identifier here](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
 
 This example is on the index page, but it should work on any of your pages as is.
 
@@ -52,7 +52,7 @@ import { Flyyer } from "@flyyer/flyyer"
 
 export default function IndexPage() {
   const flyyer = new Flyyer({
-    project: "your-project-slug",
+    project: "your-project-identifier",
     path: useRouter().asPath,
   });
   return (
@@ -112,7 +112,7 @@ export default function IndexPage(props) {
 // This function runs only server-side, it won't be bundled to the client
 export async function getServerSideProps(context) {
   const flyyer = new Flyyer({
-    project: "your-project-slug",
+    project: "your-project-identifier",
     path: context.resolvedUrl,
     secret: "your-secret-key",
     strategy: "JWT", // or "HMAC"

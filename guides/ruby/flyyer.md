@@ -31,7 +31,7 @@ gem install flyyer
 
 ### 2. Generate smart image URLs for your meta-tags
 
-Find your `project-slug` in [your dashboard](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
+[Find your project identifier here](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
 
 Now you can generate smart image URLs like shown below.
 
@@ -39,8 +39,8 @@ Now you can generate smart image URLs like shown below.
 require 'flyyer'
 
 flyyer = Flyyer::Flyyer.create do |f|
-  # Your project slug
-  f.project = 'your-project-slug'
+  # Your project identifier
+  f.project = 'your-project-identifier'
   # The current pathname of your website, try to set it dynamically
   f.path = '/path/to/product'
 end
