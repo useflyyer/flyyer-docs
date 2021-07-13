@@ -39,7 +39,9 @@ npm install --save @flyyer/docusaurus-preset
 </TabItem>
 </Tabs>
 
-On your `docusaurus.config.js` add `@flyyer/docusaurus-preset` at the end of your `presets` array:
+On your `docusaurus.config.js` add `@flyyer/docusaurus-preset` at the end of your `presets` array, and fill it with your project identifier.
+
+[Find your project identifier here](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
 
 ```js
 {
@@ -49,28 +51,7 @@ On your `docusaurus.config.js` add `@flyyer/docusaurus-preset` at the end of you
     [
       "@flyyer/docusaurus-preset",
       {
-        // Use this for the root "/"
-        main: { tenant: "flyyer", deck: "flyyer-docs", template: "page" },
-        // Use this flyyer for individual documentation pages
-        docs: {
-          tenant: "flyyer",
-          deck: "flyyer-docs",
-          template: "page",
-          variables: {
-            // Enable variable replacement
-            title: "{{id}} - {{title}}",
-            description: "{{description}}",
-            static: "Plain hardcoded string",
-          },
-        },
-        // Use this flyyer for individual blogpost pages
-        blog: {
-          tenant: "flyyer",
-          deck: "flyyer-docs",
-          template: "page",
-          // Pick values form the context
-          variables: ["title", "description"],
-        },
+        project: "your-project-identifier",
       },
     ],
   ],
