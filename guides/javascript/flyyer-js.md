@@ -89,9 +89,17 @@ Now you're able to manage your link previews from your dashboard, create content
 
 ### Signed URLs
 
-The module `@flyyer/flyyer` supports HMAC and JWT signatures.
+The module `@flyyer/flyyer` supports HMAC and JWT signatures to prevent bad actors from using your URLs to create images.
 
 Find your `secret key` [here](https://www.flyyer.io/dashboard/_/projects/_/advanced) under Signed URLS, and enable the signing strategy you desire.
+
+Install the beta version of the JS that supports this feature:
+
+```sh
+yarn add @flyyer/flyyer@beta
+```
+
+Usage:
 
 ```js {6-7}
 import { Flyyer } from "@flyyer/flyyer";
