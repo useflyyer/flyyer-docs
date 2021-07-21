@@ -64,7 +64,7 @@ On your `docusaurus.config.js` add `@flyyer/docusaurus-preset` at the end of you
 
 To prevent bad actors from generating images you can sign your URLs.
 
-🔑 Get your **secret key** here: [https://www.flyyer.io/dashboard/_/projects/_/advanced](flyyer.io/dashboard/_/projects/_/advanced).
+🔑 Get your **secret key** here: [flyyer.io/dashboard/_/projects/_/advanced](https://www.flyyer.io/dashboard/_/projects/_/advanced).
 
 > Note: This key is different form your `FLYYER_KEY`.
 

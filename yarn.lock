@@ -1589,14 +1589,20 @@
     eslint-plugin-vue "^7.10.0"
     vue-eslint-parser "^7.6.0"
 
-"@flyyer/flyyer@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@flyyer/flyyer/-/flyyer-3.1.0.tgz#21e4dbb515a121cdcf2a6df1e68fa60569e4a86e"
-  integrity sha512-hbWVDqwMJUGYqH9l0lGqhaPCBw0zqXIF1pWswOzMGM4WmKF2Lx8qIJu3/2QL34gfQXQdzT1KgNsik2yCdWx4Ew==
+"@flyyer/flyyer-lite@^3.2.1":
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/@flyyer/flyyer-lite/-/flyyer-lite-3.2.1.tgz#c7fde619aa2b7132d99f2098c300aa586e052e39"
+  integrity sha512-G77eEhZU8YwbGy2hGCh5xg9SzhuI1U2+rdZfRKVZU8uoJZUmsCQxHPgUatmmQN/2wcJBQdASn+XiK4wi+uDwLg==
   dependencies:
     "@types/qs" "^6.9.7"
-    crypto-js "^4.0.0"
     qs "^6.10.1"
+
+"@flyyer/flyyer@^3.2.1":
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/@flyyer/flyyer/-/flyyer-3.2.1.tgz#ff73b2882be34e5366f98498daff72858b9d9d60"
+  integrity sha512-jsfnAtpQfr7vmZiBHU0SoXchalSyivukxmhKoNAm1f1VyI2IYufwozD6LIMOBoIk/04KFK0ZZsvFDVKEJFxQvA==
+  dependencies:
+    "@flyyer/flyyer-lite" "^3.2.1"
 
 "@hapi/hoek@^9.0.0":
   version "9.2.0"
@@ -3358,11 +3364,6 @@ cross-spawn@^6.0.0:
     semver "^5.5.0"
     shebang-command "^1.2.0"
     which "^1.2.9"
-
-crypto-js@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/crypto-js/-/crypto-js-4.0.0.tgz#2904ab2677a9d042856a2ea2ef80de92e4a36dcc"
-  integrity sha512-bzHZN8Pn+gS7DQA6n+iUmBfl0hO5DJq++QP3U6uTucDtk/0iGpXd/Gg7CGR0p8tJhofJyaKoWBuJI4eAO00BBg==
 
 crypto-random-string@^2.0.0:
   version "2.0.0"
