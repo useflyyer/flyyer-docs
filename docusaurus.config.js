@@ -198,10 +198,14 @@ module.exports = {
     [
       "@flyyer/docusaurus-preset",
       {
-        /**
-         * Get your project's identifier at https://flyyer.io/dashboard/_/projects/_/integrate
-         */
-        project: "flyyer-docs",
+        flyyer: {
+          /**
+           * Get your project's identifier at https://flyyer.io/dashboard/_/projects/_/integrate
+           */
+          project: "flyyer-docs",
+          secret: process.env.FLYYER_SIGNATURE_KEY,
+          strategy: "HMAC",
+        },
       },
     ],
   ],

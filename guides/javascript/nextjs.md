@@ -44,16 +44,17 @@ Use [next/head](https://nextjs.org/docs/api-reference/next/head) for appending m
 
 This example is on the index page, but it should work on any of your pages as is.
 
-```jsx title="pages/index.js" {4,7-10,14-16,18}
+```jsx title="pages/index.js" {4,8-11,14-16,19}
 import React from "react";
 import Head from "next/head"
 import { useRouter } from "next/router"
 import { Flyyer } from "@flyyer/flyyer"
 
 export default function IndexPage() {
+  const router = useRouter();
   const flyyer = new Flyyer({
     project: "your-project-identifier",
-    path: useRouter().asPath,
+    path: router.asPath,
   });
   return (
     <div>
@@ -61,9 +62,9 @@ export default function IndexPage() {
         <meta key="og:image" property="og:image" content={flyyer.href()} />
         <meta key="twitter:image" name="twitter:image" content={flyyer.href()} />
         <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
-        {/* [Recommended] Keep your original og:image handy for your project */
-        /* <meta key="flyyer:default" name="flyyer:default" content={your-original-og-image} /> */
-        /* ... */}
+        {/* [Recommended] Keep your original og:image handy for your project */}
+        <meta key="flyyer:default" name="flyyer:default" content="https://..." />
+        {/* ... */}
       </Head>
       {/* ... */}
     </div>

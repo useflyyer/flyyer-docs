@@ -57,3 +57,30 @@ On your `docusaurus.config.js` add `@flyyer/docusaurus-preset` at the end of you
   ],
 }
 ```
+
+## Advanced usage
+
+### Signed URLs
+
+To prevent bad actors from generating images you can sign your URLs.
+
+🔑 Get your **secret key** here: [https://www.flyyer.io/dashboard/_/projects/_/advanced](flyyer.io/dashboard/_/projects/_/advanced).
+
+> Note: This key is different form your `FLYYER_KEY`.
+
+```js
+{
+  presets: [
+    [
+      "@flyyer/docusaurus-preset",
+      {
+        flyyer: {
+          project: "",
+          secret: process.env.FLYYER_SIGNATURE_KEY || "your-key",
+          strategy: "JWT", // "JWT" | "HMAC"
+        }
+      },
+    ],
+  ],
+}
+```
