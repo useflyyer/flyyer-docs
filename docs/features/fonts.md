@@ -3,9 +3,56 @@ id: fonts
 title: Fonts
 ---
 
+## use-googlefonts
+
+The easiest way to include fonts and also allow users to change them is via our custom React Hook:
+
+```sh
+yarn add @flyyer/use-googlefonts
+```
+
+Note: this hook is only available for Flyyer decks created with the React preset.
+
+```tsx
+import React from "react";
+import { TemplateProps } from "@flyyer/types";
+import { Variable as V, Validator, Static } from "@flyyer/variables";
+import { useGoogleFonts, GoogleFontsStatus } from "@flyyer/use-googlefonts";
+
+export const schema = V.Object({
+  font: V.Font({
+    default: 'Bebas Neue',
+    examples: ['Bebas Neue', 'Bitter', 'Dela Gothic One', 'Heebo'],
+    description: "Main text's font"
+  }),
+});
+type Variables = Static<typeof schema>;
+
+const validator = new Validator(schema);
+
+export default function MyTemplate(props: TemplateProps<Variables>) {
+  const {
+    data: { font },
+  } = validator.parse(props.variables);
+
+  const googleFont = useGoogleFonts([{
+    family: font,
+    styles: [200, 400, 600, 800],
+  }]);
+
+  return (
+    <div className={googleFont.status === GoogleFontsStatus.LOADING && "flyyer-wait"}>
+      Using font: {font}
+    <div/>
+  );
+}
+```
+
+> See https://github.com/useflyyer/flyyer-marketplace-nicetypography for a deck in production using this hook.
+
 ## From CDN
 
-The easiest way to include fonts is via SCSS:
+The next easiest way to include fonts is via SCSS:
 
 ```scss title="styles/style.scss"
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900");
