@@ -19,6 +19,7 @@ module.exports = {
       items: [
         "features/templates",
         "features/components",
+        "features/schema",
         "features/styles",
         "features/images",
         "features/fonts",
@@ -50,6 +51,7 @@ module.exports = {
       items: [
         "advanced/complex-variables",
         "advanced/typescript",
+        "advanced/i18n",
         "advanced/automatic-deploys",
         "advanced/monorepo",
         "advanced/existing-projects",
