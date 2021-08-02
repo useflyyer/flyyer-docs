@@ -52,6 +52,7 @@ module.exports = {
         "advanced/complex-variables",
         "advanced/typescript",
         "advanced/i18n",
+        "advanced/flyyer-wait",
         "advanced/automatic-deploys",
         "advanced/monorepo",
         "advanced/existing-projects",

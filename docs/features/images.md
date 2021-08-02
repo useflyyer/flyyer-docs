@@ -26,3 +26,11 @@ export default function Template({ variables }) {
   )
 }
 ```
+
+## Smart crop
+
+To create smart images that focus on people's faces use [use-smartcrop](https://github.com/useflyyer/use-smartcrop) built by us on top of [jwagner/smartcrop.js](https://github.com/jwagner/smartcrop.js/)
+
+It's important to use `.flyyer-wait` CSS class to prevent premature renders, see [/docs/advanced/flyyer-wait](/docs/advanced/flyyer-wait).
+
+![Example of use-smartcrop](https://raw.githubusercontent.com/useflyyer/use-smartcrop/HEAD/.github/image.png)
