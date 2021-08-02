@@ -9,10 +9,10 @@ Variables are passed through the unique URL of a flyyer as **queryparams**.
 
 This is easy, just follow the [correct queryparams standard](https://en.wikipedia.org/wiki/Query_string#Structure) of `?` to start the queryparams and `&` between consecutive variables.
 
-Here is an example: `?first=` and `&second=`, `&third=`, etc.
+Here is an example: `?title=` and `&noop=` (has no effect).
 
 ```bash
-https://cdn.flyyer.io/render/v2/flyyer/landing/demo.png?first=Foo&second=Bar&third=Baz
+https://cdn.flyyer.io/render/v2/flyyer/default/main.png?title=Flyyer+Docs&noop=nothing
 ```
 
 Inside the component it looks like this:
@@ -58,7 +58,7 @@ export default function DemoTemplate({ variables }) {
 }
 ```
 
-Of course you can mix variables and arrays, but **try to keep variables simple.**
+Of course you can mix variables and arrays, but **try to keep variables simple and flat.**
 
 ## Types
 

@@ -3,19 +3,23 @@ id: get-started
 title: Getting started
 ---
 
-[new-project]: https://flyyer.io/dashboard/_/projects/new
-[current-project]: https://flyyer.io/dashboard/_/projects
+[get-started]: https://www.flyyer.io/get-started
+[new-project]: https://www.flyyer.io/dashboard/_/projects/new
+[current-project]: https://www.flyyer.io/dashboard/_/projects
 [guides-with-full-examples]: #guides-with-full-examples
 
 ## Install Flyyer previews
 
-### 1. Create a project [here][new-project]
+### 1. Create a project
+
+A project is created when you synchronize a website with Flyyer.
+
+* If you already have an account **[create a project here][new-project].**
+* If you are a new user **[click here to get started][get-started].**
 
 ### 2. Insert smart image URLs in your meta-tags
 
-It's built with your **project identifier** and the current `pathname` of your site which lets our AI system enrich your preview automatically.
-
-[Find your project identifier here](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
+It's built with your **project identifier** and the current `pathname` of your site which lets our system enrich your preview automatically. [Find your project identifier here](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs).
 
 In HTML it would look like this:
 
@@ -40,7 +44,7 @@ Now you're able to manage your link previews from your dashboard, create content
 
 ### JavaScript guides
 
-* [Pure JavaScript](/guides/javascript/flyyer-js)
+* [JavaScript and TypeScript](/guides/javascript/flyyer-js)
 * [Next.js](/guides/javascript/nextjs)
 * [Gatsby.js](/guides/javascript/gatsbyjs)
 * [Express.js](/guides/javascript/expressjs)
@@ -48,15 +52,19 @@ Now you're able to manage your link previews from your dashboard, create content
 
 ### Python guides
 
-* [Pure Python](/guides/python/flyyer)
+* [Python](/guides/python/flyyer)
 * [Django](/guides/python/django)
 
 ### Ruby guides
 
-* [Pure Ruby](/guides/ruby/flyyer)
+* [Ruby](/guides/ruby/flyyer)
 * [Ruby on Rails](/guides/ruby/rails)
 
 ### PHP guides
 
-* [Pure PHP](/guides/php/flyyer)
+* [PHP](/guides/php/flyyer)
 * [Wordpress](/guides/php/wordpress)
+
+---
+
+Are we missing an integration guide? Need help? **Feel free to join our [Discord Channel](https://www.flyyer.io/discord).**

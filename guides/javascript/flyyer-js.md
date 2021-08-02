@@ -93,12 +93,6 @@ The module `@flyyer/flyyer` supports HMAC and JWT signatures to prevent bad acto
 
 Find your `secret key` [here](https://www.flyyer.io/dashboard/_/projects/_/advanced) under Signed URLS, and enable the signing strategy you desire.
 
-Install the beta version of the JS that supports this feature:
-
-```sh
-yarn add @flyyer/flyyer@beta
-```
-
 Usage:
 
 ```js {6-7}
@@ -117,5 +111,6 @@ const url = flyyer.href();
 ```
 
 :::note
-Make sure Flyyer is instanciated at build time or server-side, so your secret is not exposed on the client.
+**Do not expose your secret key!**
+Make sure Flyyer is instantiated at build time or server-side, so your secret is not exposed on the client.
 :::

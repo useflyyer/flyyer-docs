@@ -30,7 +30,7 @@ mkdir fonts
 ```
 
 ```tree {4,5}
-PROJECT-NAME/
+DECK-NAME/
 │   ...
 ├── fonts/
 │   ├── ibm-plex-sans-v7-latin-600.woff2

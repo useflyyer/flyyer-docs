@@ -39,7 +39,7 @@ npm install --save-dev @flyyer/cli
 </Tabs>
 
 :::note
-This module is included when creating a project with [`create-flyyer-app`](../getting-started.md)
+This module is included when creating a deck with [`create-flyyer-app`](../getting-started.md)
 :::
 
 ## flyyer.config.js
@@ -52,34 +52,80 @@ Basic file structure is:
 module.exports = {
   engine: "react",
   key: process.env.FLYYER_KEY,
-  deck: "my-project",
+  deck: "my-deck",
 };
 ```
 
 Here is the expected format of the file using a Typescript Type notation:
 
 ```ts
-// Typescript type for reference
-type FlyyerConfigType = {
+// See https://github.com/useflyyer/flyyer-types/blob/main/src/index.ts
+
+export type FlyyerConfig = {
   /**
-   * Engine/framework used to develop the templates
+   * Engine/framework used to develop the templates.
    */
   engine: "react" | "react-typescript" | "vue" | "vue-typescript";
 
   /**
-   * Flyyer API key.
+   * **This field is required:** `FLYYER_KEY` api key to identify your tenant/company on flyyer.io.
+   * Get your key at {@link https://flyyer.io/dashboard/_/settings}.
+   *
+   * By default you can set this field to `process.env.FLYYER_KEY` and read the value from the environment, but remember to use `dotenv`.
+   *
+   * - To setup automatic deploys you can use a CI like Github Actions, see guide here: {@link https://docs.flyyer.io/docs/advanced/automatic-deploys}
+   *
    * @default process.env.FLYYER_KEY
    */
   key: string;
 
   /**
-   * Project name in slug format.
-   * Beware this can override other project under your account if you use the same value here.
-   * Eg: project-name ✅
-   * Eg: Project Name ❌
+   * Identifier of this deck of templates in your tenant/company account. **Only lowercase letters, numbers and dashes are allowed**.
+   *
+   * **This will create a new version of previous deployed instances of this code.**
+   * You can always refer a specific version by setting the `version` field, see {@link https://docs.flyyer.io/docs/concepts#url-anatomy}
+   *
+   * - `my-deck-1`: OK
+   * - `My Deck`: INVALID
    */
   deck: string;
-}
+
+  /**
+   * Optional user friendly name.
+   */
+  name?: string | null;
+  /**
+   * Optional user friendly description, Markdown is allowed.
+   */
+  description?: string | null;
+
+  /**
+   * Optional. Same as `package.json` license field.
+   */
+  homepage?: string | null;
+  /**
+   * Optional. Same as `package.json` license field.
+   */
+  license?: string | null;
+  /**
+   * Optional. Same as `package.json` keywords field to allow searching and indexing.
+   */
+  keywords?: string[] | null;
+  sizes?: (keyof typeof Sizes | "FREE")[] | null;
+  /**
+   * Optional. Parsed with https://github.com/npm/hosted-git-info
+   */
+  repository?: string | null;
+
+  /**
+   * Make deck public on https://flyyer.io/community when `false`. Defaults to `true` to prevent unintended public publishing.
+   */
+  private?: boolean | null;
+  /**
+   * @deprecated Use `private: false` instead.
+   */
+  marketplace?: boolean | null;
+};
 ```
 
 ### FLYYER_KEY
@@ -88,7 +134,7 @@ type FlyyerConfigType = {
 Get your API key at: [https://flyyer.io/dashboard/_/settings](https://flyyer.io/dashboard/_/settings)
 :::
 
-This is the API key required to authenticate before uploading your project to our cloud.
+This is the API key required to authenticate before uploading your deck to our cloud.
 
 ## Scripts
 

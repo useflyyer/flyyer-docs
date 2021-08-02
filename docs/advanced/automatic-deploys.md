@@ -24,7 +24,7 @@ curl -L https://raw.githubusercontent.com/useflyyer/flyyer-actions/main/workflow
 
 :::note
 Afraid of copy-pasting commands from strangers?
-Grab this file [flyyer-yarn.yml](https://raw.githubusercontent.com/useflyyer/flyyer-actions/main/workflow-templates/flyyer-yarn.yml) and put it in your project as `.github/workflows/deploy.yml`
+Grab this file [flyyer-yarn.yml](https://raw.githubusercontent.com/useflyyer/flyyer-actions/main/workflow-templates/flyyer-yarn.yml) and put it in your deck as `.github/workflows/deploy.yml`
 :::
 
 ### Add FLYYER_KEY to your GitHub's secrets
@@ -33,4 +33,4 @@ Get your FLYYER_KEY from https://flyyer.io/dashboard/_/settings then add it to y
 
 ![Github example of adding api keys to secrets](https://github.com/useflyyer/flyyer-actions/raw/main/assets/settings-secrets.png)
 
-**Finally, on your next `git push` your project will deploy automatically 🎉**
+**Finally, on your next `git push` your deck will deploy automatically 🎉**

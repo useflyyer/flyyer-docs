@@ -16,9 +16,9 @@ You'll **learn to create your own templates**, which you can use for your link p
 Alternatively, you can integrate Flyyer to manage link previews and social media images enriched from your website (no effort required). You can choose templates that are already available. [Check it out][flyyer-guides] before coming here.
 :::
 
-## Create project
+## Create deck
 
-Create a new Flyyer app using [`create-flyyer-app`][create-flyyer-app], which sets up everything automatically for you. To start a project follow the steps below.
+Create a new Flyyer app using [`create-flyyer-app`][create-flyyer-app], which sets up everything automatically for you. To start a deck follow the steps below.
 
 <!-- MDX variables -->
 import Tabs from '@theme/Tabs';
@@ -31,20 +31,20 @@ export const jsManagers = [
 <Tabs groupId="js-manager" defaultValue="yarn" values={jsManagers}>
 <TabItem value="yarn">
 
-Using Yarn will create a folder called `my-project` in your current directory:
+Using Yarn will create a folder called `my-deck` in your current directory:
 
 ```bash title="Terminal.app"
-yarn create flyyer-app my-project
+yarn create flyyer-app my-deck
 ```
 
 </TabItem>
 
 <TabItem value="npm">
 
-Using NPM will create a folder called `my-project` in your current directory:
+Using NPM will create a folder called `my-deck` in your current directory:
 
 ```bash title="Terminal.app"
-npm init flyyer-app@latest my-project
+npm init flyyer-app@latest my-deck
 ```
 
 </TabItem>
@@ -68,12 +68,12 @@ vue-typescript
 For more details about the available commands refer to [Command-Line Interface](./cli/flyyer-cli.md).
 :::
 
-Create (if you don't have) a file with the desired name of your template in a directory called `templates`. Every project created with `create-flyyer-app` starts with a file named `templates/main.js`, `template/main.tsx`, or `template/main.vue`.
+Create (if you don't have) a file with the desired name of your template in a directory called `templates`. Every deck created with `create-flyyer-app` starts with a file named `templates/main.js`, `template/main.tsx`, or `template/main.vue`.
 
 Let's take https://github.com/useflyyer/create-flyyer-app/tree/master/templates/react as example
 
 ```tree
-PROJECT-NAME/
+DECK-NAME/
 │   ...
 ├── templates/
 │   └── main.js
@@ -193,7 +193,7 @@ If everything is correct, you should see an output with your templates' URLs.
 🖼 Created template with URL: https://cdn.flyyer.io/render/v2/TENANT/DECK/TEMPLATE.jpeg
 ```
 
-**Congratulations! You deployed your first Flyyer project! 🎉**
+**Congratulations! You deployed your first Flyyer deck! 🎉**
 
 [![Resultant flyyer live image](https://github.com/useflyyer/create-flyyer-app/blob/master/.github/assets/result-1.png?raw=true)][result-1]
 

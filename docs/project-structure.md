@@ -5,7 +5,7 @@ title: Project structure
 
 [create-flyyer-app]: https://npmjs.com/package/create-flyyer-app
 
-The most basic project structure (if you used [create-flyyer-app][create-flyyer-app]) should look something like:
+The most basic deck structure (if you used [create-flyyer-app][create-flyyer-app]) should look something like:
 
 <!-- MDX variables -->
 import Tabs from '@theme/Tabs';
@@ -19,7 +19,7 @@ export const engines = [
 <TabItem value="react">
 
 ```tree {6}
-PROJECT-NAME/
+DECK-NAME/
 ├── static/
 │   ├── background.jpg
 │   └── logo.svg
@@ -36,7 +36,7 @@ PROJECT-NAME/
 <TabItem value="react-typescript">
 
 ```tree {6}
-PROJECT-NAME/
+DECK-NAME/
 ├── static/
 │   ├── background.jpg
 │   └── logo.svg

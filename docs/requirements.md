@@ -9,7 +9,8 @@ But don't worry! You only need basic HTML and CSS knowledge to create your first
 ## System requirements
 
 * A computer with MacOS, Windows or Linux
-* [Node.js 10.13](https://nodejs.org/) or later
+* [Node.js 12](https://nodejs.org/) or later
+
 ## Supported technologies
 
 ### Creation
@@ -32,6 +33,19 @@ This is what you can use to develop flyyers:
 
 ### Integration
 
-**Anything! 😮 there is no restrictions where you can use Flyyer!**
+The only requirement is being able to add/modify the following meta-tag:
+
+```html
+<meta property="og:image" content="use Flyyer URL here">
+```
+
+Optional but recommended is being able to modify
+
+```html
+<meta name="twitter:image" content="use Flyyer URL here">
+<meta name="twitter:card" content="summary_large_image" />
+
+<meta property="flyyer:default" content="original URL from og:image before using Flyyer" />
+```
 
 Checkout our [Guides](/guides/) for some common workflows of how to integrate Flyyer with the most popular technologies.

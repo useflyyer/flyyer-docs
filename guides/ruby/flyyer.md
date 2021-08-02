@@ -47,7 +47,7 @@ end
 
 # Use this image URL in your <head/> tags
 url = flyyer.href
-# > https://cdn.flyyer.io/v2/project/_/__v=1596906866/path/to/product
+# > https://cdn.flyyer.io/v2/your-project-identifier/_/__v=1596906866/path/to/product
 ```
 
 Take a look into the [Ruby on Rails integration guide](/guides/ruby/rails) to see a full example for your specific setup. You're invited to [contribute to the Ruby documentation](https://github.com/useflyyer/flyyer-docs/tree/main/guides/ruby) and add your own guide for other technologies.
