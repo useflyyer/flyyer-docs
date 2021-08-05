@@ -60,8 +60,8 @@ const url = flyyer.href();
 
 If you are using React, you should use this URL as content of some of your HTML's head tags to render link previews:
 
-```tsx
-// This is just an illustrative example, it depends on how you are using React.
+```tsx {5-7}
+// This is just an illustrative example, it depends on the framework you are using.
 function Head() {
   return (
     <head>

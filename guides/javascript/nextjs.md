@@ -44,7 +44,7 @@ Use [next/head](https://nextjs.org/docs/api-reference/next/head) for appending m
 
 This example is on the index page, but it should work on any of your pages as is.
 
-```jsx title="pages/index.js" {4,8-11,14-16,19}
+```jsx title="pages/index.js" {4,8-11,15-17,19}
 import React from "react";
 import Head from "next/head"
 import { useRouter } from "next/router"

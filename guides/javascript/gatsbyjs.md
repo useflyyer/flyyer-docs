@@ -98,7 +98,7 @@ The module `@flyyer/flyyer` supports HMAC and JWT signatures.
 
 Find your `secret key` [here](https://www.flyyer.io/dashboard/_/projects/_/advanced) under Signed URLS, and enable the signing strategy you desire.
 
-```jsx title="pages/index.js" {4,8-9,21-31}
+```jsx title="pages/index.js" {3,9-10}
 import React from "react"
 import { Helmet } from "react-helmet"
 import { Flyyer } from "@flyyer/flyyer"
