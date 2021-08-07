@@ -3,7 +3,8 @@ id: docusaurus
 title: Docusaurus.io
 ---
 
-> Repository: https://github.com/useflyyer/integration-examples/tree/main/examples/docusaurus
+<!-- TODO -->
+<!-- > Repository: https://github.com/useflyyer/integration-examples/tree/main/examples/docusaurus -->
 
 This documentation site is built with Docusaurus v2, so you can also refer to [this source code](https://github.com/useflyyer/flyyer-docs) to see a production example.
 

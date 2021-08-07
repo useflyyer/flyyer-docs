@@ -3,7 +3,8 @@ id: rails
 title: Ruby on Rails
 ---
 
-> Example Repository: https://github.com/useflyyer/integration-examples/tree/main/examples/rails
+<!-- TODO -->
+<!-- > Example Repository: https://github.com/useflyyer/integration-examples/tree/main/examples/rails -->
 
 ## Installation
 

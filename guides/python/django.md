@@ -3,7 +3,8 @@ id: django
 title: Django
 ---
 
-> Example Repository: https://github.com/useflyyer/integration-examples/tree/main/examples/django/django-without-extra-dependencies
+<!-- TODO -->
+<!-- > Example Repository: https://github.com/useflyyer/integration-examples/tree/main/examples/django/django-without-extra-dependencies -->
 
 ## Installation
 
@@ -137,7 +138,8 @@ Now you're able to manage your link previews from your dashboard, create content
 
 ## Installation with `django-meta`
 
-> Example Repository: https://github.com/useflyyer/integration-examples/tree/main/examples/django/django-with-django-meta
+<!-- TODO -->
+<!-- > Example Repository: https://github.com/useflyyer/integration-examples/tree/main/examples/django/django-with-django-meta -->
 
 The `django-meta` module helps you rendering meta-tags efficiently.
 
