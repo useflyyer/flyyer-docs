@@ -3,8 +3,7 @@ id: rails
 title: Ruby on Rails
 ---
 
-<!-- TODO -->
-<!-- > Example Repository: https://github.com/useflyyer/integration-examples/tree/main/examples/rails -->
+> Example Repository: https://github.com/useflyyer/flyyer-example-rails
 
 ## Installation
 
@@ -33,13 +32,13 @@ Use `before_action` to provide the smart image URL to every view.
 
 [Find your project identifier here](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
 
-```ruby title="app/controllers/application_controller.rb" {2,4-23}
+```ruby title="app/controllers/application_controller.rb" {2,4-34}
 class ApplicationController < ActionController::Base
   before_action :set_flyyer
 
   def set_flyyer(&block)
     flyyer = Flyyer::Flyyer.create(&block)
-    flyyer.project = "your-project-identifier"
+    flyyer.project = 'your-project-identifier'
     flyyer.path = request.path
 
     image_src = flyyer.href.html_safe
@@ -47,13 +46,24 @@ class ApplicationController < ActionController::Base
     social_image = {
       _: image_src,
     }
+    # See 'meta-tags' documentation for more details: https://github.com/kpumuk/meta-tags
     set_meta_tags({
+      # title: 'My Website', # <title />
+      # description: 'My website description', # <description />
       image_src: image_src,
       og: {
         image: social_image,
       },
       twitter: {
         image: social_image,
+        card: 'summary_large_image',
+      },
+      # Optional
+      flyyer: {
+        # Reference your previous or default image (eg: product item, profile image, etc.)
+        default: '/default-social-image.png',
+        # Additional variables
+        color: 'indigo',
       },
     })
   end
@@ -66,16 +76,16 @@ end
 
 Add `display_meta_tags` to your layout.
 
-```ruby title="app/views/layouts/application.html.erb" {9}
+```ruby title="app/views/layouts/application.html.erb" {4,9}
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsExample</title>
+    <%# <title>RailsExample</title> 👈 Remove this line %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= display_meta_tags site: 'My website' %>
+    <%= display_meta_tags %>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
@@ -98,6 +108,10 @@ Now you're able to manage your link previews from your dashboard, create content
 
 ## Advanced usage
 
+## Flyyer meta-tags
+
+You can pro
+
 ### Signed URLs
 
 The `flyyer` gem supports HMAC and JWT signatures.
@@ -110,10 +124,10 @@ class ApplicationController < ActionController::Base
 
   def set_flyyer(&block)
     flyyer = Flyyer::Flyyer.create(&block)
-    flyyer.project = "your-project-identifier"
+    flyyer.project = 'your-project-identifier'
     flyyer.path = request.path
-    flyyer.secret = "your-secret-key"
-    flyyer.strategy = "JWT" # or "HMAC"
+    flyyer.secret = 'your-secret-key'
+    flyyer.strategy = 'JWT' # or 'HMAC'
 
     image_src = flyyer.href.html_safe
 
@@ -121,6 +135,7 @@ class ApplicationController < ActionController::Base
       _: image_src,
     }
     set_meta_tags({
+      # Setup other meta-tags here.
       image_src: image_src,
       og: {
         image: social_image,
