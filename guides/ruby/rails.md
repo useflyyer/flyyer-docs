@@ -61,7 +61,7 @@ class ApplicationController < ActionController::Base
       # Optional
       flyyer: {
         # Reference your previous or default image (eg: product item, profile image, etc.)
-        default: '/default-social-image.png',
+        default: '/default-social-image.png', # ActionController::Base.helpers.asset_path('default-social-image.png'),
         # Additional variables
         color: 'indigo',
       },
