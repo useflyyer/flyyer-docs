@@ -54,7 +54,7 @@ export default function IndexPage() {
   const router = useRouter();
   const flyyer = new Flyyer({
     project: "your-project-identifier",
-    path: router.asPath,
+    path: [router.locale, router.asPath],
   });
   return (
     <div>
