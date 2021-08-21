@@ -7,25 +7,25 @@ title: Wordpress
 
 Let our Wordpress plugin integrate Flyyer for you. It requires **Yoast SEO** plugin and PHP >= 14.0.
 
-### 1. Download the plugin zip
+### 1. Install the official plugin `flyyer previews`
 
-Download the zip here: [flyyer-wordpress-plugin.zip](https://github.com/useflyyer/flyyer-wp/releases/latest/download/flyyer-wordpress-plugin.zip). Feel free to review the source code here: [github.com/useflyyer/flyyer-wp](https://github.com/useflyyer/flyyer-wp).
+In your Wordpress dashboard, go to Plugins > Add new, search for `flyyer previews`, then install and activate the plugin.
+
+You can also install it from the [official plugin page in Wordpress](https://wordpress.org/plugins/flyyer-previews/).
+
+![demo image of flyyer install](https://raw.githubusercontent.com/useflyyer/flyyer-wp/master/.github/assets/install-wp-plugin.png)
 
 ### 2. Add `Yoast SEO` plugin
 
-Download **Yoast SEO** from the plugins list (Plugins > Add New > Search for `Yoast SEO`) or [from here](https://wordpress.org/plugins/wordpress-seo/).
+In the same way install **Yoast SEO**, Plugins > Add New > Search for `Yoast SEO`, or [from the official page](https://wordpress.org/plugins/wordpress-seo/). Make sure to **Activate** this plugin too.
 
-### 3. Upload the plugin
+![demo image of flyyer install](https://raw.githubusercontent.com/useflyyer/flyyer-wp/master/.github/assets/install-yoast.png)
 
-From your admin dashboard go to the **Plugins** menu. Click on **Upload Plugin** and upload the zipped file `flyyer-wordpress-plugin.zip`. If you downloaded `Yoast SEO` zip, then upload it the same way.
-
-![demo image of flyyer install](https://raw.githubusercontent.com/useflyyer/flyyer-wp/master/.github/assets/install.png)
-
-### 4. Set your **project identifier**
+### 3. Set your **project identifier**
 
 [Find your project identifier here](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
 
-Write it down in the Flyyer settings, then hit Save Settings. By default it's your domain name but it may be different. Looks like this:
+Write it down in the Flyyer settings, then hit **Save Settings**. It looks like this:
 
 ![demo image of flyyer for wordpress](https://raw.githubusercontent.com/useflyyer/flyyer-wp/master/.github/assets/view.png)
 
@@ -33,7 +33,7 @@ Write it down in the Flyyer settings, then hit Save Settings. By default it's yo
 If you inspect the `<head />` of your HTML you should see the `og:image` and `twitter:image` tags with `cdn.flyyer.io` URLs with your **project identifier** and current `pathname` on it. If you're having trouble, **please make sure both plugins are active** in the Plugins menu.
 :::
 
-### 5. Voilà 🎉
+### 4. Voilà 🎉
 
 Now you're able to manage your link previews from your dashboard, create content from templates while preserving your brand style and export it as social media formats.
 
