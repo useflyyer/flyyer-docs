@@ -34,7 +34,7 @@ module.exports = {
     },
     announcementBar: {
       id: "announcement-bar",
-      content: `👉 Preview your links with <a target="_blank" rel="noopener noreferrer" href="https://socialpreview.io?ref=docs">SocialPreview.io</a>, it's free!`,
+      content: `👉 Preview your links with <a target="_blank" rel="noopener" href="https://linkpreview.io?ref=docs">LinkPreview.io</a>, it's free!`,
       backgroundColor: "#4346DE", // Defaults to `#fff`.
       textColor: "#fff", // Defaults to `#000`.
       isCloseable: false, // Defaults to `true`.
