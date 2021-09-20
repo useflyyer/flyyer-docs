@@ -37,11 +37,11 @@ npm install --save @flyyer/flyyer
 </TabItem>
 </Tabs>
 
-### 2. Generate smart image URLs for your meta-tags
+### 2. Format Flyyer CDN URLs for your meta-tags
 
 [Find your project identifier here](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
 
-Now you can generate smart image URLs like shown below.
+Now you can format Flyyer CDN URLs like shown below.
 
 ```js
 import { Flyyer } from "@flyyer/flyyer";

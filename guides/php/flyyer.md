@@ -17,11 +17,11 @@ Install it with [Composer](https://getcomposer.org/).
 composer require flyyer/flyyer
 ```
 
-### 2. Generate smart image URLs
+### 2. Format Flyyer CDN URLs
 
 [Find your project identifier here](https://flyyer.io/dashboard/_/projects/_/integrate?ref=docs). If you don't have a project yet, [create one here](https://flyyer.io/get-started?ref=docs).
 
-Now you can generate smart image URLs like shown below.
+Now you can format Flyyer CDN URLs like shown below.
 
 ```php
 require_once 'vendor/flyyer/flyyer/src/Flyyer.php';

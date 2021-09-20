@@ -46,7 +46,7 @@ npm install --save @flyyer/flyyer react-helmet gatsby-plugin-react-helmet
 plugins: [`gatsby-plugin-react-helmet`]
 ```
 
-### 3. Generate smart image URLs for your meta-tags
+### 3. Format Flyyer CDN URLs for your meta-tags
 
 Use `react-helmet` to append the meta-tags to the `<head />`. The plugin will make sure it works with static generation ("server-side") which is required for link previews. Then `@flyyer/flyyer` to generate the smart image link along with `props.location` from the page component to set the `pathname` dynamically.
 

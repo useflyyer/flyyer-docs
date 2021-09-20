@@ -26,7 +26,7 @@ bundle install
 rails generate meta_tags:install
 ```
 
-### 2. Generate smart image URLs
+### 2. Format Flyyer CDN URLs
 
 Use `before_action` to provide the smart image URL to every view.
 

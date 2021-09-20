@@ -36,7 +36,7 @@ npm install --save @flyyer/flyyer
 </TabItem>
 </Tabs>
 
-### 2. Generate smart image URLs
+### 2. Format Flyyer CDN URLs
 
 Use `@flyyer/flyyer` to generate the smart image link on your controllers, then the `req.originalUrl` to set the current `pathname` dynamically.
 

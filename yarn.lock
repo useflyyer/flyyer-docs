@@ -1595,20 +1595,20 @@
     eslint-plugin-vue "^7.17.0"
     vue-eslint-parser "^7.11.0"
 
-"@flyyer/flyyer-lite@^3.3.2":
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/@flyyer/flyyer-lite/-/flyyer-lite-3.3.2.tgz#e071c95d0cdde83d4be03f8d078f1d53c04d7a4b"
-  integrity sha512-y2GCZaYWWvWz5tImvjiYP+E6Xl2O42UQtNjYtWZJfovraUhcP3ru70IAgr6GK1rJvsQdzeCuJSVeqcyvi8tU3A==
+"@flyyer/flyyer-lite@^3.3.3":
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/@flyyer/flyyer-lite/-/flyyer-lite-3.3.3.tgz#92a2be4be86cda5e46e967f416c7fdfe87049295"
+  integrity sha512-w3kEyE2s5ASgvm4LstpXKcGf5lB58svuBEa/lw8mPc912m2XpFDhLXT4oqP3/2ZFUePRG+RmdNW/yoGhhK9jqw==
   dependencies:
     "@types/qs" "^6.9.7"
     qs "^6.10.1"
 
-"@flyyer/flyyer@^3.3.2":
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/@flyyer/flyyer/-/flyyer-3.3.2.tgz#e05aa93049df0e2e04bc00ffec67acb04b0a57db"
-  integrity sha512-qy9feCxmkh4F90AccRzygvRkbDEfJvWNZsXwdWU0GxzFxzaQp9EC6k5j5Y1r3+YcEXQDwgKa4uY1deimy4HzpQ==
+"@flyyer/flyyer@^3.3.3":
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/@flyyer/flyyer/-/flyyer-3.3.3.tgz#7762eeea4343f0e395ce191acb68d81d77b08b4a"
+  integrity sha512-Xx3PlIXbaTfN7zZtEv54R4Ja/iaSu/nzhT6bcP6qj9DApYHjyUspbBZD8dLsSixcqGESmjnNDwVDjniFfwB3ag==
   dependencies:
-    "@flyyer/flyyer-lite" "^3.3.2"
+    "@flyyer/flyyer-lite" "^3.3.3"
 
 "@hapi/hoek@^9.0.0":
   version "9.2.0"
@@ -2009,10 +2009,19 @@
     "@types/history" "*"
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^17.0.21":
+"@types/react@*":
   version "17.0.21"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.21.tgz#069c43177cd419afaab5ce26bb4e9056549f7ea6"
   integrity sha512-GzzXCpOthOjXvrAUFQwU/svyxu658cwu00Q9ugujS4qc1zXgLFaO0kS2SLOaMWLt2Jik781yuHCWB7UcYdGAeQ==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/react@^17.0.22":
+  version "17.0.22"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.22.tgz#c80d1d0e87fe953bae3ab273bef451dea1a6291b"
+  integrity sha512-kq/BMeaAVLJM6Pynh8C2rnr/drCK+/5ksH0ch9asz+8FW3DscYCIEFtCeYTFeIx/ubvOsMXmRfy7qEJ76gM96A==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -7546,10 +7555,10 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.4.0.tgz#85bdfe0f70c3e777cf13a4ffff39713ca6f64cba"
-  integrity sha512-DsEPLY1dE5HF3BxCRBmD4uYZ+5DCbvatnolqTqcxEgKVZnL2kUfyu7b8pPQ5+hTBkdhU9SLUmK0/pHb07RE4WQ==
+prettier@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.4.1.tgz#671e11c89c14a4cfc876ce564106c4a6726c9f5c"
+  integrity sha512-9fbDAXSBcc6Bs1mZrDYb3XKzDLm4EXXL9sC1LqKP5rZkT6KRr/rf9amVUcODVXgguK/isJz0d0hP72WeaKWsvA==
 
 pretty-error@^3.0.4:
   version "3.0.4"
@@ -8358,10 +8367,10 @@ sass-loader@^10.1.1:
     schema-utils "^3.0.0"
     semver "^7.3.2"
 
-sass@^1.41.0:
-  version "1.41.0"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.41.0.tgz#f7b41dc00336a4c03429c37b9680b86758af61d4"
-  integrity sha512-wb8nT60cjo9ZZMcHzG7TzdbFtCAmHEKWrH+zAdScPb4ZxL64WQBnGdbp5nwlenW5wJPcHva1JWmVa0h6iqA5eg==
+sass@^1.41.1:
+  version "1.41.1"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.41.1.tgz#bca5bed2154192779c29f48fca9c644c60c38d98"
+  integrity sha512-vIjX7izRxw3Wsiez7SX7D+j76v7tenfO18P59nonjr/nzCkZuoHuF7I/Fo0ZRZPKr88v29ivIdE9BqGDgQD/Nw==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
 

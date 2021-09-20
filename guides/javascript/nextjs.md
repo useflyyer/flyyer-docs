@@ -36,7 +36,7 @@ npm install --save @flyyer/flyyer
 </TabItem>
 </Tabs>
 
-### 2. Generate smart image URLs for your meta-tags
+### 2. Format Flyyer CDN URLs for your meta-tags
 
 Use [next/head](https://nextjs.org/docs/api-reference/next/head) for appending meta-tags to the `<head />`, then `@flyyer/flyyer` to generate the smart image link along with [next/router](https://nextjs.org/docs/api-reference/next/router) to get the current `pathname` dynamically.
 
