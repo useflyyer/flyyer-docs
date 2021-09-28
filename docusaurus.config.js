@@ -36,7 +36,8 @@ module.exports = {
     },
     announcementBar: {
       id: "announcement-bar",
-      content: `👉 Preview your links with <a target="_blank" rel="noopener" href="https://linkpreview.io?ref=docs">LinkPreview.io</a>, it's free!`,
+      content: `👉 Follow us on <a target="_blank" rel="noopener" href="https://twitter.com/useflyyer">Twitter</a> or give it a star on <a target="_blank" rel="noopener" href="https://github.com/useflyyer">Github</a>`,
+      // content: `👉 Preview your links with <a target="_blank" rel="noopener" href="https://linkpreview.io?ref=docs">LinkPreview.io</a>, it's free!`,
       backgroundColor: "#4346DE", // Defaults to `#fff`.
       textColor: "#fff", // Defaults to `#000`.
       isCloseable: false, // Defaults to `true`.
