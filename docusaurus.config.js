@@ -5,6 +5,7 @@ dotenv.config();
 
 const ALGOLIA_KEY = process.env.ALGOLIA_KEY;
 const ALGOLIA_APP_ID = process.env.ALGOLIA_APP_ID;
+const ALGOLIA_INDEX = process.env.ALGOLIA_INDEX;
 
 module.exports = {
   title: "Flyyer docs",
@@ -27,7 +28,7 @@ module.exports = {
     algolia: {
       apiKey: ALGOLIA_KEY,
       appId: ALGOLIA_APP_ID,
-      indexName: "flyyer",
+      indexName: ALGOLIA_INDEX,
       // Optional: see doc section bellow
       contextualSearch: false,
       // Optional: Algolia search parameters
