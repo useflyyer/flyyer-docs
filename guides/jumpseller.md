@@ -37,7 +37,7 @@ At the start of the file, press `Enter ⏎` to create a new line and paste the c
 
 {%- capture f_url -%}https://cdn.flyyer.io/v2/{{ f_project }}/_/__v={{ "now" | date: "%N" }}{{ store.current_url }}{% endcapture %}
 <meta property="og:image" content="{{f_url}}" />
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary_large_image" />
 ```
 
 **Remember to press the top-right corner "Save" button.**
