@@ -13,6 +13,10 @@ module.exports = {
       id: "shopify",
     },
     {
+      type: "doc",
+      id: "jumpseller",
+    },
+    {
       type: "category",
       label: "JavaScript",
       collapsed: false,
