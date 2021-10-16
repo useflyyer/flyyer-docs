@@ -35,7 +35,7 @@ In HTML it would look like this:
 
 #### Example
 
-Let's say you synced `https://example.com` and you crated a project with id `example`.
+Let's say you synced `https://example.com` and you created a project with id `example`.
 
 | Webpage                     | Path     | Mirrored URL to Flyyer CDN (`og:image`'s content) |
 |:----------------------------|:---------|:---------------------------------------------|
