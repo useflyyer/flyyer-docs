@@ -26,7 +26,7 @@ Now you can format Flyyer CDN URLs like shown below.
 ```php
 require_once 'vendor/flyyer/flyyer/src/Flyyer.php';
 
-$flyyer = new Flyyer
+$flyyer = new Flyyer(
   # Your project identifier
   'your-project-identifier',
   # The current pathname of your website, try to set it dynamically
@@ -52,13 +52,28 @@ Now you're able to manage your link previews from your dashboard, create content
 
 ## Advanced usage
 
+### Default image
+
+Pass your main or default image for each page through the `default` parameter. This will help Flyyer to create a better preview efficiently.
+
+```php {4}
+require_once 'vendor/flyyer/flyyer/src/Flyyer.php';
+
+$flyyer = new Flyyer('your-project-identifier', '/path/to/product');
+$flyyer->default = '/static/image-1.png';
+
+# Use this image URL in your <head/> tags
+url = flyyer.href();
+# > https://cdn.flyyer.io/v2/your-project-identifier/_/_def=%2Fstatic%2Fimage-1.png&__v=1618283086/path/to/product
+```
+
 ### Signed URLs
 
 The package `flyyer/flyyer` supports HMAC and JWT signatures.
 
 Find your `secret key` [here](https://www.flyyer.io/dashboard/_/projects/_/advanced) under Signed URLS, and enable the signing strategy you desire.
 
-```php
+```php {4,5}
 require_once 'vendor/flyyer/flyyer/src/Flyyer.php';
 
 $flyyer = new Flyyer('your-project-identifier', '/path/to/product');
