@@ -87,6 +87,24 @@ Now you're able to manage your link previews from your dashboard, create content
 
 ## Advanced usage
 
+### Default image
+
+Pass your main or default image for each page through the `default` parameter. This will help Flyyer to create a better preview efficiently.
+
+```js {6}
+import { Flyyer } from "@flyyer/flyyer";
+
+const flyyer = new Flyyer({
+  project: "your-project-identifier",
+  path: "/path/to/product",
+  default: "/static/image-1.png",
+});
+
+// Use this image in your <head/> tags
+const url = flyyer.href()
+// > https://cdn.flyyer.io/v2/your-project-identifier/_/_def=%2Fstatic%2Fimage-1.png&__v=1618283086/path/to/product
+```
+
 ### Signed URLs
 
 The module `@flyyer/flyyer` supports HMAC and JWT signatures to prevent bad actors from using your URLs to create images.
@@ -100,7 +118,7 @@ import { Flyyer } from "@flyyer/flyyer";
 
 const flyyer = new Flyyer({
   project: "your-project-identifier",
-  path: `/path/to/product`,
+  path: "/path/to/product",
   secret: "your-secret-key",
   strategy: "JWT", // or "HMAC"
 });

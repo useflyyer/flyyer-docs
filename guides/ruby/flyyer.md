@@ -64,23 +64,41 @@ Now you're able to manage your link previews from your dashboard, create content
 
 ## Advanced usage
 
+### Default image
+
+Pass your main or default image for each page through the `default` parameter. This will help Flyyer to create a better preview efficiently.
+
+```ruby {6}
+require 'flyyer'
+
+flyyer = Flyyer::Flyyer.create do |f|
+  f.project = 'your-project-identifier'
+  f.path = '/path/to/product'
+  f.default = "/static/image-1.png" # or https://your-site.com/static/image-1.png
+end
+
+# Use this image URL in your <head/> tags
+url = flyyer.href
+# > https://cdn.flyyer.io/v2/your-project-identifier/_/_def=%2Fstatic%2Fimage-1.png&__v=1618283086/path/to/product
+```
+
 ### Signed URLs
 
 The package `flyyer` supports HMAC and JWT signatures.
 
 Find your `secret key` [here](https://www.flyyer.io/dashboard/_/projects/_/advanced) under Signed URLS, and enable the signing strategy you desire.
 
-```python {6-7}
-from flyyer import Flyyer
+```ruby {6,7}
+require 'flyyer'
 
-flyyer = Flyyer(
-  project="website-com",
-  path="/path/to/product",
-  secret="your-secret-key",
-  strategy="JWT", # or "HMAC"
-)
+flyyer = Flyyer::Flyyer.create do |f|
+  f.project = 'your-project-identifier'
+  f.path = '/path/to/product'
+  f.secret = 'your-secret-key'
+  f.strategy = 'JWT' # or 'HMAC'
+end
 
 # Use this image in your <head/> tags
-url = flyyer.href()
-# > https://cdn.flyyer.io/v2/website-com/jwt-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXJhbXMiOnsiX19pZCI6ImplYW5zLTEyMyJ9LCJwYXRoIjoiXC9wYXRoXC90b1wvcHJvZHVjdCJ9.X8Vs5SGEA1-3M6bH-h24jhQnbwH95V_G0f-gPhTBTzE?__v=1618283086
+url = flyyer.href
+# > https://cdn.flyyer.io/v2/your-project-identifier/jwt-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXJhbXMiOnsiX19pZCI6ImplYW5zLTEyMyJ9LCJwYXRoIjoiXC9wYXRoXC90b1wvcHJvZHVjdCJ9.X8Vs5SGEA1-3M6bH-h24jhQnbwH95V_G0f-gPhTBTzE?__v=1618283086
 ```

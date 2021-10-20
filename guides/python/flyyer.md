@@ -88,6 +88,24 @@ Now you're able to manage your link previews from your dashboard, create content
 
 ## Advanced usage
 
+### Default image
+
+Pass your main or default image for each page through the `default` parameter. This will help Flyyer to create a better preview efficiently.
+
+```python {6}
+from flyyer import Flyyer
+
+flyyer = Flyyer(
+  project="your-project-identifier",
+  path="/path/to/product",
+  default="/static/image-1.png" # or https://your-site.com/static/image-1.png
+)
+
+# Use this image in your <head/> tags
+url = flyyer.href()
+# > https://cdn.flyyer.io/v2/your-project-identifier/_/_def=%2Fstatic%2Fimage-1.png&__v=1618283086/path/to/product
+```
+
 ### Signed URLs
 
 The package `flyyer` supports HMAC and JWT signatures.
