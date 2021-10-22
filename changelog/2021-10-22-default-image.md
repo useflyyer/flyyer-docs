@@ -1,6 +1,6 @@
 ---
 slug: default-image
-title: "Optimize latency with a default image"
+title: "Optimize latency with a default image per page"
 author: Franco Mendez
 author_title: Co-Founder @ Flyyer.io
 author_url: https://github.com/fnmendez
