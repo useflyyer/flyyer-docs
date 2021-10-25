@@ -14,6 +14,10 @@ module.exports = {
     },
     {
       type: "doc",
+      id: "figma",
+    },
+    {
+      type: "doc",
       id: "shopify",
     },
     {
