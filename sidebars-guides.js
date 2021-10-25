@@ -10,6 +10,10 @@ module.exports = {
     },
     {
       type: "doc",
+      id: "advanced",
+    },
+    {
+      type: "doc",
       id: "shopify",
     },
     {

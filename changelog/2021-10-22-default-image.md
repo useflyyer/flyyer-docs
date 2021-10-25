@@ -36,7 +36,7 @@ How to upgrade (note `_def` value is [URL-encoded](https://developer.mozilla.org
 
 If you are using one of our SDK/libraries It's already available for [Node.js](/guides/javascript/flyyer-js#default-image), [Python](/guides/python/flyyer#default-image), [PHP](/guides/php/flyyer#default-image) and [Ruby](/guides/ruby/flyyer#default-image).
 
-For the Node.js case it looks like this:
+Here is an example for JavaScript-based projects:
 
 ```tsx {6}
 import { Flyyer } from "@flyyer/flyyer";

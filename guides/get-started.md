@@ -23,13 +23,13 @@ Each path or route of your website should have a _"mirrored"_ URL targeting Flyy
 
 In HTML it would look like this:
 
-```html
+```html {2-4,7}
 <!-- Replace {project-identifier} and {path} with your project-id and your current page's path respectively -->
 <meta property="og:image" content="https://cdn.flyyer.io/v2/{project-identifier}/_/_/{path}" />
 <meta name="twitter:image" content="https://cdn.flyyer.io/v2/{project-identifier}/_/_/{path}" />
 <meta name="twitter:card" content="summary_large_image" />
 
-<!-- [Recommended] Keep your original image handy for your project -->
+<!-- [Optional but recommended] Keep your original images per page available on the dashboard -->
 <meta property="flyyer:default" content="{your-original-og:image-link}" />
 ```
 

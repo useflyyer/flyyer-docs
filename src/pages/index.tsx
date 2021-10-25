@@ -16,7 +16,7 @@ import styles from "./styles.module.scss";
 
 const FEATURES = [
   {
-    title: "Our AI system does the work",
+    title: "Low-code integration",
     imageUrl: "img/feature-relax.svg",
     description: (
       <>
@@ -70,6 +70,7 @@ function Feature({ imageUrl, title, description }: any) {
 export default function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
+  const config = siteConfig as Record<string, any>;
   return (
     <Layout
       title={`Create dynamic image previews and integrate them`}
@@ -79,8 +80,8 @@ export default function Home() {
     >
       <header className={clsx("hero hero--primary", styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <h1 className="hero__title">{config.title}</h1>
+          <p className="hero__subtitle">{config.tagline}</p>
           <div className={styles.buttons}>
             <Link
               className={clsx(styles.button, "button button--secondary button--lg", styles.getStarted)}
