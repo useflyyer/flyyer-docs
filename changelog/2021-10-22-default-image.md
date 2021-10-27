@@ -38,7 +38,7 @@ If you are using one of our SDK/libraries It's already available for [Node.js](/
 
 Here is an example for JavaScript-based projects:
 
-```tsx {6}
+```tsx {8}
 import { Flyyer } from "@flyyer/flyyer";
 
 const product = { /* */ }
