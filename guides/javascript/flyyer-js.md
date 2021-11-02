@@ -97,7 +97,7 @@ import { Flyyer } from "@flyyer/flyyer";
 const flyyer = new Flyyer({
   project: "your-project-identifier",
   path: "/path/to/product",
-  default: "/static/image-1.png",
+  default: "/static/image-1.png", // dynamic paths and URLs are allowed (eg: blogpost.image)
 });
 
 // Use this image in your <head/> tags
