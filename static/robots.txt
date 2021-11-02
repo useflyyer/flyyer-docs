@@ -1,0 +1,4 @@
+Sitemap: https://docs.flyyer.io/sitemap.xml
+
+User-agent: *
+Allow: /
